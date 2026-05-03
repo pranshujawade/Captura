@@ -1,0 +1,3349 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Enterprise PRD suite for a hybrid DTC + curated marketplace wellness platform, India-first.">
+      
+      
+      
+      
+        <link rel="prev" href="../04-TAD-technical-architecture/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>5. Functional Specifications (FSD) - Wellness Platform - Product Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fsd-functional-specification-document" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Wellness Platform - Product Documentation" class="md-header__button md-logo" aria-label="Wellness Platform - Product Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Wellness Platform - Product Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              5. Functional Specifications (FSD)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Wellness Platform - Product Documentation" class="md-nav__button md-logo" aria-label="Wellness Platform - Product Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Wellness Platform - Product Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-BMRD-business-market-requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Business & Market Requirements (BMRD)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-PRD-product-requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Product Requirements (PRD)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-IA-information-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Information Architecture (IA)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-TAD-technical-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Technical Architecture (TAD)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Functional Specifications (FSD)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Functional Specifications (FSD)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Conventions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Conventions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-requirement-language-rfc-2119" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Requirement Language (RFC 2119)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-data-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Data Formats
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-error-code-taxonomy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Error Code Taxonomy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-state-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 State Notation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-feature-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Feature Specifications
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Feature Specifications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-user-authentication-f-usr-001" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 User Authentication (F-USR-001)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 User Authentication (F-USR-001)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-machine-user-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State Machine: User Session
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#business-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inputoutput-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input/Output Specification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Handling
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-cart-management-f-chk-001" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Cart Management (F-CHK-001)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Cart Management (F-CHK-001)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-machine-cart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State Machine: Cart
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#business-rules_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-contract" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Contract
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-checkout-flow-f-chk-002" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Checkout Flow (F-CHK-002)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 Checkout Flow (F-CHK-002)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-machine-checkout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State Machine: Checkout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#business-rules_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checkout-summary-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checkout Summary Calculation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-order-lifecycle-f-ord-001" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Order Lifecycle (F-ORD-001)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4 Order Lifecycle (F-ORD-001)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-machine-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State Machine: Order
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#business-rules_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2-sub-order-states-multi-seller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2: Sub-Order States (Multi-Seller)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-payment-processing-f-chk-003" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Payment Processing (F-CHK-003)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.5 Payment Processing (F-CHK-003)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-machine-payment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State Machine: Payment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#business-rules_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cod-otp-verification-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        COD OTP Verification Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-key-complex-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Key Complex Flows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Key Complex Flows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-multi-seller-checkout-flow-phase-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Multi-Seller Checkout Flow (Phase 2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-seller-onboarding-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Seller Onboarding Flow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Seller Onboarding Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-machine-seller-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State Machine: Seller Application
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#document-verification-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Document Verification Checklist
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-payment-payout-flow-phase-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Payment &amp; Payout Flow (Phase 2)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 Payment &amp; Payout Flow (Phase 2)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#settlement-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Settlement Calculation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payout-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Payout Execution
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-product-moderation-flow-phase-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Product Moderation Flow (Phase 2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-gst-invoice-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 GST Invoice Generation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5 GST Invoice Generation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#invoice-generation-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Invoice Generation Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invoice-pdf-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Invoice PDF Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-notification-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Notification Specifications
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Notification Specifications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-buyer-notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Buyer Notifications
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-seller-notifications-phase-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Seller Notifications (Phase 2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-admin-notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Admin Notifications
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-search-filter-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Search &amp; Filter Specifications
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Search &amp; Filter Specifications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-search-ranking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Search Ranking
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-filter-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Filter Logic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-autocomplete-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Autocomplete Behavior
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-api-contract-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. API Contract Summary
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. API Contract Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-key-api-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Key API Endpoints
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-phase-2-seller-api-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Phase 2 Seller API Endpoints
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-admin-api-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Admin API Endpoints
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Conventions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Conventions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-requirement-language-rfc-2119" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Requirement Language (RFC 2119)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-data-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Data Formats
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-error-code-taxonomy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Error Code Taxonomy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-state-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 State Notation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-feature-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Feature Specifications
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Feature Specifications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-user-authentication-f-usr-001" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 User Authentication (F-USR-001)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 User Authentication (F-USR-001)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-machine-user-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State Machine: User Session
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#business-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inputoutput-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input/Output Specification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Handling
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-cart-management-f-chk-001" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Cart Management (F-CHK-001)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Cart Management (F-CHK-001)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-machine-cart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State Machine: Cart
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#business-rules_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-contract" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Contract
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-checkout-flow-f-chk-002" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Checkout Flow (F-CHK-002)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 Checkout Flow (F-CHK-002)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-machine-checkout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State Machine: Checkout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#business-rules_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checkout-summary-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checkout Summary Calculation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-order-lifecycle-f-ord-001" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Order Lifecycle (F-ORD-001)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4 Order Lifecycle (F-ORD-001)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-machine-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State Machine: Order
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#business-rules_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2-sub-order-states-multi-seller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2: Sub-Order States (Multi-Seller)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-payment-processing-f-chk-003" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Payment Processing (F-CHK-003)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.5 Payment Processing (F-CHK-003)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-machine-payment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State Machine: Payment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#business-rules_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cod-otp-verification-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        COD OTP Verification Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-key-complex-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Key Complex Flows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Key Complex Flows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-multi-seller-checkout-flow-phase-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Multi-Seller Checkout Flow (Phase 2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-seller-onboarding-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Seller Onboarding Flow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Seller Onboarding Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-machine-seller-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State Machine: Seller Application
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#document-verification-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Document Verification Checklist
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-payment-payout-flow-phase-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Payment &amp; Payout Flow (Phase 2)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 Payment &amp; Payout Flow (Phase 2)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#settlement-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Settlement Calculation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payout-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Payout Execution
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-product-moderation-flow-phase-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Product Moderation Flow (Phase 2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-gst-invoice-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 GST Invoice Generation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5 GST Invoice Generation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#invoice-generation-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Invoice Generation Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invoice-pdf-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Invoice PDF Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-notification-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Notification Specifications
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Notification Specifications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-buyer-notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Buyer Notifications
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-seller-notifications-phase-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Seller Notifications (Phase 2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-admin-notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Admin Notifications
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-search-filter-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Search &amp; Filter Specifications
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Search &amp; Filter Specifications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-search-ranking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Search Ranking
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-filter-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Filter Logic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-autocomplete-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Autocomplete Behavior
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-api-contract-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. API Contract Summary
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. API Contract Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-key-api-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Key API Endpoints
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-phase-2-seller-api-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Phase 2 Seller API Endpoints
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-admin-api-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Admin API Endpoints
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="fsd-functional-specification-document">FSD: Functional Specification Document<a class="headerlink" href="#fsd-functional-specification-document" title="Permanent link">&para;</a></h1>
+<p><strong>Document ID</strong>: FSD-v1.0
+<strong>Status</strong>: Draft
+<strong>Author</strong>: [Product Manager + Engineering Lead]
+<strong>Last Updated</strong>: [Date]
+<strong>Audience</strong>: Engineering, QA, AI coding agents
+<strong>Dependencies</strong>: PRD (Doc 02), IA (Doc 03), TAD (Doc 04)</p>
+<hr />
+<h2 id="1-conventions">1. Conventions<a class="headerlink" href="#1-conventions" title="Permanent link">&para;</a></h2>
+<h3 id="11-requirement-language-rfc-2119">1.1 Requirement Language (RFC 2119)<a class="headerlink" href="#11-requirement-language-rfc-2119" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MUST</strong></td>
+<td>Absolute requirement. Feature will not ship without this.</td>
+</tr>
+<tr>
+<td><strong>MUST NOT</strong></td>
+<td>Absolute prohibition. Implementing this is a defect.</td>
+</tr>
+<tr>
+<td><strong>SHOULD</strong></td>
+<td>Recommended. Can be omitted with documented justification.</td>
+</tr>
+<tr>
+<td><strong>SHOULD NOT</strong></td>
+<td>Discouraged. Can be implemented with documented justification.</td>
+</tr>
+<tr>
+<td><strong>MAY</strong></td>
+<td>Optional. Implement if time permits or future phase.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="12-data-formats">1.2 Data Formats<a class="headerlink" href="#12-data-formats" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Data Type</th>
+<th>Format</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Currency</td>
+<td>Integer (paise). ₹800.50 = 80050</td>
+<td>All monetary fields: price, tax, shipping, payout</td>
+</tr>
+<tr>
+<td>Dates</td>
+<td>ISO 8601 UTC: <code>YYYY-MM-DDTHH:mm:ssZ</code></td>
+<td><code>2026-05-03T14:30:00Z</code></td>
+</tr>
+<tr>
+<td>Phone</td>
+<td>String, 10 digits, Indian mobile (starts with 6-9)</td>
+<td><code>9876543210</code> (no country code stored, +91 prefixed at SMS layer)</td>
+</tr>
+<tr>
+<td>Email</td>
+<td>String, lowercase, RFC 5322 validated</td>
+<td><code>priya@example.com</code></td>
+</tr>
+<tr>
+<td>GSTIN</td>
+<td>String, 15 chars, regex: <code>^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$</code></td>
+<td><code>29ABCDE1234F1Z5</code></td>
+</tr>
+<tr>
+<td>FSSAI License</td>
+<td>String, 14 digits</td>
+<td><code>10012345678901</code></td>
+</tr>
+<tr>
+<td>Pincode</td>
+<td>String, 6 digits</td>
+<td><code>560001</code></td>
+</tr>
+<tr>
+<td>Slug</td>
+<td>Lowercase, hyphen-separated, alphanumeric</td>
+<td><code>vitamin-d3-2000iu</code></td>
+</tr>
+<tr>
+<td>UUID</td>
+<td>v4 UUID for all entity IDs</td>
+<td><code>550e8400-e29b-41d4-a716-446655440000</code></td>
+</tr>
+<tr>
+<td>Percentage</td>
+<td>Integer basis points internally (15% = 1500) or decimal in API (0.15)</td>
+<td>Commission: 12% stored as 1200 basis points</td>
+</tr>
+</tbody>
+</table>
+<h3 id="13-error-code-taxonomy">1.3 Error Code Taxonomy<a class="headerlink" href="#13-error-code-taxonomy" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Code Range</th>
+<th>Category</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ERR-AUTH-xxx</code></td>
+<td>Authentication errors</td>
+<td><code>ERR-AUTH-001</code>: Invalid OTP</td>
+</tr>
+<tr>
+<td><code>ERR-CART-xxx</code></td>
+<td>Cart errors</td>
+<td><code>ERR-CART-001</code>: Product out of stock</td>
+</tr>
+<tr>
+<td><code>ERR-CHK-xxx</code></td>
+<td>Checkout errors</td>
+<td><code>ERR-CHK-001</code>: Pincode not serviceable</td>
+</tr>
+<tr>
+<td><code>ERR-PAY-xxx</code></td>
+<td>Payment errors</td>
+<td><code>ERR-PAY-001</code>: Payment failed</td>
+</tr>
+<tr>
+<td><code>ERR-ORD-xxx</code></td>
+<td>Order errors</td>
+<td><code>ERR-ORD-001</code>: Order not found</td>
+</tr>
+<tr>
+<td><code>ERR-SEL-xxx</code></td>
+<td>Seller errors</td>
+<td><code>ERR-SEL-001</code>: GSTIN already registered</td>
+</tr>
+<tr>
+<td><code>ERR-PRD-xxx</code></td>
+<td>Product errors</td>
+<td><code>ERR-PRD-001</code>: Invalid HSN code</td>
+</tr>
+<tr>
+<td><code>ERR-VAL-xxx</code></td>
+<td>Validation errors</td>
+<td><code>ERR-VAL-001</code>: Required field missing</td>
+</tr>
+</tbody>
+</table>
+<p>All API error responses follow this structure:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ERR-CART-001&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Product is out of stock&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">&quot;details&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">      </span><span class="nt">&quot;product_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">      </span><span class="nt">&quot;available_quantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">}</span>
+</code></pre></div></p>
+<h3 id="14-state-notation">1.4 State Notation<a class="headerlink" href="#14-state-notation" title="Permanent link">&para;</a></h3>
+<p>States are represented in <code>UPPER_SNAKE_CASE</code>. Transitions are documented as:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[CURRENT_STATE] --trigger--&gt; [NEXT_STATE]  {guard_condition}
+</code></pre></div></p>
+<hr />
+<h2 id="2-feature-specifications">2. Feature Specifications<a class="headerlink" href="#2-feature-specifications" title="Permanent link">&para;</a></h2>
+<h3 id="21-user-authentication-f-usr-001">2.1 User Authentication (F-USR-001)<a class="headerlink" href="#21-user-authentication-f-usr-001" title="Permanent link">&para;</a></h3>
+<h4 id="state-machine-user-session">State Machine: User Session<a class="headerlink" href="#state-machine-user-session" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>[ANONYMOUS] --enter_phone--&gt; [OTP_SENT]
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>[OTP_SENT] --verify_otp(valid)--&gt; [AUTHENTICATED]
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>[OTP_SENT] --verify_otp(invalid, attempts&lt;3)--&gt; [OTP_SENT]
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>[OTP_SENT] --verify_otp(invalid, attempts&gt;=3)--&gt; [OTP_LOCKED]
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>[OTP_SENT] --otp_expired(5min)--&gt; [ANONYMOUS]
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>[OTP_LOCKED] --cooldown_expired(30min)--&gt; [ANONYMOUS]
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>[AUTHENTICATED] --logout--&gt; [ANONYMOUS]
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>[AUTHENTICATED] --token_expired(15min) + refresh_valid--&gt; [AUTHENTICATED]  (silent refresh)
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>[AUTHENTICATED] --token_expired + refresh_invalid--&gt; [ANONYMOUS]
+</code></pre></div>
+<h4 id="business-rules">Business Rules<a class="headerlink" href="#business-rules" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>BR-AUTH-001</strong>: Phone number is the primary unique identifier. One account per phone number.</li>
+<li><strong>BR-AUTH-002</strong>: OTP MUST be 6 digits, cryptographically random (not sequential).</li>
+<li><strong>BR-AUTH-003</strong>: OTP MUST expire after 5 minutes from generation.</li>
+<li><strong>BR-AUTH-004</strong>: Maximum 3 OTP verification attempts per OTP. After 3 failures, lock for 30 minutes.</li>
+<li><strong>BR-AUTH-005</strong>: Maximum 3 OTP resend requests per phone number per session. After 3 resends, lock for 30 minutes.</li>
+<li><strong>BR-AUTH-006</strong>: If phone number is not registered, auto-create account on first successful OTP verification (zero-friction registration).</li>
+<li><strong>BR-AUTH-007</strong>: Access token (JWT) expires in 15 minutes. Refresh token expires in 30 days. Refresh token is rotated on every use (old token invalidated).</li>
+<li><strong>BR-AUTH-008</strong>: On logout, refresh token MUST be invalidated server-side (deleted from database/Redis).</li>
+</ul>
+<h4 id="inputoutput-specification">Input/Output Specification<a class="headerlink" href="#inputoutput-specification" title="Permanent link">&para;</a></h4>
+<p><strong>Send OTP</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>POST /api/auth/otp/send
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Request:  { &quot;phone&quot;: &quot;9876543210&quot; }
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>Response (200): { &quot;message&quot;: &quot;OTP sent successfully&quot;, &quot;expires_in&quot;: 300 }
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>Response (429): { &quot;error&quot;: { &quot;code&quot;: &quot;ERR-AUTH-003&quot;, &quot;message&quot;: &quot;Too many OTP requests. Try again in X minutes&quot; } }
+</code></pre></div></p>
+<p><strong>Verify OTP</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>POST /api/auth/otp/verify
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Request:  { &quot;phone&quot;: &quot;9876543210&quot;, &quot;otp&quot;: &quot;123456&quot; }
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Response (200): {
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>  &quot;access_token&quot;: &quot;jwt...&quot;,
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>  &quot;refresh_token&quot;: &quot;opaque...&quot;,
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>  &quot;customer&quot;: { &quot;id&quot;: &quot;uuid&quot;, &quot;phone&quot;: &quot;9876543210&quot;, &quot;name&quot;: null, &quot;email&quot;: null, &quot;is_new&quot;: true }
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>}
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>Response (401): { &quot;error&quot;: { &quot;code&quot;: &quot;ERR-AUTH-001&quot;, &quot;message&quot;: &quot;Invalid OTP. X attempts remaining&quot; } }
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>Response (423): { &quot;error&quot;: { &quot;code&quot;: &quot;ERR-AUTH-002&quot;, &quot;message&quot;: &quot;Account locked. Try again in X minutes&quot; } }
+</code></pre></div></p>
+<h4 id="error-handling">Error Handling<a class="headerlink" href="#error-handling" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>Code</th>
+<th>User Message</th>
+<th>Recovery</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Invalid OTP</td>
+<td>ERR-AUTH-001</td>
+<td>"Invalid OTP. [X] attempts remaining."</td>
+<td>Retry or resend OTP</td>
+</tr>
+<tr>
+<td>OTP expired</td>
+<td>ERR-AUTH-004</td>
+<td>"OTP has expired. Please request a new one."</td>
+<td>Resend OTP</td>
+</tr>
+<tr>
+<td>Too many attempts</td>
+<td>ERR-AUTH-002</td>
+<td>"Too many failed attempts. Please try again in 30 minutes."</td>
+<td>Wait for cooldown</td>
+</tr>
+<tr>
+<td>Too many resends</td>
+<td>ERR-AUTH-003</td>
+<td>"Too many OTP requests. Please try again in 30 minutes."</td>
+<td>Wait for cooldown</td>
+</tr>
+<tr>
+<td>SMS delivery failure</td>
+<td>ERR-AUTH-005</td>
+<td>"Unable to send OTP. Please try again."</td>
+<td>Retry (system-level retry first)</td>
+</tr>
+<tr>
+<td>Phone format invalid</td>
+<td>ERR-VAL-001</td>
+<td>"Please enter a valid 10-digit Indian mobile number."</td>
+<td>Correct input</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="22-cart-management-f-chk-001">2.2 Cart Management (F-CHK-001)<a class="headerlink" href="#22-cart-management-f-chk-001" title="Permanent link">&para;</a></h3>
+<h4 id="state-machine-cart">State Machine: Cart<a class="headerlink" href="#state-machine-cart" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>[EMPTY] --add_item--&gt; [ACTIVE]
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>[ACTIVE] --add_item--&gt; [ACTIVE]
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>[ACTIVE] --update_quantity--&gt; [ACTIVE]
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>[ACTIVE] --remove_item(last_item)--&gt; [EMPTY]
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>[ACTIVE] --remove_item(not_last)--&gt; [ACTIVE]
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>[ACTIVE] --checkout_initiated--&gt; [CHECKOUT_IN_PROGRESS]
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>[CHECKOUT_IN_PROGRESS] --payment_success--&gt; [CONVERTED]  (cart cleared)
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>[CHECKOUT_IN_PROGRESS] --payment_failed--&gt; [ACTIVE]
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>[CHECKOUT_IN_PROGRESS] --abandoned(30min)--&gt; [ACTIVE]
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>[ACTIVE] --save_for_later(item)--&gt; [ACTIVE]  (item moved to saved list)
+</code></pre></div>
+<h4 id="business-rules_1">Business Rules<a class="headerlink" href="#business-rules_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>BR-CART-001</strong>: Adding a product already in cart MUST increment quantity by 1 (not create duplicate line item).</li>
+<li><strong>BR-CART-002</strong>: Quantity per line item MUST be between 1 and 10. Exceeding 10 shows error: "Maximum 10 units per product."</li>
+<li><strong>BR-CART-003</strong>: Quantity MUST NOT exceed available stock. If stock &lt; requested quantity, show: "Only [X] left in stock."</li>
+<li><strong>BR-CART-004</strong>: Cart for authenticated users MUST persist server-side (database/Redis). Cart for anonymous users MUST persist in browser local storage.</li>
+<li><strong>BR-CART-005</strong>: On login, anonymous cart MUST merge with server-side cart. Merge logic: for items in both carts, use the higher quantity (capped at stock). Items unique to either cart are added to merged cart.</li>
+<li><strong>BR-CART-006</strong>: Cart prices MUST be re-validated on every cart page load. If a product price has changed since it was added, update the price in cart and show notice: "Price updated for [product name]."</li>
+<li><strong>BR-CART-007</strong>: If a product is discontinued/unpublished after being added to cart, show: "This product is no longer available" with remove option. Block checkout until removed.</li>
+<li><strong>BR-CART-008</strong>: Cart MUST NOT be cleared on payment failure. Cart returns to ACTIVE state for retry.</li>
+<li><strong>BR-CART-009</strong> (Phase 2): Multi-seller cart MUST visually group items by seller. Each group shows seller name, per-group subtotal, and per-group shipping cost.</li>
+</ul>
+<h4 id="api-contract">API Contract<a class="headerlink" href="#api-contract" title="Permanent link">&para;</a></h4>
+<p><strong>Add to Cart</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>POST /api/cart/items
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>Request:  { &quot;variant_id&quot;: &quot;uuid&quot;, &quot;quantity&quot;: 1 }
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>Response (200): { &quot;cart&quot;: { ...full cart object... } }
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>Response (400): { &quot;error&quot;: { &quot;code&quot;: &quot;ERR-CART-001&quot;, &quot;message&quot;: &quot;Product is out of stock&quot; } }
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>Response (400): { &quot;error&quot;: { &quot;code&quot;: &quot;ERR-CART-002&quot;, &quot;message&quot;: &quot;Maximum 10 units per product&quot; } }
+</code></pre></div></p>
+<p><strong>Update Quantity</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>PATCH /api/cart/items/{item_id}
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>Request:  { &quot;quantity&quot;: 3 }
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>Response (200): { &quot;cart&quot;: { ...full cart object... } }
+</code></pre></div></p>
+<p><strong>Remove from Cart</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>DELETE /api/cart/items/{item_id}
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>Response (200): { &quot;cart&quot;: { ...full cart object... } }
+</code></pre></div></p>
+<p><strong>Cart Object Structure</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">{</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">  </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">      </span><span class="nt">&quot;product_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">      </span><span class="nt">&quot;variant_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">      </span><span class="nt">&quot;product_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Vitamin D3 2000IU&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">      </span><span class="nt">&quot;variant_title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;60 Capsules&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">      </span><span class="nt">&quot;image_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://...&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">      </span><span class="nt">&quot;unit_price&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">59900</span><span class="p">,</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">      </span><span class="nt">&quot;quantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">      </span><span class="nt">&quot;line_total&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">119800</span><span class="p">,</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">      </span><span class="nt">&quot;seller_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="w">      </span><span class="nt">&quot;seller_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Our Brand&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="w">      </span><span class="nt">&quot;in_stock&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="w">      </span><span class="nt">&quot;available_quantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">45</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a><span class="w">  </span><span class="p">],</span>
+<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a><span class="w">  </span><span class="nt">&quot;saved_items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a><span class="w">  </span><span class="nt">&quot;subtotal&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">119800</span><span class="p">,</span>
+<a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a><span class="w">  </span><span class="nt">&quot;item_count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a><span class="w">  </span><span class="nt">&quot;warnings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;price_changed&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;item_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Price updated for Vitamin D3&quot;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a><span class="w">  </span><span class="p">]</span>
+<a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a><span class="p">}</span>
+</code></pre></div></p>
+<hr />
+<h3 id="23-checkout-flow-f-chk-002">2.3 Checkout Flow (F-CHK-002)<a class="headerlink" href="#23-checkout-flow-f-chk-002" title="Permanent link">&para;</a></h3>
+<h4 id="state-machine-checkout">State Machine: Checkout<a class="headerlink" href="#state-machine-checkout" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>[CART_ACTIVE] --initiate_checkout--&gt; [ADDRESS_STEP]  {user is authenticated, cart is non-empty}
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>[ADDRESS_STEP] --select_address(serviceable)--&gt; [SHIPPING_STEP]
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>[ADDRESS_STEP] --select_address(not_serviceable)--&gt; [ADDRESS_STEP]  {show error}
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>[SHIPPING_STEP] --select_shipping--&gt; [PAYMENT_STEP]
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>[PAYMENT_STEP] --apply_coupon(valid)--&gt; [PAYMENT_STEP]  {recalculate totals}
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>[PAYMENT_STEP] --apply_coupon(invalid)--&gt; [PAYMENT_STEP]  {show error}
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>[PAYMENT_STEP] --select_payment_method--&gt; [REVIEW_STEP]
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>[REVIEW_STEP] --place_order--&gt; [PAYMENT_PROCESSING]
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>[PAYMENT_PROCESSING] --payment_success--&gt; [ORDER_CONFIRMED]
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>[PAYMENT_PROCESSING] --payment_failed--&gt; [PAYMENT_STEP]  {show error, allow retry}
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>[PAYMENT_PROCESSING] --payment_pending--&gt; [PAYMENT_PENDING]  {poll status}
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>[PAYMENT_PENDING] --payment_confirmed--&gt; [ORDER_CONFIRMED]
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>[PAYMENT_PENDING] --payment_timeout(5min)--&gt; [PAYMENT_STEP]  {show timeout message}
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>[any step] --abandoned(30min)--&gt; [CART_ACTIVE]  {session expired}
+</code></pre></div>
+<h4 id="business-rules_2">Business Rules<a class="headerlink" href="#business-rules_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>BR-CHK-001</strong>: Checkout MUST require authentication. Anonymous users are redirected to login and returned to checkout after.</li>
+<li><strong>BR-CHK-002</strong>: Checkout MUST re-validate stock availability on "Place Order" click. If any item is now out of stock, block order and show error with link back to cart.</li>
+<li><strong>BR-CHK-003</strong>: Checkout session MUST timeout after 30 minutes of inactivity. Cart items are preserved, checkout restarts from step 1.</li>
+<li><strong>BR-CHK-004</strong>: Pincode serviceability MUST be checked at the Address step. If not serviceable, user cannot proceed. Message: "Delivery not available to this pincode. Please use a different address."</li>
+<li><strong>BR-CHK-005</strong>: Shipping cost MUST be calculated after address is confirmed. Shipping cost is based on total cart weight + delivery zone (origin warehouse pincode → buyer pincode).</li>
+<li><strong>BR-CHK-006</strong>: Only one coupon MUST be allowed per order. Applying a new coupon replaces the previous one.</li>
+<li><strong>BR-CHK-007</strong>: "Place Order" MUST be idempotent. If clicked multiple times (double-click, network retry), only one order is created. Implement via idempotency key (frontend generates UUID, backend checks for duplicate).</li>
+<li><strong>BR-CHK-008</strong>: After payment success, order confirmation page MUST display order ID, items, delivery estimate, and payment method. This page MUST be bookmarkable (GET request, not POST result).</li>
+<li><strong>BR-CHK-009</strong>: Prices shown on checkout summary MUST be inclusive of GST (standard B2C practice in India). GST breakup (CGST/SGST or IGST) MUST be shown as a line item for transparency.</li>
+</ul>
+<h4 id="checkout-summary-calculation">Checkout Summary Calculation<a class="headerlink" href="#checkout-summary-calculation" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>For each item:
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    line_total = unit_price × quantity
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>subtotal = sum(all line_totals)
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>if coupon:
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>    if coupon.type == &quot;flat&quot;:
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>        discount = min(coupon.value, subtotal)
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>    if coupon.type == &quot;percentage&quot;:
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>        discount = min(subtotal × coupon.percentage, coupon.max_discount)
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>    if coupon.type == &quot;free_shipping&quot;:
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>        discount = shipping_total
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>discounted_subtotal = subtotal - discount
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>shipping_total = sum(shipping per fulfillment group)
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>    Phase 1: single group (own brand warehouse → buyer)
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>    Phase 2: per-seller group
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>tax_breakup:
+<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>    For each item:
+<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a>        tax_rate = lookup(item.hsn_code)
+<a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a>        if seller_state == buyer_state:
+<a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a>            cgst = item.line_total × (tax_rate / 2)
+<a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a>            sgst = item.line_total × (tax_rate / 2)
+<a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a>        else:
+<a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a>            igst = item.line_total × tax_rate
+<a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a>    Note: prices are GST-inclusive, so tax is already in the price
+<a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a>    Tax shown for transparency, not added on top
+<a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a>
+<a id="__codelineno-11-31" name="__codelineno-11-31" href="#__codelineno-11-31"></a>order_total = discounted_subtotal + shipping_total
+<a id="__codelineno-11-32" name="__codelineno-11-32" href="#__codelineno-11-32"></a>
+<a id="__codelineno-11-33" name="__codelineno-11-33" href="#__codelineno-11-33"></a>prepaid_discount (if applicable): ₹50 off for non-COD
+<a id="__codelineno-11-34" name="__codelineno-11-34" href="#__codelineno-11-34"></a>final_total = order_total - prepaid_discount
+</code></pre></div>
+<hr />
+<h3 id="24-order-lifecycle-f-ord-001">2.4 Order Lifecycle (F-ORD-001)<a class="headerlink" href="#24-order-lifecycle-f-ord-001" title="Permanent link">&para;</a></h3>
+<h4 id="state-machine-order">State Machine: Order<a class="headerlink" href="#state-machine-order" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>                ┌─────────────────────────────────────────┐
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>                │                                         │
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>[CONFIRMED] ──processing──▶ [PROCESSING] ──ship──▶ [SHIPPED]
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>    │                           │                     │
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>    │                           │                     ▼
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>    │cancel                     │cancel         [OUT_FOR_DELIVERY]
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>    │                           │                     │
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>    ▼                           ▼                     ▼
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>[CANCELLED]              [CANCELLED]            [DELIVERED]
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>                                                     │
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>                                              return_request
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>                                                     │
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>                                                     ▼
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>                                             [RETURN_REQUESTED]
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>                                                     │
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>                                          ┌──────────┼──────────┐
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>                                          │                     │
+<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>                                    approved                rejected
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>                                          │                     │
+<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a>                                          ▼                     ▼
+<a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a>                                  [RETURN_APPROVED]      [RETURN_REJECTED]
+<a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a>                                          │
+<a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a>                                   pickup_scheduled
+<a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a>                                          │
+<a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a>                                          ▼
+<a id="__codelineno-12-26" name="__codelineno-12-26" href="#__codelineno-12-26"></a>                                  [RETURN_PICKED]
+<a id="__codelineno-12-27" name="__codelineno-12-27" href="#__codelineno-12-27"></a>                                          │
+<a id="__codelineno-12-28" name="__codelineno-12-28" href="#__codelineno-12-28"></a>                                   refund_initiated
+<a id="__codelineno-12-29" name="__codelineno-12-29" href="#__codelineno-12-29"></a>                                          │
+<a id="__codelineno-12-30" name="__codelineno-12-30" href="#__codelineno-12-30"></a>                                          ▼
+<a id="__codelineno-12-31" name="__codelineno-12-31" href="#__codelineno-12-31"></a>                                  [REFUND_PROCESSED]
+</code></pre></div>
+<h4 id="business-rules_3">Business Rules<a class="headerlink" href="#business-rules_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>BR-ORD-001</strong>: Order status transitions MUST follow the state machine. No skipping states (e.g., cannot go from CONFIRMED directly to DELIVERED).</li>
+<li><strong>BR-ORD-002</strong>: Buyer can cancel order in states: CONFIRMED, PROCESSING. Once SHIPPED, cancellation is not allowed (must use returns).</li>
+<li><strong>BR-ORD-003</strong>: Seller/admin can cancel order in states: CONFIRMED, PROCESSING (e.g., stock issue discovered post-order). Buyer is notified and refunded.</li>
+<li><strong>BR-ORD-004</strong>: Order stuck in PROCESSING for &gt;48 hours MUST trigger an admin alert.</li>
+<li><strong>BR-ORD-005</strong>: On cancellation by buyer (before shipping), full refund MUST be initiated automatically. On cancellation by seller, full refund + apology notification.</li>
+<li><strong>BR-ORD-006</strong>: Return request MUST be within return window (default: 7 days from delivery, configurable per category).</li>
+<li><strong>BR-ORD-007</strong>: Return reasons: <code>damaged</code>, <code>wrong_product</code>, <code>expired</code>, <code>quality_issue</code>, <code>not_as_described</code>, <code>changed_mind</code>. For <code>damaged</code> and <code>quality_issue</code>, image upload is REQUIRED.</li>
+<li><strong>BR-ORD-008</strong>: Supplements MUST NOT accept <code>changed_mind</code> returns (opened supplements cannot be resold per FSSAI guidelines). Only <code>damaged</code>, <code>wrong_product</code>, <code>expired</code> allowed.</li>
+<li><strong>BR-ORD-009</strong>: Refund MUST be processed within 5-7 business days of return pickup confirmation.</li>
+<li><strong>BR-ORD-010</strong>: Refund to original payment method. COD orders: refund via bank transfer (buyer provides bank details) or store credit.</li>
+</ul>
+<h4 id="phase-2-sub-order-states-multi-seller">Phase 2: Sub-Order States (Multi-Seller)<a class="headerlink" href="#phase-2-sub-order-states-multi-seller" title="Permanent link">&para;</a></h4>
+<p>Each sub-order (per seller) has its own independent state machine (same as above). Parent order status is derived:
+- Parent = CONFIRMED if all sub-orders are CONFIRMED
+- Parent = PARTIALLY_SHIPPED if at least one sub-order is SHIPPED but not all
+- Parent = SHIPPED if all sub-orders are SHIPPED
+- Parent = DELIVERED if all sub-orders are DELIVERED
+- Parent = PARTIALLY_DELIVERED if at least one is DELIVERED</p>
+<hr />
+<h3 id="25-payment-processing-f-chk-003">2.5 Payment Processing (F-CHK-003)<a class="headerlink" href="#25-payment-processing-f-chk-003" title="Permanent link">&para;</a></h3>
+<h4 id="state-machine-payment">State Machine: Payment<a class="headerlink" href="#state-machine-payment" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>[INITIATED] --razorpay_checkout_opened--&gt; [AWAITING_PAYMENT]
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>[AWAITING_PAYMENT] --payment_success--&gt; [CAPTURED]
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>[AWAITING_PAYMENT] --payment_failed--&gt; [FAILED]
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>[AWAITING_PAYMENT] --payment_timeout(5min)--&gt; [TIMED_OUT]
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>[AWAITING_PAYMENT] --user_cancelled--&gt; [CANCELLED]
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>[FAILED] --retry--&gt; [AWAITING_PAYMENT]
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>[TIMED_OUT] --retry--&gt; [AWAITING_PAYMENT]
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>[CAPTURED] --refund_partial--&gt; [PARTIALLY_REFUNDED]
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>[CAPTURED] --refund_full--&gt; [REFUNDED]
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>[PARTIALLY_REFUNDED] --refund_remaining--&gt; [REFUNDED]
+</code></pre></div>
+<p>Special state for COD:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>[COD_PENDING] --delivery_confirmed + cash_collected--&gt; [COD_COLLECTED]
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>[COD_PENDING] --delivery_refused--&gt; [COD_RTO]
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>[COD_COLLECTED] --remittance_received--&gt; [COD_RECONCILED]
+</code></pre></div></p>
+<h4 id="business-rules_4">Business Rules<a class="headerlink" href="#business-rules_4" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>BR-PAY-001</strong>: All Razorpay interactions MUST use server-side signature verification. Frontend MUST NOT have access to <code>key_secret</code>.</li>
+<li><strong>BR-PAY-002</strong>: Payment amount MUST be in paise. Amount sent to Razorpay MUST exactly match order total (no floating point).</li>
+<li><strong>BR-PAY-003</strong>: Webhook (<code>payment.captured</code>) is the source of truth for payment confirmation, not the client-side callback. Client-side callback provides immediate UX, but order MUST NOT be fulfilled until webhook confirms.</li>
+<li><strong>BR-PAY-004</strong>: Webhook processing MUST be idempotent. Check <code>razorpay_payment_id</code> against database before processing. If already processed, return 200 OK without re-processing.</li>
+<li><strong>BR-PAY-005</strong>: Double-payment prevention: order ID is passed as <code>receipt</code> in Razorpay order creation. If two Razorpay payments exist for the same receipt, the second is auto-refunded.</li>
+<li><strong>BR-PAY-006</strong>: COD is available for orders between ₹200 and ₹5,000 (configurable). Below ₹200: minimum order for COD. Above ₹5,000: prepaid only (fraud prevention).</li>
+<li><strong>BR-PAY-007</strong>: COD orders above ₹1,000 MUST require OTP verification before order confirmation.</li>
+<li><strong>BR-PAY-008</strong>: Prepaid discount (₹50 off) SHOULD be offered to incentivize non-COD payments. This reduces RTO risk.</li>
+<li><strong>BR-PAY-009</strong>: Refund API call to Razorpay MUST include <code>speed: "normal"</code> (5-7 business days) for standard refunds. Instant refund (<code>speed: "optimum"</code>) has higher fees, use only for escalations.</li>
+</ul>
+<h4 id="cod-otp-verification-flow">COD OTP Verification Flow<a class="headerlink" href="#cod-otp-verification-flow" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Buyer selects COD at checkout
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    │
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>    ▼
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>IF order_total &gt; ₹1,000:
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>    │
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>    ▼
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>Send OTP to buyer&#39;s registered phone
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>    │
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>    ▼
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>Buyer enters OTP on checkout page
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>    │
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>    ▼
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>Verify OTP (same MSG91 flow as login, different template)
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>    │
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>    ├── Success → proceed with order placement (COD)
+<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a>    └── Failure (3 attempts) → &quot;Unable to verify. Please use a prepaid payment method.&quot;
+<a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a>        → Do NOT place order as COD
+</code></pre></div>
+<hr />
+<h2 id="3-key-complex-flows">3. Key Complex Flows<a class="headerlink" href="#3-key-complex-flows" title="Permanent link">&para;</a></h2>
+<h3 id="31-multi-seller-checkout-flow-phase-2">3.1 Multi-Seller Checkout Flow (Phase 2)<a class="headerlink" href="#31-multi-seller-checkout-flow-phase-2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Step 1: Cart Analysis
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>────────────────────
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>INPUT: Cart with items from multiple sellers
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>FOR each item in cart:
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>    group_by seller_id
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>    → Creates fulfillment_groups[]
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>FOR each fulfillment_group:
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>    origin_pincode = seller.warehouse_pincode (or platform warehouse if own_brand)
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>    destination_pincode = buyer.address.pincode
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>    total_weight = sum(item.weight × item.quantity for items in group)
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>
+<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a>    shipping_options = Shiprocket.check_serviceability(origin, destination, weight)
+<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a>    IF no carriers available:
+<a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a>        → ERROR: &quot;Delivery not available for [seller_name] products to your pincode&quot;
+<a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a>        → Block checkout, show which seller group is unserviceable
+<a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a>
+<a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a>    group.shipping_cost = cheapest_option.cost
+<a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a>    group.estimated_delivery = cheapest_option.estimated_days
+<a id="__codelineno-16-21" name="__codelineno-16-21" href="#__codelineno-16-21"></a>
+<a id="__codelineno-16-22" name="__codelineno-16-22" href="#__codelineno-16-22"></a>
+<a id="__codelineno-16-23" name="__codelineno-16-23" href="#__codelineno-16-23"></a>Step 2: Checkout Display
+<a id="__codelineno-16-24" name="__codelineno-16-24" href="#__codelineno-16-24"></a>────────────────────────
+<a id="__codelineno-16-25" name="__codelineno-16-25" href="#__codelineno-16-25"></a>Show grouped summary:
+<a id="__codelineno-16-26" name="__codelineno-16-26" href="#__codelineno-16-26"></a>    ┌─────────────────────────────────────┐
+<a id="__codelineno-16-27" name="__codelineno-16-27" href="#__codelineno-16-27"></a>    │ From Our Brand                      │
+<a id="__codelineno-16-28" name="__codelineno-16-28" href="#__codelineno-16-28"></a>    │   Item A  ₹500 × 1 = ₹500          │
+<a id="__codelineno-16-29" name="__codelineno-16-29" href="#__codelineno-16-29"></a>    │   Shipping: ₹50                     │
+<a id="__codelineno-16-30" name="__codelineno-16-30" href="#__codelineno-16-30"></a>    │   Delivery by: May 8                │
+<a id="__codelineno-16-31" name="__codelineno-16-31" href="#__codelineno-16-31"></a>    ├─────────────────────────────────────┤
+<a id="__codelineno-16-32" name="__codelineno-16-32" href="#__codelineno-16-32"></a>    │ From [Seller 1]                     │
+<a id="__codelineno-16-33" name="__codelineno-16-33" href="#__codelineno-16-33"></a>    │   Item B  ₹800 × 1 = ₹800          │
+<a id="__codelineno-16-34" name="__codelineno-16-34" href="#__codelineno-16-34"></a>    │   Item C  ₹300 × 1 = ₹300          │
+<a id="__codelineno-16-35" name="__codelineno-16-35" href="#__codelineno-16-35"></a>    │   Shipping: ₹60                     │
+<a id="__codelineno-16-36" name="__codelineno-16-36" href="#__codelineno-16-36"></a>    │   Delivery by: May 10               │
+<a id="__codelineno-16-37" name="__codelineno-16-37" href="#__codelineno-16-37"></a>    ├─────────────────────────────────────┤
+<a id="__codelineno-16-38" name="__codelineno-16-38" href="#__codelineno-16-38"></a>    │ Subtotal:        ₹1,600             │
+<a id="__codelineno-16-39" name="__codelineno-16-39" href="#__codelineno-16-39"></a>    │ Shipping:        ₹110               │
+<a id="__codelineno-16-40" name="__codelineno-16-40" href="#__codelineno-16-40"></a>    │ Discount:        -₹100 (coupon)     │
+<a id="__codelineno-16-41" name="__codelineno-16-41" href="#__codelineno-16-41"></a>    │ Total:           ₹1,610             │
+<a id="__codelineno-16-42" name="__codelineno-16-42" href="#__codelineno-16-42"></a>    └─────────────────────────────────────┘
+<a id="__codelineno-16-43" name="__codelineno-16-43" href="#__codelineno-16-43"></a>
+<a id="__codelineno-16-44" name="__codelineno-16-44" href="#__codelineno-16-44"></a>
+<a id="__codelineno-16-45" name="__codelineno-16-45" href="#__codelineno-16-45"></a>Step 3: Payment (Single Transaction)
+<a id="__codelineno-16-46" name="__codelineno-16-46" href="#__codelineno-16-46"></a>─────────────────────────────────────
+<a id="__codelineno-16-47" name="__codelineno-16-47" href="#__codelineno-16-47"></a>Create single Razorpay order for ₹1,610 (total)
+<a id="__codelineno-16-48" name="__codelineno-16-48" href="#__codelineno-16-48"></a>Buyer pays once
+<a id="__codelineno-16-49" name="__codelineno-16-49" href="#__codelineno-16-49"></a>
+<a id="__codelineno-16-50" name="__codelineno-16-50" href="#__codelineno-16-50"></a>
+<a id="__codelineno-16-51" name="__codelineno-16-51" href="#__codelineno-16-51"></a>Step 4: Order Creation (Post-Payment)
+<a id="__codelineno-16-52" name="__codelineno-16-52" href="#__codelineno-16-52"></a>─────────────────────────────────────
+<a id="__codelineno-16-53" name="__codelineno-16-53" href="#__codelineno-16-53"></a>1. Create parent_order:
+<a id="__codelineno-16-54" name="__codelineno-16-54" href="#__codelineno-16-54"></a>     id: ORD-20260503-001
+<a id="__codelineno-16-55" name="__codelineno-16-55" href="#__codelineno-16-55"></a>     customer_id: buyer_uuid
+<a id="__codelineno-16-56" name="__codelineno-16-56" href="#__codelineno-16-56"></a>     total: 161000 (paise)
+<a id="__codelineno-16-57" name="__codelineno-16-57" href="#__codelineno-16-57"></a>     payment_id: razorpay_payment_id
+<a id="__codelineno-16-58" name="__codelineno-16-58" href="#__codelineno-16-58"></a>     status: CONFIRMED
+<a id="__codelineno-16-59" name="__codelineno-16-59" href="#__codelineno-16-59"></a>
+<a id="__codelineno-16-60" name="__codelineno-16-60" href="#__codelineno-16-60"></a>2. FOR each fulfillment_group:
+<a id="__codelineno-16-61" name="__codelineno-16-61" href="#__codelineno-16-61"></a>     Create sub_order:
+<a id="__codelineno-16-62" name="__codelineno-16-62" href="#__codelineno-16-62"></a>       id: ORD-20260503-001-A (own_brand)
+<a id="__codelineno-16-63" name="__codelineno-16-63" href="#__codelineno-16-63"></a>       parent_order_id: ORD-20260503-001
+<a id="__codelineno-16-64" name="__codelineno-16-64" href="#__codelineno-16-64"></a>       seller_id: seller_uuid (or null for own brand)
+<a id="__codelineno-16-65" name="__codelineno-16-65" href="#__codelineno-16-65"></a>       items: [group items]
+<a id="__codelineno-16-66" name="__codelineno-16-66" href="#__codelineno-16-66"></a>       subtotal: group subtotal
+<a id="__codelineno-16-67" name="__codelineno-16-67" href="#__codelineno-16-67"></a>       shipping_cost: group shipping
+<a id="__codelineno-16-68" name="__codelineno-16-68" href="#__codelineno-16-68"></a>       commission_amount: subtotal × commission_rate (marketplace only)
+<a id="__codelineno-16-69" name="__codelineno-16-69" href="#__codelineno-16-69"></a>       tcs_amount: subtotal × 0.01 (marketplace only)
+<a id="__codelineno-16-70" name="__codelineno-16-70" href="#__codelineno-16-70"></a>       status: CONFIRMED
+<a id="__codelineno-16-71" name="__codelineno-16-71" href="#__codelineno-16-71"></a>
+<a id="__codelineno-16-72" name="__codelineno-16-72" href="#__codelineno-16-72"></a>3. Notify each seller of their sub-order (email + dashboard notification)
+<a id="__codelineno-16-73" name="__codelineno-16-73" href="#__codelineno-16-73"></a>4. Notify buyer with order confirmation (email + SMS with parent order ID)
+<a id="__codelineno-16-74" name="__codelineno-16-74" href="#__codelineno-16-74"></a>
+<a id="__codelineno-16-75" name="__codelineno-16-75" href="#__codelineno-16-75"></a>
+<a id="__codelineno-16-76" name="__codelineno-16-76" href="#__codelineno-16-76"></a>Step 5: Fulfillment (Independent per Sub-Order)
+<a id="__codelineno-16-77" name="__codelineno-16-77" href="#__codelineno-16-77"></a>────────────────────────────────────────────────
+<a id="__codelineno-16-78" name="__codelineno-16-78" href="#__codelineno-16-78"></a>Each sub-order is independently:
+<a id="__codelineno-16-79" name="__codelineno-16-79" href="#__codelineno-16-79"></a>    → Picked, packed, shipped by respective seller (or platform warehouse)
+<a id="__codelineno-16-80" name="__codelineno-16-80" href="#__codelineno-16-80"></a>    → Gets its own AWB number and tracking
+<a id="__codelineno-16-81" name="__codelineno-16-81" href="#__codelineno-16-81"></a>    → Delivered on its own timeline
+<a id="__codelineno-16-82" name="__codelineno-16-82" href="#__codelineno-16-82"></a>    → Can be individually cancelled/returned
+<a id="__codelineno-16-83" name="__codelineno-16-83" href="#__codelineno-16-83"></a>
+<a id="__codelineno-16-84" name="__codelineno-16-84" href="#__codelineno-16-84"></a>
+<a id="__codelineno-16-85" name="__codelineno-16-85" href="#__codelineno-16-85"></a>Step 6: Payout (Post-Delivery)
+<a id="__codelineno-16-86" name="__codelineno-16-86" href="#__codelineno-16-86"></a>──────────────────────────────
+<a id="__codelineno-16-87" name="__codelineno-16-87" href="#__codelineno-16-87"></a>ON sub_order.status == DELIVERED:
+<a id="__codelineno-16-88" name="__codelineno-16-88" href="#__codelineno-16-88"></a>    wait settlement_period (T+7 days)
+<a id="__codelineno-16-89" name="__codelineno-16-89" href="#__codelineno-16-89"></a>    THEN calculate payout:
+<a id="__codelineno-16-90" name="__codelineno-16-90" href="#__codelineno-16-90"></a>        payout = sub_order.subtotal - commission - tcs + shipping_reimbursement
+<a id="__codelineno-16-91" name="__codelineno-16-91" href="#__codelineno-16-91"></a>    initiate bank transfer via Razorpay Route
+</code></pre></div>
+<h3 id="32-seller-onboarding-flow">3.2 Seller Onboarding Flow<a class="headerlink" href="#32-seller-onboarding-flow" title="Permanent link">&para;</a></h3>
+<h4 id="state-machine-seller-application">State Machine: Seller Application<a class="headerlink" href="#state-machine-seller-application" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>[NOT_APPLIED] --submit_application--&gt; [SUBMITTED]
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>[SUBMITTED] --admin_review--&gt; [UNDER_REVIEW]
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>[UNDER_REVIEW] --admin_approve--&gt; [APPROVED]
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>[UNDER_REVIEW] --admin_request_info--&gt; [INFO_REQUESTED]
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>[UNDER_REVIEW] --admin_reject--&gt; [REJECTED]
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>[INFO_REQUESTED] --seller_responds--&gt; [UNDER_REVIEW]
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>[INFO_REQUESTED] --no_response(14days)--&gt; [EXPIRED]
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>[APPROVED] --seller_starts_onboarding--&gt; [ONBOARDING]
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>[ONBOARDING] --all_steps_complete--&gt; [ONBOARDING_COMPLETE]
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>[ONBOARDING] --abandoned(30days)--&gt; [ARCHIVED]
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>[ONBOARDING_COMPLETE] --admin_final_verify--&gt; [ACTIVE]
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>[ACTIVE] --sla_violation--&gt; [WARNING]
+<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>[WARNING] --repeated_violation--&gt; [SUSPENDED]
+<a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>[SUSPENDED] --admin_reactivate--&gt; [ACTIVE]
+<a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>[REJECTED] --seller_reapplies(after_90_days)--&gt; [SUBMITTED]
+</code></pre></div>
+<h4 id="document-verification-checklist">Document Verification Checklist<a class="headerlink" href="#document-verification-checklist" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>Application Stage:
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>    ☐ GSTIN format validation (regex)
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>    ☐ FSSAI license number format validation (14 digits) [if supplements]
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>    ☐ FSSAI license document uploaded (PDF/image, &lt;5MB)
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>    ☐ Cosmetics manufacturing license uploaded [if skincare]
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>    ☐ Sample product images (3-5, quality check: resolution ≥ 500x500)
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>Onboarding Stage:
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>    ☐ Bank account details provided (account number, IFSC)
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>    ☐ Cancelled cheque uploaded (for bank verification)
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>    ☐ PAN number provided (format validated: [A-Z]{5}[0-9]{4}[A-Z]{1})
+<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>    ☐ PAN card image uploaded
+<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a>    ☐ GST certificate uploaded
+<a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a>    ☐ FSSAI license expiry date &gt; today + 90 days (warn if expiring soon)
+<a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a>    ☐ Marketplace seller agreement digitally signed
+<a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a>
+<a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a>Admin Verification:
+<a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a>    ☐ GSTIN validated against government GST portal (manual or API check)
+<a id="__codelineno-18-19" name="__codelineno-18-19" href="#__codelineno-18-19"></a>    ☐ FSSAI license validated against FSSAI portal (manual check)
+<a id="__codelineno-18-20" name="__codelineno-18-20" href="#__codelineno-18-20"></a>    ☐ Bank details verified via penny drop test (Razorpay/Cashfree API)
+<a id="__codelineno-18-21" name="__codelineno-18-21" href="#__codelineno-18-21"></a>    ☐ PAN-GSTIN cross-verification (PAN should match GSTIN)
+<a id="__codelineno-18-22" name="__codelineno-18-22" href="#__codelineno-18-22"></a>    ☐ Product samples reviewed for quality (if physical samples requested)
+<a id="__codelineno-18-23" name="__codelineno-18-23" href="#__codelineno-18-23"></a>    ☐ Brand website/social media verified for legitimacy
+</code></pre></div>
+<h3 id="33-payment-payout-flow-phase-2">3.3 Payment &amp; Payout Flow (Phase 2)<a class="headerlink" href="#33-payment-payout-flow-phase-2" title="Permanent link">&para;</a></h3>
+<h4 id="settlement-calculation">Settlement Calculation<a class="headerlink" href="#settlement-calculation" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>INPUT: sub_order (delivered, past settlement period)
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>gross_amount = sub_order.subtotal  (product selling prices, GST-inclusive)
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a># Determine commission
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>IF sub_order.seller.custom_commission_rate:
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>    commission_rate = seller.custom_commission_rate
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>ELSE:
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>    commission_rate = category_default_commission_rate
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>    # Supplements: 12%, Skincare: 15%
+<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>
+<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>commission_amount = gross_amount × commission_rate
+<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>
+<a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a># TCS (Tax Collected at Source)
+<a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a># TCS is on net taxable value (exclusive of GST)
+<a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a>gst_rate = weighted_average_gst_rate(sub_order.items)
+<a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a>net_taxable_value = gross_amount / (1 + gst_rate)
+<a id="__codelineno-19-18" name="__codelineno-19-18" href="#__codelineno-19-18"></a>tcs_amount = net_taxable_value × 0.01  # 1% TCS
+<a id="__codelineno-19-19" name="__codelineno-19-19" href="#__codelineno-19-19"></a>
+<a id="__codelineno-19-20" name="__codelineno-19-20" href="#__codelineno-19-20"></a># Shipping reimbursement
+<a id="__codelineno-19-21" name="__codelineno-19-21" href="#__codelineno-19-21"></a>IF fulfillment_model == &quot;seller_shipped&quot;:
+<a id="__codelineno-19-22" name="__codelineno-19-22" href="#__codelineno-19-22"></a>    shipping_reimbursement = sub_order.shipping_cost  # pass through to seller
+<a id="__codelineno-19-23" name="__codelineno-19-23" href="#__codelineno-19-23"></a>ELSE:  # platform_fulfilled
+<a id="__codelineno-19-24" name="__codelineno-19-24" href="#__codelineno-19-24"></a>    shipping_reimbursement = 0  # platform handles shipping
+<a id="__codelineno-19-25" name="__codelineno-19-25" href="#__codelineno-19-25"></a>
+<a id="__codelineno-19-26" name="__codelineno-19-26" href="#__codelineno-19-26"></a># Return adjustments
+<a id="__codelineno-19-27" name="__codelineno-19-27" href="#__codelineno-19-27"></a>return_adjustments = sum(returned_item.refund_amount for returned items in sub_order)
+<a id="__codelineno-19-28" name="__codelineno-19-28" href="#__codelineno-19-28"></a>
+<a id="__codelineno-19-29" name="__codelineno-19-29" href="#__codelineno-19-29"></a># Final payout
+<a id="__codelineno-19-30" name="__codelineno-19-30" href="#__codelineno-19-30"></a>payout_amount = gross_amount - commission_amount - tcs_amount - return_adjustments + shipping_reimbursement
+<a id="__codelineno-19-31" name="__codelineno-19-31" href="#__codelineno-19-31"></a>
+<a id="__codelineno-19-32" name="__codelineno-19-32" href="#__codelineno-19-32"></a>OUTPUT: {
+<a id="__codelineno-19-33" name="__codelineno-19-33" href="#__codelineno-19-33"></a>    seller_id,
+<a id="__codelineno-19-34" name="__codelineno-19-34" href="#__codelineno-19-34"></a>    sub_order_id,
+<a id="__codelineno-19-35" name="__codelineno-19-35" href="#__codelineno-19-35"></a>    gross_amount,
+<a id="__codelineno-19-36" name="__codelineno-19-36" href="#__codelineno-19-36"></a>    commission_amount,
+<a id="__codelineno-19-37" name="__codelineno-19-37" href="#__codelineno-19-37"></a>    commission_rate,
+<a id="__codelineno-19-38" name="__codelineno-19-38" href="#__codelineno-19-38"></a>    tcs_amount,
+<a id="__codelineno-19-39" name="__codelineno-19-39" href="#__codelineno-19-39"></a>    return_adjustments,
+<a id="__codelineno-19-40" name="__codelineno-19-40" href="#__codelineno-19-40"></a>    shipping_reimbursement,
+<a id="__codelineno-19-41" name="__codelineno-19-41" href="#__codelineno-19-41"></a>    payout_amount,
+<a id="__codelineno-19-42" name="__codelineno-19-42" href="#__codelineno-19-42"></a>    payout_date: delivery_date + settlement_period
+<a id="__codelineno-19-43" name="__codelineno-19-43" href="#__codelineno-19-43"></a>}
+</code></pre></div>
+<h4 id="payout-execution">Payout Execution<a class="headerlink" href="#payout-execution" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>Daily Payout Job (runs at 10:00 AM IST):
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>    1. Query all settlements where payout_date &lt;= today AND payout_status = PENDING
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>    2. Group by seller_id (consolidate multiple sub-orders into single payout)
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>    3. FOR each seller:
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>        IF total_payout &lt; ₹100:
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>            → Skip (accumulate until threshold met)
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>            → Set payout_status = HELD (below minimum)
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>        ELSE:
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>            → Call Razorpay Route Transfer API or Cashfree Payout API
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>            → Request body: { account_id, amount (paise), currency: INR, notes }
+<a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a>            → On success: set payout_status = PROCESSING, store transfer_id
+<a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a>            → On failure: set payout_status = FAILED, alert admin, retry next day
+<a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a>
+<a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a>    4. Webhook from Razorpay/Cashfree:
+<a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a>        → transfer.processed: set payout_status = COMPLETED, store UTR number
+<a id="__codelineno-20-16" name="__codelineno-20-16" href="#__codelineno-20-16"></a>        → transfer.failed: set payout_status = FAILED, alert admin + seller
+</code></pre></div>
+<h3 id="34-product-moderation-flow-phase-2">3.4 Product Moderation Flow (Phase 2)<a class="headerlink" href="#34-product-moderation-flow-phase-2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>Seller submits product
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>    │
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>    ▼
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>Auto-Validation (immediate):
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>    ☐ All required fields present
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>    ☐ Product name length: 5-200 chars
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>    ☐ Description length: 200-2000 chars
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>    ☐ At least 3 product images, each ≥ 500x500px
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>    ☐ MRP &gt; 0
+<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>    ☐ Selling price ≤ MRP
+<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>    ☐ Selling price &gt; 0
+<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>    ☐ HSN code is in valid HSN list
+<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>    ☐ Stock quantity &gt; 0
+<a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>    ☐ FSSAI license number matches seller&#39;s verified FSSAI (for supplements)
+<a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a>    │
+<a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a>    ├── FAIL → status: DRAFT, show validation errors to seller
+<a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a>    │
+<a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a>    ▼ PASS
+<a id="__codelineno-21-19" name="__codelineno-21-19" href="#__codelineno-21-19"></a>    │
+<a id="__codelineno-21-20" name="__codelineno-21-20" href="#__codelineno-21-20"></a>    status: PENDING_REVIEW
+<a id="__codelineno-21-21" name="__codelineno-21-21" href="#__codelineno-21-21"></a>    → Added to admin moderation queue
+<a id="__codelineno-21-22" name="__codelineno-21-22" href="#__codelineno-21-22"></a>    → Admin receives notification (if queue was empty)
+<a id="__codelineno-21-23" name="__codelineno-21-23" href="#__codelineno-21-23"></a>    │
+<a id="__codelineno-21-24" name="__codelineno-21-24" href="#__codelineno-21-24"></a>    ▼
+<a id="__codelineno-21-25" name="__codelineno-21-25" href="#__codelineno-21-25"></a>Admin Review:
+<a id="__codelineno-21-26" name="__codelineno-21-26" href="#__codelineno-21-26"></a>    Admin checks:
+<a id="__codelineno-21-27" name="__codelineno-21-27" href="#__codelineno-21-27"></a>    ☐ Product images are genuine (not stock photos with watermarks)
+<a id="__codelineno-21-28" name="__codelineno-21-28" href="#__codelineno-21-28"></a>    ☐ Description is accurate, not misleading
+<a id="__codelineno-21-29" name="__codelineno-21-29" href="#__codelineno-21-29"></a>    ☐ Health claims comply with FSSAI / D&amp;C Act (no &quot;cures&quot; or &quot;treats&quot; claims)
+<a id="__codelineno-21-30" name="__codelineno-21-30" href="#__codelineno-21-30"></a>    ☐ Ingredients list is complete and accurate
+<a id="__codelineno-21-31" name="__codelineno-21-31" href="#__codelineno-21-31"></a>    ☐ HSN code is correct for the product type
+<a id="__codelineno-21-32" name="__codelineno-21-32" href="#__codelineno-21-32"></a>    ☐ Category and sub-category assignment is correct
+<a id="__codelineno-21-33" name="__codelineno-21-33" href="#__codelineno-21-33"></a>    ☐ Pricing is reasonable (not suspiciously cheap or expensive)
+<a id="__codelineno-21-34" name="__codelineno-21-34" href="#__codelineno-21-34"></a>    │
+<a id="__codelineno-21-35" name="__codelineno-21-35" href="#__codelineno-21-35"></a>    ├── APPROVE → status: ACTIVE
+<a id="__codelineno-21-36" name="__codelineno-21-36" href="#__codelineno-21-36"></a>    │   → Product visible in catalog within 5 minutes (cache invalidation)
+<a id="__codelineno-21-37" name="__codelineno-21-37" href="#__codelineno-21-37"></a>    │   → Product indexed in Meilisearch
+<a id="__codelineno-21-38" name="__codelineno-21-38" href="#__codelineno-21-38"></a>    │   → Seller notified: &quot;Your product [name] has been approved and is now live&quot;
+<a id="__codelineno-21-39" name="__codelineno-21-39" href="#__codelineno-21-39"></a>    │
+<a id="__codelineno-21-40" name="__codelineno-21-40" href="#__codelineno-21-40"></a>    ├── REQUEST_CHANGES → status: CHANGES_REQUESTED
+<a id="__codelineno-21-41" name="__codelineno-21-41" href="#__codelineno-21-41"></a>    │   → Admin specifies which fields need changes + reason
+<a id="__codelineno-21-42" name="__codelineno-21-42" href="#__codelineno-21-42"></a>    │   → Seller notified with specific feedback
+<a id="__codelineno-21-43" name="__codelineno-21-43" href="#__codelineno-21-43"></a>    │   → Seller edits product, re-submits → back to PENDING_REVIEW
+<a id="__codelineno-21-44" name="__codelineno-21-44" href="#__codelineno-21-44"></a>    │
+<a id="__codelineno-21-45" name="__codelineno-21-45" href="#__codelineno-21-45"></a>    └── REJECT → status: REJECTED
+<a id="__codelineno-21-46" name="__codelineno-21-46" href="#__codelineno-21-46"></a>        → Admin provides rejection reason (free text, required)
+<a id="__codelineno-21-47" name="__codelineno-21-47" href="#__codelineno-21-47"></a>        → Seller notified: &quot;Your product [name] was not approved. Reason: [reason]&quot;
+<a id="__codelineno-21-48" name="__codelineno-21-48" href="#__codelineno-21-48"></a>        → Seller can edit and re-submit as a new submission
+<a id="__codelineno-21-49" name="__codelineno-21-49" href="#__codelineno-21-49"></a>
+<a id="__codelineno-21-50" name="__codelineno-21-50" href="#__codelineno-21-50"></a>
+<a id="__codelineno-21-51" name="__codelineno-21-51" href="#__codelineno-21-51"></a>Post-Approval Edits:
+<a id="__codelineno-21-52" name="__codelineno-21-52" href="#__codelineno-21-52"></a>    Seller edits an ACTIVE product:
+<a id="__codelineno-21-53" name="__codelineno-21-53" href="#__codelineno-21-53"></a>    │
+<a id="__codelineno-21-54" name="__codelineno-21-54" href="#__codelineno-21-54"></a>    ├── Non-regulated fields changed (price, stock, images):
+<a id="__codelineno-21-55" name="__codelineno-21-55" href="#__codelineno-21-55"></a>    │   → Changes go live immediately
+<a id="__codelineno-21-56" name="__codelineno-21-56" href="#__codelineno-21-56"></a>    │   → No re-review needed
+<a id="__codelineno-21-57" name="__codelineno-21-57" href="#__codelineno-21-57"></a>    │
+<a id="__codelineno-21-58" name="__codelineno-21-58" href="#__codelineno-21-58"></a>    └── Regulated fields changed (ingredients, description, health claims, FSSAI, HSN):
+<a id="__codelineno-21-59" name="__codelineno-21-59" href="#__codelineno-21-59"></a>        → status: PENDING_REVIEW (version tracking: old version stays live until new version approved)
+<a id="__codelineno-21-60" name="__codelineno-21-60" href="#__codelineno-21-60"></a>        → Admin re-reviews the changes
+<a id="__codelineno-21-61" name="__codelineno-21-61" href="#__codelineno-21-61"></a>        → On approve: new version replaces old
+<a id="__codelineno-21-62" name="__codelineno-21-62" href="#__codelineno-21-62"></a>        → On reject: old version remains live, seller notified
+</code></pre></div>
+<h3 id="35-gst-invoice-generation">3.5 GST Invoice Generation<a class="headerlink" href="#35-gst-invoice-generation" title="Permanent link">&para;</a></h3>
+<h4 id="invoice-generation-rules">Invoice Generation Rules<a class="headerlink" href="#invoice-generation-rules" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>ON order_confirmed:
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>IF order is own-brand only (Phase 1):
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>    Generate 1 invoice:
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>        seller = platform legal entity
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>        seller_gstin = platform GSTIN
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>        buyer_gstin = buyer.gstin (if provided, optional for B2C)
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>        items = all order items
+<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>        tax_determination:
+<a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>            FOR each item:
+<a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a>                seller_state = platform_warehouse_state
+<a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a>                buyer_state = buyer.address.state
+<a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a>                IF same: CGST + SGST
+<a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a>                ELSE: IGST
+<a id="__codelineno-22-15" name="__codelineno-22-15" href="#__codelineno-22-15"></a>
+<a id="__codelineno-22-16" name="__codelineno-22-16" href="#__codelineno-22-16"></a>IF order has marketplace items (Phase 2):
+<a id="__codelineno-22-17" name="__codelineno-22-17" href="#__codelineno-22-17"></a>    FOR each sub_order (grouped by seller):
+<a id="__codelineno-22-18" name="__codelineno-22-18" href="#__codelineno-22-18"></a>        Generate 1 invoice per seller:
+<a id="__codelineno-22-19" name="__codelineno-22-19" href="#__codelineno-22-19"></a>            seller = seller legal entity
+<a id="__codelineno-22-20" name="__codelineno-22-20" href="#__codelineno-22-20"></a>            seller_gstin = seller.gstin
+<a id="__codelineno-22-21" name="__codelineno-22-21" href="#__codelineno-22-21"></a>            buyer_gstin = buyer.gstin (if provided)
+<a id="__codelineno-22-22" name="__codelineno-22-22" href="#__codelineno-22-22"></a>            items = items in this sub_order
+<a id="__codelineno-22-23" name="__codelineno-22-23" href="#__codelineno-22-23"></a>            tax_determination:
+<a id="__codelineno-22-24" name="__codelineno-22-24" href="#__codelineno-22-24"></a>                seller_state = seller.registered_state
+<a id="__codelineno-22-25" name="__codelineno-22-25" href="#__codelineno-22-25"></a>                buyer_state = buyer.address.state
+<a id="__codelineno-22-26" name="__codelineno-22-26" href="#__codelineno-22-26"></a>                IF same: CGST + SGST
+<a id="__codelineno-22-27" name="__codelineno-22-27" href="#__codelineno-22-27"></a>                ELSE: IGST
+<a id="__codelineno-22-28" name="__codelineno-22-28" href="#__codelineno-22-28"></a>
+<a id="__codelineno-22-29" name="__codelineno-22-29" href="#__codelineno-22-29"></a>    Result: multi-seller order with 3 sellers → buyer receives 3 invoices
+<a id="__codelineno-22-30" name="__codelineno-22-30" href="#__codelineno-22-30"></a>
+<a id="__codelineno-22-31" name="__codelineno-22-31" href="#__codelineno-22-31"></a>
+<a id="__codelineno-22-32" name="__codelineno-22-32" href="#__codelineno-22-32"></a>ON return_approved:
+<a id="__codelineno-22-33" name="__codelineno-22-33" href="#__codelineno-22-33"></a>    Generate credit note:
+<a id="__codelineno-22-34" name="__codelineno-22-34" href="#__codelineno-22-34"></a>        reference_invoice = original invoice number
+<a id="__codelineno-22-35" name="__codelineno-22-35" href="#__codelineno-22-35"></a>        items = returned items only
+<a id="__codelineno-22-36" name="__codelineno-22-36" href="#__codelineno-22-36"></a>        amount = negative (refund amount)
+<a id="__codelineno-22-37" name="__codelineno-22-37" href="#__codelineno-22-37"></a>        tax = negative (proportional tax refund)
+</code></pre></div>
+<h4 id="invoice-pdf-fields">Invoice PDF Fields<a class="headerlink" href="#invoice-pdf-fields" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>INVOICE
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>─────────────────────────────────────────────────
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>Invoice No: INV/2627/00042          Date: 03-May-2026
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>Order No: ORD-20260503-001
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>SOLD BY:
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>[Seller Legal Name]
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>[Seller Address]
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a>GSTIN: [Seller GSTIN]
+<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a>FSSAI: [FSSAI Number] (if supplements)
+<a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a>
+<a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a>BILL TO:                           SHIP TO:
+<a id="__codelineno-23-13" name="__codelineno-23-13" href="#__codelineno-23-13"></a>[Buyer Name]                       [Buyer Name]
+<a id="__codelineno-23-14" name="__codelineno-23-14" href="#__codelineno-23-14"></a>[Buyer Address]                    [Delivery Address]
+<a id="__codelineno-23-15" name="__codelineno-23-15" href="#__codelineno-23-15"></a>GSTIN: [Buyer GSTIN if provided]   [Pincode]
+<a id="__codelineno-23-16" name="__codelineno-23-16" href="#__codelineno-23-16"></a>
+<a id="__codelineno-23-17" name="__codelineno-23-17" href="#__codelineno-23-17"></a>─────────────────────────────────────────────────
+<a id="__codelineno-23-18" name="__codelineno-23-18" href="#__codelineno-23-18"></a>SN | Product    | HSN  | Qty | Rate   | Taxable | CGST    | SGST    | Total
+<a id="__codelineno-23-19" name="__codelineno-23-19" href="#__codelineno-23-19"></a>                                       Value    | Rate Amt | Rate Amt |
+<a id="__codelineno-23-20" name="__codelineno-23-20" href="#__codelineno-23-20"></a>───┼────────────┼──────┼─────┼────────┼─────────┼─────────┼─────────┼──────
+<a id="__codelineno-23-21" name="__codelineno-23-21" href="#__codelineno-23-21"></a> 1 | Vitamin D3 | 2106 |  2  | ₹499   | ₹891    | 6% ₹53  | 6% ₹53  | ₹998
+<a id="__codelineno-23-22" name="__codelineno-23-22" href="#__codelineno-23-22"></a> 2 | Face Serum | 3304 |  1  | ₹546   | ₹427    | 14% ₹60 | 14% ₹60 | ₹546
+<a id="__codelineno-23-23" name="__codelineno-23-23" href="#__codelineno-23-23"></a>───┼────────────┼──────┼─────┼────────┼─────────┼─────────┼─────────┼──────
+<a id="__codelineno-23-24" name="__codelineno-23-24" href="#__codelineno-23-24"></a>                               SUBTOTAL: ₹1,318 | ₹113    | ₹113    | ₹1,544
+<a id="__codelineno-23-25" name="__codelineno-23-25" href="#__codelineno-23-25"></a>                               SHIPPING:                              ₹50
+<a id="__codelineno-23-26" name="__codelineno-23-26" href="#__codelineno-23-26"></a>                               DISCOUNT:                             -₹100
+<a id="__codelineno-23-27" name="__codelineno-23-27" href="#__codelineno-23-27"></a>                               ─────────────────────────────────────────────
+<a id="__codelineno-23-28" name="__codelineno-23-28" href="#__codelineno-23-28"></a>                               TOTAL:                                ₹1,494
+<a id="__codelineno-23-29" name="__codelineno-23-29" href="#__codelineno-23-29"></a>                               ─────────────────────────────────────────────
+<a id="__codelineno-23-30" name="__codelineno-23-30" href="#__codelineno-23-30"></a>                               Amount in words: Rupees One Thousand Four
+<a id="__codelineno-23-31" name="__codelineno-23-31" href="#__codelineno-23-31"></a>                               Hundred Ninety-Four Only
+<a id="__codelineno-23-32" name="__codelineno-23-32" href="#__codelineno-23-32"></a>
+<a id="__codelineno-23-33" name="__codelineno-23-33" href="#__codelineno-23-33"></a>Place of Supply: Karnataka (29)
+<a id="__codelineno-23-34" name="__codelineno-23-34" href="#__codelineno-23-34"></a>Reverse Charge: No
+<a id="__codelineno-23-35" name="__codelineno-23-35" href="#__codelineno-23-35"></a>
+<a id="__codelineno-23-36" name="__codelineno-23-36" href="#__codelineno-23-36"></a>─────────────────────────────────────────────────
+<a id="__codelineno-23-37" name="__codelineno-23-37" href="#__codelineno-23-37"></a>This is a computer-generated invoice. No signature required.
+</code></pre></div>
+<hr />
+<h2 id="4-notification-specifications">4. Notification Specifications<a class="headerlink" href="#4-notification-specifications" title="Permanent link">&para;</a></h2>
+<h3 id="41-buyer-notifications">4.1 Buyer Notifications<a class="headerlink" href="#41-buyer-notifications" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Channel</th>
+<th>Template</th>
+<th>Variables</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OTP for login</td>
+<td>SMS</td>
+<td>"{{otp}} is your OTP to login to [Brand]. Valid for 5 min. Do not share with anyone."</td>
+<td>otp</td>
+</tr>
+<tr>
+<td>COD OTP</td>
+<td>SMS</td>
+<td>"{{otp}} is your OTP to confirm COD order #{{order_id}} of ₹{{amount}}. Valid for 5 min."</td>
+<td>otp, order_id, amount</td>
+</tr>
+<tr>
+<td>Order placed</td>
+<td>Email + SMS</td>
+<td>Email: full order summary with items, total, delivery estimate. SMS: "Order #{{order_id}} placed! Expected delivery by {{delivery_date}}. Track: {{url}}"</td>
+<td>order_id, items, total, delivery_date, url</td>
+</tr>
+<tr>
+<td>Order shipped</td>
+<td>Email + SMS</td>
+<td>Email: tracking details. SMS: "Order #{{order_id}} shipped via {{carrier}}. Track: {{tracking_url}}"</td>
+<td>order_id, carrier, tracking_url</td>
+</tr>
+<tr>
+<td>Out for delivery</td>
+<td>SMS</td>
+<td>"Order #{{order_id}} is out for delivery today."</td>
+<td>order_id</td>
+</tr>
+<tr>
+<td>Order delivered</td>
+<td>Email + SMS</td>
+<td>SMS: "Order #{{order_id}} delivered! Rate your experience: {{review_url}}"</td>
+<td>order_id, review_url</td>
+</tr>
+<tr>
+<td>Order cancelled (by buyer)</td>
+<td>Email</td>
+<td>"Your order #{{order_id}} has been cancelled. Refund of ₹{{amount}} will be processed within 5-7 business days."</td>
+<td>order_id, amount</td>
+</tr>
+<tr>
+<td>Order cancelled (by seller)</td>
+<td>Email + SMS</td>
+<td>"Order #{{order_id}} has been cancelled by the seller. Full refund of ₹{{amount}} will be processed."</td>
+<td>order_id, amount, reason</td>
+</tr>
+<tr>
+<td>Refund processed</td>
+<td>Email + SMS</td>
+<td>"Refund of ₹{{amount}} for order #{{order_id}} has been processed. It will reflect in your account within 5-7 business days."</td>
+<td>amount, order_id</td>
+</tr>
+<tr>
+<td>Return approved</td>
+<td>Email</td>
+<td>"Your return request for [product] from order #{{order_id}} has been approved. Pickup will be scheduled within 2-3 business days."</td>
+<td>product_name, order_id</td>
+</tr>
+<tr>
+<td>Return rejected</td>
+<td>Email</td>
+<td>"Your return request for [product] was not approved. Reason: {{reason}}. Contact support for assistance."</td>
+<td>product_name, reason</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-seller-notifications-phase-2">4.2 Seller Notifications (Phase 2)<a class="headerlink" href="#42-seller-notifications-phase-2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Channel</th>
+<th>Template Variables</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Application received</td>
+<td>Email</td>
+<td>business_name, reference_number</td>
+</tr>
+<tr>
+<td>Application approved</td>
+<td>Email</td>
+<td>business_name, onboarding_link</td>
+</tr>
+<tr>
+<td>Application rejected</td>
+<td>Email</td>
+<td>business_name, rejection_reason</td>
+</tr>
+<tr>
+<td>New order (sub-order)</td>
+<td>Email + Dashboard</td>
+<td>order_id, items, buyer_address, total</td>
+</tr>
+<tr>
+<td>Product approved</td>
+<td>Email + Dashboard</td>
+<td>product_name</td>
+</tr>
+<tr>
+<td>Product rejected</td>
+<td>Email + Dashboard</td>
+<td>product_name, rejection_reason</td>
+</tr>
+<tr>
+<td>Product changes requested</td>
+<td>Email + Dashboard</td>
+<td>product_name, feedback</td>
+</tr>
+<tr>
+<td>Payout processed</td>
+<td>Email + Dashboard</td>
+<td>payout_amount, utr_number, order_references</td>
+</tr>
+<tr>
+<td>Payout failed</td>
+<td>Email + Dashboard</td>
+<td>payout_amount, failure_reason</td>
+</tr>
+<tr>
+<td>SLA warning</td>
+<td>Email + Dashboard</td>
+<td>metric_name, current_value, threshold</td>
+</tr>
+<tr>
+<td>Account suspended</td>
+<td>Email</td>
+<td>suspension_reason, appeal_process</td>
+</tr>
+<tr>
+<td>FSSAI license expiring (30 days before)</td>
+<td>Email</td>
+<td>license_number, expiry_date</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-admin-notifications">4.3 Admin Notifications<a class="headerlink" href="#43-admin-notifications" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Channel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New seller application</td>
+<td>Email + Dashboard</td>
+</tr>
+<tr>
+<td>Product moderation queue &gt; 10 items</td>
+<td>Dashboard alert</td>
+</tr>
+<tr>
+<td>Order stuck in PROCESSING &gt; 48 hours</td>
+<td>Dashboard alert</td>
+</tr>
+<tr>
+<td>Payout failure</td>
+<td>Email + Dashboard</td>
+</tr>
+<tr>
+<td>High RTO rate (&gt;15% in a week)</td>
+<td>Dashboard alert</td>
+</tr>
+<tr>
+<td>Seller SLA violation</td>
+<td>Dashboard alert</td>
+</tr>
+<tr>
+<td>Low stock alert (product &lt; threshold units)</td>
+<td>Dashboard alert</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-search-filter-specifications">5. Search &amp; Filter Specifications<a class="headerlink" href="#5-search-filter-specifications" title="Permanent link">&para;</a></h2>
+<h3 id="51-search-ranking">5.1 Search Ranking<a class="headerlink" href="#51-search-ranking" title="Permanent link">&para;</a></h3>
+<p><strong>Ranking Strategy</strong> (Meilisearch configuration):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>Ranking Rules (in priority order):
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>1. words       -- documents containing all query words rank higher
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>2. typo        -- fewer typos rank higher
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>3. proximity   -- words closer together rank higher
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>4. attribute   -- matches in higher-weighted fields rank higher
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>5. sort        -- user-selected sort order (if applied)
+<a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>6. exactness   -- exact matches rank higher than prefix/substring
+<a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>
+<a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a>Searchable Attributes (in priority order):
+<a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a>1. name        (highest weight)
+<a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a>2. brand
+<a id="__codelineno-24-12" name="__codelineno-24-12" href="#__codelineno-24-12"></a>3. description
+<a id="__codelineno-24-13" name="__codelineno-24-13" href="#__codelineno-24-13"></a>4. ingredients
+<a id="__codelineno-24-14" name="__codelineno-24-14" href="#__codelineno-24-14"></a>5. concerns    (array field)
+<a id="__codelineno-24-15" name="__codelineno-24-15" href="#__codelineno-24-15"></a>6. tags        (array field)
+</code></pre></div>
+<h3 id="52-filter-logic">5.2 Filter Logic<a class="headerlink" href="#52-filter-logic" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>Applied filters are ANDed across dimensions, ORed within a dimension.
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>Example:
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>    User selects:
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>        Category: Supplements
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>        Concern: [Immunity, Energy]     (OR: Immunity OR Energy)
+<a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>        Price: 500-1000                 (range)
+<a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a>        Product Type: [Capsule, Tablet] (OR: Capsule OR Tablet)
+<a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a>        Rating: 4+                      (minimum threshold)
+<a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a>
+<a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a>    Query: category=supplements AND (concern=immunity OR concern=energy) AND price&gt;=500 AND price&lt;=1000 AND (type=capsule OR type=tablet) AND rating&gt;=4
+</code></pre></div>
+<h3 id="53-autocomplete-behavior">5.3 Autocomplete Behavior<a class="headerlink" href="#53-autocomplete-behavior" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>User types: &quot;vit&quot;
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>Meilisearch search with limit=10, prefix matching
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>Response groups:
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>    Products (max 5):
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>        &quot;Vitamin D3 2000IU&quot; → link to PDP
+<a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>        &quot;Vitamin C Serum&quot; → link to PDP
+<a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a>        &quot;Vital Protein Powder&quot; → link to PDP
+<a id="__codelineno-26-10" name="__codelineno-26-10" href="#__codelineno-26-10"></a>
+<a id="__codelineno-26-11" name="__codelineno-26-11" href="#__codelineno-26-11"></a>    Categories (max 3):
+<a id="__codelineno-26-12" name="__codelineno-26-12" href="#__codelineno-26-12"></a>        &quot;Vitamins &amp; Minerals&quot; → link to category PLP
+<a id="__codelineno-26-13" name="__codelineno-26-13" href="#__codelineno-26-13"></a>
+<a id="__codelineno-26-14" name="__codelineno-26-14" href="#__codelineno-26-14"></a>    Journal (max 2):
+<a id="__codelineno-26-15" name="__codelineno-26-15" href="#__codelineno-26-15"></a>        &quot;Benefits of Vitamin D for Indian Summers&quot; → link to article
+<a id="__codelineno-26-16" name="__codelineno-26-16" href="#__codelineno-26-16"></a>
+<a id="__codelineno-26-17" name="__codelineno-26-17" href="#__codelineno-26-17"></a>Display:
+<a id="__codelineno-26-18" name="__codelineno-26-18" href="#__codelineno-26-18"></a>    ┌────────────────────────────────────┐
+<a id="__codelineno-26-19" name="__codelineno-26-19" href="#__codelineno-26-19"></a>    │ 🔍 vit                        [X] │
+<a id="__codelineno-26-20" name="__codelineno-26-20" href="#__codelineno-26-20"></a>    ├────────────────────────────────────┤
+<a id="__codelineno-26-21" name="__codelineno-26-21" href="#__codelineno-26-21"></a>    │ Products                          │
+<a id="__codelineno-26-22" name="__codelineno-26-22" href="#__codelineno-26-22"></a>    │   Vitamin D3 2000IU        ₹499   │
+<a id="__codelineno-26-23" name="__codelineno-26-23" href="#__codelineno-26-23"></a>    │   Vitamin C Serum          ₹799   │
+<a id="__codelineno-26-24" name="__codelineno-26-24" href="#__codelineno-26-24"></a>    │   Vital Protein Powder   ₹1,299   │
+<a id="__codelineno-26-25" name="__codelineno-26-25" href="#__codelineno-26-25"></a>    ├────────────────────────────────────┤
+<a id="__codelineno-26-26" name="__codelineno-26-26" href="#__codelineno-26-26"></a>    │ Categories                        │
+<a id="__codelineno-26-27" name="__codelineno-26-27" href="#__codelineno-26-27"></a>    │   Vitamins &amp; Minerals             │
+<a id="__codelineno-26-28" name="__codelineno-26-28" href="#__codelineno-26-28"></a>    ├────────────────────────────────────┤
+<a id="__codelineno-26-29" name="__codelineno-26-29" href="#__codelineno-26-29"></a>    │ From Journal                      │
+<a id="__codelineno-26-30" name="__codelineno-26-30" href="#__codelineno-26-30"></a>    │   Benefits of Vitamin D for ...   │
+<a id="__codelineno-26-31" name="__codelineno-26-31" href="#__codelineno-26-31"></a>    └────────────────────────────────────┘
+<a id="__codelineno-26-32" name="__codelineno-26-32" href="#__codelineno-26-32"></a>
+<a id="__codelineno-26-33" name="__codelineno-26-33" href="#__codelineno-26-33"></a>Timing:
+<a id="__codelineno-26-34" name="__codelineno-26-34" href="#__codelineno-26-34"></a>    - Debounce input: 150ms (don&#39;t search on every keystroke)
+<a id="__codelineno-26-35" name="__codelineno-26-35" href="#__codelineno-26-35"></a>    - API response target: &lt;200ms
+<a id="__codelineno-26-36" name="__codelineno-26-36" href="#__codelineno-26-36"></a>    - Show skeleton loading state after 100ms if no response
+</code></pre></div>
+<hr />
+<h2 id="6-api-contract-summary">6. API Contract Summary<a class="headerlink" href="#6-api-contract-summary" title="Permanent link">&para;</a></h2>
+<h3 id="61-key-api-endpoints">6.1 Key API Endpoints<a class="headerlink" href="#61-key-api-endpoints" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Endpoint</th>
+<th>Description</th>
+<th>Auth Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td><code>/api/auth/otp/send</code></td>
+<td>Send OTP</td>
+<td>No</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/auth/otp/verify</code></td>
+<td>Verify OTP, return tokens</td>
+<td>No</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/auth/refresh</code></td>
+<td>Refresh access token</td>
+<td>Refresh token</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/auth/logout</code></td>
+<td>Invalidate refresh token</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/products</code></td>
+<td>List products (with filters, sort, pagination)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/products/:slug</code></td>
+<td>Product detail</td>
+<td>No</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/categories</code></td>
+<td>Category tree</td>
+<td>No</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/search?q=</code></td>
+<td>Search products + content</td>
+<td>No</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/search/suggest?q=</code></td>
+<td>Autocomplete suggestions</td>
+<td>No</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/cart</code></td>
+<td>Get current cart</td>
+<td>Optional (anon or auth)</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/cart/items</code></td>
+<td>Add item to cart</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td><code>/api/cart/items/:id</code></td>
+<td>Update item quantity</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td><code>/api/cart/items/:id</code></td>
+<td>Remove item from cart</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/cart/merge</code></td>
+<td>Merge anonymous cart on login</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/checkout</code></td>
+<td>Initiate checkout</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/checkout/address</code></td>
+<td>Set delivery address</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/checkout/shipping</code></td>
+<td>Get shipping options</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/checkout/payment</code></td>
+<td>Create Razorpay order</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/checkout/confirm</code></td>
+<td>Verify payment, create order</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/checkout/coupon</code></td>
+<td>Apply coupon</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td><code>/api/checkout/coupon</code></td>
+<td>Remove coupon</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/orders</code></td>
+<td>List buyer's orders</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/orders/:id</code></td>
+<td>Order detail</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/orders/:id/cancel</code></td>
+<td>Cancel order</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/orders/:id/return</code></td>
+<td>Request return</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/account/profile</code></td>
+<td>Get profile</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td><code>/api/account/profile</code></td>
+<td>Update profile</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/account/addresses</code></td>
+<td>List addresses</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/account/addresses</code></td>
+<td>Add address</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td><code>/api/account/addresses/:id</code></td>
+<td>Update address</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td><code>/api/account/addresses/:id</code></td>
+<td>Delete address</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/account/wishlist</code></td>
+<td>Get wishlist</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/account/wishlist</code></td>
+<td>Add to wishlist</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td><code>/api/account/wishlist/:product_id</code></td>
+<td>Remove from wishlist</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/serviceability/:pincode</code></td>
+<td>Check pincode serviceability</td>
+<td>No</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/content/articles</code></td>
+<td>List articles</td>
+<td>No</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/content/articles/:slug</code></td>
+<td>Article detail</td>
+<td>No</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/webhooks/razorpay</code></td>
+<td>Razorpay payment webhooks</td>
+<td>Webhook signature</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/webhooks/shiprocket</code></td>
+<td>Shiprocket tracking webhooks</td>
+<td>IP whitelist</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-phase-2-seller-api-endpoints">6.2 Phase 2 Seller API Endpoints<a class="headerlink" href="#62-phase-2-seller-api-endpoints" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Endpoint</th>
+<th>Description</th>
+<th>Auth</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td><code>/api/seller/apply</code></td>
+<td>Submit seller application</td>
+<td>No</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/seller/auth/login</code></td>
+<td>Seller login</td>
+<td>No</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/seller/dashboard</code></td>
+<td>Dashboard metrics</td>
+<td>Seller</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/seller/products</code></td>
+<td>List seller's products</td>
+<td>Seller</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/seller/products</code></td>
+<td>Submit new product</td>
+<td>Seller</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td><code>/api/seller/products/:id</code></td>
+<td>Edit product</td>
+<td>Seller</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/seller/orders</code></td>
+<td>List seller's sub-orders</td>
+<td>Seller</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/seller/orders/:id</code></td>
+<td>Sub-order detail</td>
+<td>Seller</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td><code>/api/seller/orders/:id/status</code></td>
+<td>Update sub-order status (ship, etc.)</td>
+<td>Seller</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/seller/payouts</code></td>
+<td>Payout history</td>
+<td>Seller</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/seller/profile</code></td>
+<td>Seller profile</td>
+<td>Seller</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td><code>/api/seller/profile</code></td>
+<td>Update profile</td>
+<td>Seller</td>
+</tr>
+</tbody>
+</table>
+<h3 id="63-admin-api-endpoints">6.3 Admin API Endpoints<a class="headerlink" href="#63-admin-api-endpoints" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Endpoint</th>
+<th>Description</th>
+<th>Auth</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td><code>/api/admin/dashboard</code></td>
+<td>Admin dashboard metrics</td>
+<td>Admin</td>
+</tr>
+<tr>
+<td>GET/POST/PATCH</td>
+<td><code>/api/admin/products/*</code></td>
+<td>Product CRUD</td>
+<td>Catalog Admin</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/admin/orders/*</code></td>
+<td>Order management</td>
+<td>Order Admin</td>
+</tr>
+<tr>
+<td>GET/PATCH</td>
+<td><code>/api/admin/sellers/*</code></td>
+<td>Seller management</td>
+<td>Seller Admin</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td><code>/api/admin/sellers/:id/approve</code></td>
+<td>Approve seller</td>
+<td>Seller Admin</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td><code>/api/admin/sellers/:id/reject</code></td>
+<td>Reject seller</td>
+<td>Seller Admin</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td><code>/api/admin/products/:id/moderate</code></td>
+<td>Approve/reject product</td>
+<td>Catalog Admin</td>
+</tr>
+<tr>
+<td>GET/POST/PATCH</td>
+<td><code>/api/admin/coupons/*</code></td>
+<td>Coupon management</td>
+<td>Admin</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/admin/reports/*</code></td>
+<td>Reports</td>
+<td>Admin</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>Cross-references: BMRD (Doc 01), PRD (Doc 02), IA (Doc 03), TAD (Doc 04)</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

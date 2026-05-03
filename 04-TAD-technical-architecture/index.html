@@ -1,0 +1,3175 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Enterprise PRD suite for a hybrid DTC + curated marketplace wellness platform, India-first.">
+      
+      
+      
+      
+        <link rel="prev" href="../03-IA-information-architecture/">
+      
+      
+        <link rel="next" href="../05-FSD-functional-specifications/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>4. Technical Architecture (TAD) - Wellness Platform - Product Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tad-technical-architecture-document" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Wellness Platform - Product Documentation" class="md-header__button md-logo" aria-label="Wellness Platform - Product Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Wellness Platform - Product Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              4. Technical Architecture (TAD)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Wellness Platform - Product Documentation" class="md-nav__button md-logo" aria-label="Wellness Platform - Product Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Wellness Platform - Product Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-BMRD-business-market-requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Business & Market Requirements (BMRD)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-PRD-product-requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Product Requirements (PRD)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-IA-information-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Information Architecture (IA)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Technical Architecture (TAD)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Technical Architecture (TAD)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-platform-evaluation-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Platform Evaluation &amp; Decision
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Platform Evaluation &amp; Decision">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-evaluation-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Evaluation Criteria
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-decision-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Decision Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-recommendation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Recommendation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-risk-mitigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Risk Mitigation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-system-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. System Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. System Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-high-level-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 High-Level Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-architecture-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Architecture Pattern
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-technology-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Technology Stack
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Technology Stack">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-core-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Core Stack
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Infrastructure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-frontend-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Frontend Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-integration-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Integration Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Integration Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-payments-razorpay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Payments -- Razorpay
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-shipping-shiprocket" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Shipping -- Shiprocket
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-sms-otp-msg91" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 SMS &amp; OTP -- MSG91
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-gst-invoicing-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 GST &amp; Invoicing Engine
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-search-meilisearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 Search -- Meilisearch
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-data-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Data Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Data Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-core-entity-relationship-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Core Entity Relationship Diagram
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-key-data-design-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Key Data Design Decisions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-marketplace-specific-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Marketplace-Specific Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Marketplace-Specific Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-product-ownership-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Product Ownership Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-cart-splitting-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Cart Splitting Logic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-payout-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Payout Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-seller-data-isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Seller Data Isolation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-content-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Content Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Content Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-cms-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 CMS Selection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-content-models-strapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Content Models (Strapi)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-content-to-commerce-linking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Content-to-Commerce Linking
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-content-delivery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4 Content Delivery
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-security-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Security Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Security Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 Authentication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-authorization-rbac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Authorization (RBAC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-data-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 Data Protection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84-dpdp-act-2023-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4 DPDP Act 2023 Compliance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-infrastructure-devops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Infrastructure &amp; DevOps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Infrastructure &amp; DevOps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-deployment-architecture-phase-1-mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 Deployment Architecture (Phase 1 -- MVP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-cicd-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 CI/CD Pipeline
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-monitoring-alerting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3 Monitoring &amp; Alerting
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-non-functional-requirements-detailed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Non-Functional Requirements (Detailed)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Non-Functional Requirements (Detailed)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 Performance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-availability-reliability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2 Availability &amp; Reliability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#103-scalability-targets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3 Scalability Targets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-FSD-functional-specifications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Functional Specifications (FSD)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-platform-evaluation-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Platform Evaluation &amp; Decision
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Platform Evaluation &amp; Decision">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-evaluation-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Evaluation Criteria
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-decision-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Decision Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-recommendation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Recommendation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-risk-mitigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Risk Mitigation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-system-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. System Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. System Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-high-level-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 High-Level Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-architecture-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Architecture Pattern
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-technology-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Technology Stack
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Technology Stack">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-core-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Core Stack
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Infrastructure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-frontend-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Frontend Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-integration-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Integration Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Integration Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-payments-razorpay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Payments -- Razorpay
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-shipping-shiprocket" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Shipping -- Shiprocket
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-sms-otp-msg91" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 SMS &amp; OTP -- MSG91
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-gst-invoicing-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 GST &amp; Invoicing Engine
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-search-meilisearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 Search -- Meilisearch
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-data-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Data Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Data Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-core-entity-relationship-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Core Entity Relationship Diagram
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-key-data-design-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Key Data Design Decisions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-marketplace-specific-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Marketplace-Specific Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Marketplace-Specific Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-product-ownership-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Product Ownership Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-cart-splitting-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Cart Splitting Logic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-payout-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Payout Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-seller-data-isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Seller Data Isolation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-content-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Content Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Content Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-cms-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 CMS Selection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-content-models-strapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Content Models (Strapi)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-content-to-commerce-linking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Content-to-Commerce Linking
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-content-delivery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4 Content Delivery
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-security-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Security Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Security Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 Authentication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-authorization-rbac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Authorization (RBAC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-data-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 Data Protection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84-dpdp-act-2023-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4 DPDP Act 2023 Compliance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-infrastructure-devops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Infrastructure &amp; DevOps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Infrastructure &amp; DevOps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-deployment-architecture-phase-1-mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 Deployment Architecture (Phase 1 -- MVP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-cicd-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 CI/CD Pipeline
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-monitoring-alerting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3 Monitoring &amp; Alerting
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-non-functional-requirements-detailed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Non-Functional Requirements (Detailed)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Non-Functional Requirements (Detailed)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 Performance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-availability-reliability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2 Availability &amp; Reliability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#103-scalability-targets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3 Scalability Targets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="tad-technical-architecture-document">TAD: Technical Architecture Document<a class="headerlink" href="#tad-technical-architecture-document" title="Permanent link">&para;</a></h1>
+<p><strong>Document ID</strong>: TAD-v1.0
+<strong>Status</strong>: Draft
+<strong>Author</strong>: [Engineering Lead / Solutions Architect]
+<strong>Last Updated</strong>: [Date]
+<strong>Audience</strong>: Engineering, DevOps, AI coding agents
+<strong>Dependencies</strong>: BMRD (Doc 01), PRD (Doc 02), IA (Doc 03)</p>
+<hr />
+<h2 id="1-platform-evaluation-decision">1. Platform Evaluation &amp; Decision<a class="headerlink" href="#1-platform-evaluation-decision" title="Permanent link">&para;</a></h2>
+<h3 id="11-evaluation-criteria">1.1 Evaluation Criteria<a class="headerlink" href="#11-evaluation-criteria" title="Permanent link">&para;</a></h3>
+<p>The platform must support three surfaces (branded storefront, curated marketplace, content hub) with India-specific integrations. Criteria are weighted by their importance to this specific project.</p>
+<h3 id="12-decision-matrix">1.2 Decision Matrix<a class="headerlink" href="#12-decision-matrix" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Weight</th>
+<th style="text-align: center;">Shopify + Webkul</th>
+<th style="text-align: center;">WooCommerce + Dokan</th>
+<th style="text-align: center;">Custom Headless (Next.js + Medusa)</th>
+<th style="text-align: center;">BigCommerce + Multi-Vendor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Multi-vendor marketplace support</strong></td>
+<td>25%</td>
+<td style="text-align: center;">2/5 -- Plugin-based, fragile one-way syncs, no native split checkout</td>
+<td style="text-align: center;">3/5 -- Dokan is mature but PHP-based, limited API-first capabilities</td>
+<td style="text-align: center;">5/5 -- Build exactly what's needed, native multi-seller cart/checkout</td>
+<td style="text-align: center;">3/5 -- Better plugin ecosystem than Shopify but still third-party</td>
+</tr>
+<tr>
+<td><strong>India payment gateways (UPI, COD, Razorpay)</strong></td>
+<td>15%</td>
+<td style="text-align: center;">4/5 -- Razorpay plugin available, UPI works</td>
+<td style="text-align: center;">4/5 -- Razorpay plugin, WooCommerce gateway ecosystem strong</td>
+<td style="text-align: center;">5/5 -- Direct Razorpay SDK integration, full control over UPI flows, COD OTP</td>
+<td style="text-align: center;">3/5 -- Razorpay available but less India-focused ecosystem</td>
+</tr>
+<tr>
+<td><strong>Content hub / CMS quality</strong></td>
+<td>10%</td>
+<td style="text-align: center;">2/5 -- Shopify blog is basic, no headless CMS built-in</td>
+<td style="text-align: center;">5/5 -- WordPress IS the CMS, best content management</td>
+<td style="text-align: center;">4/5 -- Integrate any headless CMS (Strapi, Sanity, Contentful)</td>
+<td style="text-align: center;">2/5 -- Blog is basic, needs headless CMS integration</td>
+</tr>
+<tr>
+<td><strong>GST compliance (multi-seller invoicing, HSN, TCS)</strong></td>
+<td>15%</td>
+<td style="text-align: center;">1/5 -- No native GST support for marketplace, plugins are limited</td>
+<td style="text-align: center;">3/5 -- GST plugins exist but multi-seller invoicing requires custom work</td>
+<td style="text-align: center;">5/5 -- Build GST engine with exact India requirements (HSN mapping, TCS, GSTR-1 export)</td>
+<td style="text-align: center;">2/5 -- Limited India tax support</td>
+</tr>
+<tr>
+<td><strong>Total cost (Year 1)</strong></td>
+<td>10%</td>
+<td style="text-align: center;">2/5 -- Shopify Plus ($2,300/mo) + Webkul ($500/yr) + apps = ~$30K+/yr</td>
+<td style="text-align: center;">4/5 -- Self-hosted, Dokan Pro ($499/yr), hosting (~$200/mo) = ~$5-8K/yr</td>
+<td style="text-align: center;">3/5 -- Dev cost (~$15-25K build), hosting (~$200-500/mo) = ~$20-30K first year, lower ongoing</td>
+<td style="text-align: center;">2/5 -- BigCommerce Enterprise ($1,000+/mo) + plugins = ~$15-20K/yr</td>
+</tr>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>10%</td>
+<td style="text-align: center;">5/5 -- Fully managed, scales automatically</td>
+<td style="text-align: center;">2/5 -- Self-managed scaling, PHP performance ceiling</td>
+<td style="text-align: center;">5/5 -- Cloud-native, horizontally scalable, CDN-friendly JAMstack</td>
+<td style="text-align: center;">4/5 -- Managed, scales well</td>
+</tr>
+<tr>
+<td><strong>Developer experience &amp; AI-agent buildability</strong></td>
+<td>10%</td>
+<td style="text-align: center;">2/5 -- Liquid templating, limited API, closed ecosystem</td>
+<td style="text-align: center;">2/5 -- PHP/WordPress ecosystem, dated developer experience</td>
+<td style="text-align: center;">5/5 -- Modern TypeScript/React stack, API-first, excellent for AI agents</td>
+<td style="text-align: center;">3/5 -- Better API than Shopify, but still constraints</td>
+</tr>
+<tr>
+<td><strong>Speed to MVP</strong></td>
+<td>5%</td>
+<td style="text-align: center;">4/5 -- Fast for simple stores, slow when customizing marketplace</td>
+<td style="text-align: center;">4/5 -- Fast with themes, Dokan setup quick</td>
+<td style="text-align: center;">3/5 -- Slower initial build, but faster iteration long-term</td>
+<td style="text-align: center;">3/5 -- Moderate setup time</td>
+</tr>
+<tr>
+<td><strong>WEIGHTED SCORE</strong></td>
+<td>100%</td>
+<td style="text-align: center;"><strong>2.55/5</strong></td>
+<td style="text-align: center;"><strong>3.25/5</strong></td>
+<td style="text-align: center;"><strong>4.65/5</strong></td>
+<td style="text-align: center;"><strong>2.75/5</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="13-recommendation">1.3 Recommendation<a class="headerlink" href="#13-recommendation" title="Permanent link">&para;</a></h3>
+<p><strong>Custom Headless Build: Next.js (frontend) + Medusa.js (commerce engine)</strong></p>
+<p>Rationale:
+1. <strong>Marketplace is core, not an add-on</strong>: The hybrid model (own brand + curated sellers) is the business differentiator. Bolting marketplace onto Shopify/BigCommerce via plugins creates technical debt from day one.
+2. <strong>India compliance is non-negotiable</strong>: GST multi-seller invoicing, TCS collection, FSSAI display, COD OTP -- these require custom logic that no off-the-shelf platform handles out of the box.
+3. <strong>Content hub needs quality CMS</strong>: A headless CMS (Strapi or Sanity) integrated with a headless commerce engine gives the best of both worlds -- real CMS capabilities with product-to-content linking.
+4. <strong>AI-agent buildability</strong>: Modern TypeScript/React codebase is significantly better for AI coding agents than PHP (WooCommerce) or Liquid (Shopify). This matters given the stated goal of using AI agents for development.
+5. <strong>Long-term cost advantage</strong>: Higher upfront investment but no recurring platform fees ($2,300/mo for Shopify Plus, $500+/yr for marketplace plugins). Year 2+ costs are substantially lower.</p>
+<p><strong>Why Medusa.js specifically</strong>:
+- Open-source, MIT licensed (no vendor lock-in)
+- Node.js/TypeScript (same language as Next.js frontend)
+- Built-in: products, variants, carts, orders, customers, payments, shipping, discounts, regions, taxes
+- Plugin architecture for extending (marketplace logic, seller management)
+- Admin panel included (extensible React-based admin)
+- Active community, well-documented API</p>
+<p><strong>Alternative considered</strong>: Saleor (Python/GraphQL). Strong option but Python backend introduces a second language. Medusa's Node.js alignment with Next.js frontend keeps the stack unified.</p>
+<h3 id="14-risk-mitigation">1.4 Risk Mitigation<a class="headerlink" href="#14-risk-mitigation" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Longer MVP development time</td>
+<td>Phase approach: Phase 1 (own brand, no marketplace) is simpler. Medusa handles single-seller e-commerce natively. Marketplace is Phase 2.</td>
+</tr>
+<tr>
+<td>No managed hosting (unlike Shopify)</td>
+<td>Use containerized deployment on AWS/GCP with managed services (RDS, ElastiCache). Infrastructure-as-code from day one.</td>
+</tr>
+<tr>
+<td>Medusa community smaller than Shopify ecosystem</td>
+<td>Core commerce features are solid. Custom marketplace logic would need custom development regardless of platform.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-system-architecture">2. System Architecture<a class="headerlink" href="#2-system-architecture" title="Permanent link">&para;</a></h2>
+<h3 id="21-high-level-architecture">2.1 High-Level Architecture<a class="headerlink" href="#21-high-level-architecture" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>                                    ┌──────────────┐
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>                                    │   CDN        │
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>                                    │ (CloudFront/ │
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>                                    │  Cloudflare) │
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>                                    └──────┬───────┘
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>                                           │
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>                                    ┌──────▼───────┐
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>                                    │   Frontend   │
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>                                    │   Next.js    │
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>                                    │  (Vercel or  │
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>                                    │   self-host) │
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>                                    └──────┬───────┘
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>                                           │
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>                              ┌────────────▼────────────┐
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>                              │      API Gateway        │
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>                              │   (Nginx / AWS ALB)     │
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>                              └─────┬──────────┬────────┘
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>                                    │          │
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>                         ┌──────────▼──┐  ┌────▼──────────┐
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>                         │  Commerce   │  │   CMS API     │
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>                         │  API        │  │   (Strapi /   │
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>                         │  (Medusa)   │  │    Sanity)    │
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>                         └──────┬──────┘  └───────────────┘
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>                                │
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>               ┌────────────────┼────────────────┐
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>               │                │                │
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>        ┌──────▼──────┐ ┌──────▼──────┐ ┌───────▼──────┐
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>        │  PostgreSQL │ │    Redis    │ │    Search    │
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>        │  (Primary   │ │  (Cache +   │ │ (Meilisearch │
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>        │   Database) │ │   Sessions) │ │  / Algolia)  │
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>        └─────────────┘ └─────────────┘ └──────────────┘
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>External Services:
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>        ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>        │ Razorpay │ │Shiprocket│ │  MSG91   │ │  S3/R2   │
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>        │(Payments)│ │(Shipping)│ │(SMS/OTP) │ │ (Media)  │
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>        └──────────┘ └──────────┘ └──────────┘ └──────────┘
+</code></pre></div>
+<h3 id="22-architecture-pattern">2.2 Architecture Pattern<a class="headerlink" href="#22-architecture-pattern" title="Permanent link">&para;</a></h3>
+<p><strong>Modular Monolith</strong> for Phase 1, with clear module boundaries for future extraction:</p>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Responsibility</th>
+<th>Future Service Boundary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>catalog</code></td>
+<td>Products, categories, variants, search indexing</td>
+<td>Product Service</td>
+</tr>
+<tr>
+<td><code>cart</code></td>
+<td>Cart management, price calculation</td>
+<td>Cart Service</td>
+</tr>
+<tr>
+<td><code>checkout</code></td>
+<td>Order creation, payment orchestration</td>
+<td>Order Service</td>
+</tr>
+<tr>
+<td><code>order</code></td>
+<td>Order management, status tracking, fulfillment</td>
+<td>Fulfillment Service</td>
+</tr>
+<tr>
+<td><code>customer</code></td>
+<td>User accounts, auth, addresses, wishlist</td>
+<td>Customer Service</td>
+</tr>
+<tr>
+<td><code>seller</code> (Phase 2)</td>
+<td>Seller accounts, onboarding, dashboard, payouts</td>
+<td>Seller Service</td>
+</tr>
+<tr>
+<td><code>content</code></td>
+<td>CMS integration, content-product linking</td>
+<td>Content Service</td>
+</tr>
+<tr>
+<td><code>tax</code></td>
+<td>GST calculation, HSN mapping, invoice generation</td>
+<td>Tax Service</td>
+</tr>
+<tr>
+<td><code>notification</code></td>
+<td>Email, SMS, push notification orchestration</td>
+<td>Notification Service</td>
+</tr>
+<tr>
+<td><code>admin</code></td>
+<td>Admin panel API, analytics queries</td>
+<td>Admin Service</td>
+</tr>
+</tbody>
+</table>
+<p>Modules communicate via direct function calls within the monolith. When extracting to microservices later, these become API calls.</p>
+<hr />
+<h2 id="3-technology-stack">3. Technology Stack<a class="headerlink" href="#3-technology-stack" title="Permanent link">&para;</a></h2>
+<h3 id="31-core-stack">3.1 Core Stack<a class="headerlink" href="#31-core-stack" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Technology</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Frontend Framework</strong></td>
+<td>Next.js 14+ (App Router)</td>
+<td>React-based, SSR/SSG for SEO, API routes, image optimization, TypeScript-native</td>
+</tr>
+<tr>
+<td><strong>Frontend Styling</strong></td>
+<td>Tailwind CSS + shadcn/ui (or Radix UI primitives)</td>
+<td>Utility-first CSS for rapid UI development, accessible component primitives</td>
+</tr>
+<tr>
+<td><strong>Commerce Engine</strong></td>
+<td>Medusa.js v2</td>
+<td>Open-source headless commerce, Node.js/TypeScript, built-in admin, plugin architecture</td>
+</tr>
+<tr>
+<td><strong>Backend Runtime</strong></td>
+<td>Node.js 20 LTS</td>
+<td>Same language as frontend, Medusa's runtime, strong async I/O</td>
+</tr>
+<tr>
+<td><strong>Primary Database</strong></td>
+<td>PostgreSQL 16</td>
+<td>Medusa's default database, robust relational DB, JSON support for flexible schemas</td>
+</tr>
+<tr>
+<td><strong>Cache / Sessions</strong></td>
+<td>Redis 7</td>
+<td>Session storage, cart caching, rate limiting, pub/sub for real-time events</td>
+</tr>
+<tr>
+<td><strong>Search Engine</strong></td>
+<td>Meilisearch</td>
+<td>Open-source, fast full-text search, typo tolerance, faceted search, easy to self-host. Alternative: Algolia (managed, higher cost)</td>
+</tr>
+<tr>
+<td><strong>Headless CMS</strong></td>
+<td>Strapi v5 (self-hosted)</td>
+<td>Open-source, Node.js, REST + GraphQL API, customizable content types, media management. Alternative: Sanity (managed, better editing UX, higher cost)</td>
+</tr>
+<tr>
+<td><strong>Object Storage</strong></td>
+<td>AWS S3 (or Cloudflare R2)</td>
+<td>Product images, documents, invoices, CMS media</td>
+</tr>
+<tr>
+<td><strong>Email</strong></td>
+<td>AWS SES or Resend</td>
+<td>Transactional emails (order confirmation, OTP, etc.)</td>
+</tr>
+<tr>
+<td><strong>Language</strong></td>
+<td>TypeScript</td>
+<td>End-to-end type safety across frontend and backend</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-infrastructure">3.2 Infrastructure<a class="headerlink" href="#32-infrastructure" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Technology</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cloud Provider</strong></td>
+<td>AWS (ap-south-1 Mumbai region)</td>
+<td>Lowest latency for India users, comprehensive services, Mumbai data center</td>
+</tr>
+<tr>
+<td><strong>Containerization</strong></td>
+<td>Docker</td>
+<td>Consistent environments, easy deployment</td>
+</tr>
+<tr>
+<td><strong>Container Orchestration</strong></td>
+<td>AWS ECS (Fargate) or simple Docker Compose on EC2 (Phase 1)</td>
+<td>Serverless containers for MVP simplicity, migrate to ECS/EKS as scale demands</td>
+</tr>
+<tr>
+<td><strong>CDN</strong></td>
+<td>CloudFront (or Cloudflare)</td>
+<td>Indian PoPs for static asset delivery, image caching</td>
+</tr>
+<tr>
+<td><strong>CI/CD</strong></td>
+<td>GitHub Actions</td>
+<td>Automated testing, building, and deployment on push</td>
+</tr>
+<tr>
+<td><strong>Monitoring</strong></td>
+<td>Sentry (errors) + AWS CloudWatch (infra) + Grafana (dashboards)</td>
+<td>Error tracking, infrastructure monitoring, custom business dashboards</td>
+</tr>
+<tr>
+<td><strong>Logging</strong></td>
+<td>AWS CloudWatch Logs or Loki</td>
+<td>Centralized log aggregation</td>
+</tr>
+<tr>
+<td><strong>DNS</strong></td>
+<td>Cloudflare or Route 53</td>
+<td>DNS management, DDoS protection</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-frontend-architecture">3.3 Frontend Architecture<a class="headerlink" href="#33-frontend-architecture" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Next.js App
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>├── app/
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>│   ├── (storefront)/          -- Public-facing pages
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>│   │   ├── page.tsx           -- Homepage
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>│   │   ├── shop/
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>│   │   │   ├── [category]/
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>│   │   │   │   ├── page.tsx   -- PLP (category listing)
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>│   │   │   │   └── [product]/
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>│   │   │   │       └── page.tsx -- PDP
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>│   │   │   ├── concern/
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>│   │   │   │   └── [concern]/page.tsx
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>│   │   │   └── brands/       -- Phase 2
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>│   │   ├── journal/
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>│   │   │   ├── page.tsx       -- Article listing
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>│   │   │   ├── [category]/
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>│   │   │   │   └── [slug]/page.tsx -- Article detail
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>│   │   │   └── authors/[slug]/page.tsx
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>│   │   ├── about/
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>│   │   ├── cart/page.tsx
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>│   │   ├── checkout/
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>│   │   ├── search/page.tsx
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>│   │   └── sell-with-us/page.tsx
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>│   ├── (account)/             -- Authenticated pages
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>│   │   └── account/
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>│   │       ├── profile/page.tsx
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>│   │       ├── orders/page.tsx
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>│   │       ├── addresses/page.tsx
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>│   │       └── wishlist/page.tsx
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>│   ├── (seller)/              -- Seller portal (Phase 2)
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>│   │   └── seller/
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>│   ├── (admin)/               -- Admin panel (Medusa admin or custom)
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>│   └── api/                   -- API routes (BFF pattern)
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>├── components/                -- Shared UI components
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>├── lib/                       -- Utilities, API clients, hooks
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>├── styles/                    -- Global styles, Tailwind config
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>└── public/                    -- Static assets
+</code></pre></div>
+<p><strong>Rendering Strategy</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Page Type</th>
+<th>Rendering</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Homepage</td>
+<td>ISR (Incremental Static Regeneration, revalidate: 300s)</td>
+<td>SEO + frequent content updates</td>
+</tr>
+<tr>
+<td>PLP (Category)</td>
+<td>SSR with client-side filtering</td>
+<td>SEO for category pages, dynamic filters</td>
+</tr>
+<tr>
+<td>PDP (Product)</td>
+<td>ISR (revalidate: 60s)</td>
+<td>SEO + price/stock freshness</td>
+</tr>
+<tr>
+<td>Article</td>
+<td>SSG at build time + ISR</td>
+<td>Content changes infrequently, SEO critical</td>
+</tr>
+<tr>
+<td>Cart</td>
+<td>Client-side only</td>
+<td>No SEO value, real-time state</td>
+</tr>
+<tr>
+<td>Checkout</td>
+<td>Client-side only</td>
+<td>No SEO value, real-time state</td>
+</tr>
+<tr>
+<td>Account pages</td>
+<td>Client-side only</td>
+<td>Authenticated, no SEO value</td>
+</tr>
+<tr>
+<td>Search</td>
+<td>SSR (initial) + client-side (filters)</td>
+<td>SEO for popular search terms</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-integration-architecture">4. Integration Architecture<a class="headerlink" href="#4-integration-architecture" title="Permanent link">&para;</a></h2>
+<h3 id="41-payments-razorpay">4.1 Payments -- Razorpay<a class="headerlink" href="#41-payments-razorpay" title="Permanent link">&para;</a></h3>
+<p><strong>Integration Type</strong>: Razorpay Standard Checkout (client-side SDK) + Server-side API</p>
+<p><strong>Flow</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Buyer clicks &quot;Place Order&quot;
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    │
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    ▼
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>Frontend creates order via Medusa API
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    │
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    ▼
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>Medusa creates Razorpay Order (server-side: POST /v1/orders)
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    → Amount in paise (₹800 = 80000 paise)
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    → Currency: INR
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    → Receipt: order_[medusa_order_id]
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    │
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    ▼
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>Frontend opens Razorpay Checkout modal (razorpay_order_id)
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    → Buyer selects payment method (UPI/Card/NetBanking/Wallet)
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    → Razorpay handles 2FA, UPI intent, etc.
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    │
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>    ▼
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>On success: Razorpay returns payment_id + signature
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>    │
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>    ▼
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>Frontend sends payment_id + signature to Medusa API
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>    │
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>    ▼
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>Medusa verifies signature (HMAC-SHA256 with Razorpay key_secret)
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>    → If valid: capture payment, confirm order
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>    → If invalid: reject, show error
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>    │
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>    ▼
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>Webhook: Razorpay sends payment.captured event to /api/webhooks/razorpay
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>    → Idempotent processing (check if already processed)
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>    → Update order payment status
+</code></pre></div></p>
+<p><strong>Phase 2 -- Marketplace Split Payments (Razorpay Route)</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Order with items from 3 sellers (A, B, own brand)
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    │
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    ▼
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>Single Razorpay payment captured (full amount: ₹3,000)
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    │
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    ▼
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>Create transfers via Razorpay Route API:
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    → Transfer to Seller A&#39;s linked account: ₹800 (selling price - commission)
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    → Transfer to Seller B&#39;s linked account: ₹1,100 (selling price - commission)
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    → Remaining ₹1,100 stays in platform account (own brand + commissions)
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    │
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    ▼
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>Transfers can be:
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    → Immediate (on payment capture)
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>    → Delayed (on delivery confirmation -- recommended for buyer protection)
+</code></pre></div></p>
+<p><strong>COD Handling</strong>:
+- COD is not processed through Razorpay
+- Order marked as <code>payment_method: cod</code>, <code>payment_status: pending</code>
+- On delivery: carrier collects cash, remits to platform via COD remittance (Shiprocket handles this)
+- Platform reconciles COD collections daily</p>
+<p><strong>Refunds</strong>:
+- Full/partial refund via Razorpay Refund API
+- Refund to original payment method (automatic)
+- COD refunds: requires buyer bank details, processed via Razorpay Payout or manual bank transfer</p>
+<h3 id="42-shipping-shiprocket">4.2 Shipping -- Shiprocket<a class="headerlink" href="#42-shipping-shiprocket" title="Permanent link">&para;</a></h3>
+<p><strong>Integration Type</strong>: Shiprocket REST API</p>
+<p><strong>Key Integrations</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>API Endpoint</th>
+<th>When Used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pincode serviceability</td>
+<td><code>GET /v1/external/courier/serviceability</code></td>
+<td>PDP (delivery check), Checkout (address step)</td>
+</tr>
+<tr>
+<td>Delivery estimate</td>
+<td><code>GET /v1/external/courier/serviceability</code> (includes ETA)</td>
+<td>PDP, Checkout</td>
+</tr>
+<tr>
+<td>Create shipment</td>
+<td><code>POST /v1/external/orders/create/adhoc</code></td>
+<td>On order confirmation (own brand) or seller ships (marketplace)</td>
+</tr>
+<tr>
+<td>Generate AWB</td>
+<td>Auto-assigned on shipment creation</td>
+<td>After order creation</td>
+</tr>
+<tr>
+<td>Generate label</td>
+<td><code>POST /v1/external/courier/generate/label</code></td>
+<td>Admin downloads for packaging</td>
+</tr>
+<tr>
+<td>Track shipment</td>
+<td><code>GET /v1/external/courier/track/awb/[awb]</code></td>
+<td>Order tracking page, status updates</td>
+</tr>
+<tr>
+<td>Cancel shipment</td>
+<td><code>POST /v1/external/orders/cancel</code></td>
+<td>On order cancellation</td>
+</tr>
+<tr>
+<td>Return pickup</td>
+<td><code>POST /v1/external/orders/create/return</code></td>
+<td>On return approval</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Carrier Selection Logic</strong>:
+- Shiprocket auto-selects cheapest carrier for serviceable pincode
+- Override rules (configurable): prefer BlueDart for metro cities (faster), DTDC for Tier 2/3
+- Express delivery: select carriers with 1-2 day SLA for metro pincodes</p>
+<p><strong>Shipping Cost Calculation</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Applicable Weight = MAX(actual_weight, volumetric_weight)
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Volumetric Weight = (L × W × H) / 5000 (in cm and grams)
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>Rate = base_rate[zone] + per_kg_rate × ceil(weight_kg)
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>Zone = derived from origin_pincode → destination_pincode mapping
+</code></pre></div></p>
+<p><strong>Webhook</strong>: Shiprocket sends tracking updates to <code>/api/webhooks/shiprocket</code>
+- Events: <code>pickup_scheduled</code>, <code>picked_up</code>, <code>in_transit</code>, <code>out_for_delivery</code>, <code>delivered</code>, <code>rto_initiated</code>, <code>rto_delivered</code>
+- Webhook updates order status in Medusa</p>
+<h3 id="43-sms-otp-msg91">4.3 SMS &amp; OTP -- MSG91<a class="headerlink" href="#43-sms-otp-msg91" title="Permanent link">&para;</a></h3>
+<p><strong>Integration Type</strong>: MSG91 REST API</p>
+<p><strong>Use Cases</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Template</th>
+<th>Variables</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Login OTP</td>
+<td>"{{otp}} is your OTP to login to [Brand]. Valid for 5 minutes. Do not share."</td>
+<td>otp</td>
+</tr>
+<tr>
+<td>COD verification OTP</td>
+<td>"{{otp}} is your OTP to confirm COD order #{{order_id}} of ₹{{amount}}. Valid for 5 minutes."</td>
+<td>otp, order_id, amount</td>
+</tr>
+<tr>
+<td>Order placed</td>
+<td>"Order #{{order_id}} placed successfully. Track: {{tracking_url}}"</td>
+<td>order_id, tracking_url</td>
+</tr>
+<tr>
+<td>Order shipped</td>
+<td>"Order #{{order_id}} shipped via {{carrier}}. Track: {{tracking_url}}"</td>
+<td>order_id, carrier, tracking_url</td>
+</tr>
+<tr>
+<td>Order delivered</td>
+<td>"Order #{{order_id}} delivered. Rate your experience: {{review_url}}"</td>
+<td>order_id, review_url</td>
+</tr>
+</tbody>
+</table>
+<p><strong>OTP Flow</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>User enters phone number
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    │
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    ▼
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>Server calls MSG91 Send OTP API (POST /api/v5/otp)
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    → Template configured in MSG91 dashboard
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    → OTP length: 6 digits
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    → Expiry: 5 minutes
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    → Retry type: text
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    │
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>    ▼
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>User enters OTP
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>    │
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>    ▼
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>Server calls MSG91 Verify OTP API (POST /api/v5/otp/verify)
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>    → On success: create/authenticate user session
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>    → On failure: &quot;Invalid OTP. Please try again.&quot; (max 3 attempts)
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>    │
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>    ▼
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>Resend: max 3 resends, then 30-minute cooldown
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>    → First resend: text SMS
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>    → Second resend: text SMS
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>    → Third resend: voice call OTP
+</code></pre></div></p>
+<h3 id="44-gst-invoicing-engine">4.4 GST &amp; Invoicing Engine<a class="headerlink" href="#44-gst-invoicing-engine" title="Permanent link">&para;</a></h3>
+<p><strong>Custom-built module</strong> (no off-the-shelf solution handles India marketplace GST correctly).</p>
+<p><strong>HSN Code Mapping</strong> (stored in database):</p>
+<table>
+<thead>
+<tr>
+<th>Product Category</th>
+<th>HSN Code</th>
+<th>CGST</th>
+<th>SGST</th>
+<th>IGST</th>
+<th>Total GST</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Health Supplements (general)</td>
+<td>2106</td>
+<td>6%</td>
+<td>6%</td>
+<td>12%</td>
+<td>12%</td>
+</tr>
+<tr>
+<td>Protein Supplements</td>
+<td>2106</td>
+<td>9%</td>
+<td>9%</td>
+<td>18%</td>
+<td>18%</td>
+</tr>
+<tr>
+<td>Vitamins (pharmaceutical grade)</td>
+<td>2936</td>
+<td>9%</td>
+<td>9%</td>
+<td>18%</td>
+<td>18%</td>
+</tr>
+<tr>
+<td>Skincare (cosmetics)</td>
+<td>3304</td>
+<td>14%</td>
+<td>14%</td>
+<td>28%</td>
+<td>28%</td>
+</tr>
+<tr>
+<td>Ayurvedic products</td>
+<td>3003</td>
+<td>6%</td>
+<td>6%</td>
+<td>12%</td>
+<td>12%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tax Determination Logic</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>INPUT: product_hsn_code, seller_state, buyer_state
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>IF seller_state == buyer_state:
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    tax_type = &quot;INTRA_STATE&quot;
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    cgst = hsn_rate / 2
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    sgst = hsn_rate / 2
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    igst = 0
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>ELSE:
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    tax_type = &quot;INTER_STATE&quot;
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>    cgst = 0
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>    sgst = 0
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>    igst = hsn_rate
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>Price display (B2C): inclusive of GST
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>Invoice: show GST breakup (unit price excl. tax + tax amount)
+</code></pre></div></p>
+<p><strong>TCS (Tax Collected at Source) -- Marketplace</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>For each marketplace seller:
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    tcs_rate = 1% (0.5% CGST + 0.5% SGST)
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    tcs_amount = net_taxable_value × tcs_rate
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    net_taxable_value = selling_price - returns - discounts (GST exclusive)
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>Platform deducts TCS from seller payout
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>Platform files GSTR-8 quarterly with TCS details per seller
+</code></pre></div></p>
+<p><strong>Invoice Generation</strong>:
+- PDF generated using a template engine (e.g., Puppeteer rendering HTML to PDF, or a library like PDFKit)
+- Stored in S3, linked to order record
+- Invoice numbering: sequential per financial year, format: <code>INV/[FY]/[sequence]</code> (e.g., INV/2627/00001)</p>
+<h3 id="45-search-meilisearch">4.5 Search -- Meilisearch<a class="headerlink" href="#45-search-meilisearch" title="Permanent link">&para;</a></h3>
+<p><strong>Integration</strong>: Meilisearch self-hosted instance, synced from PostgreSQL.</p>
+<p><strong>Indexes</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Index</th>
+<th>Documents</th>
+<th>Searchable Fields</th>
+<th>Filterable Fields</th>
+<th>Sortable Fields</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>products</code></td>
+<td>All active products</td>
+<td>name, brand, description, ingredients, concerns</td>
+<td>category, sub_category, concern, product_type, price, rating, discount_pct, seller_id, dietary, certifications</td>
+<td>price, rating, created_at, discount_pct</td>
+</tr>
+<tr>
+<td><code>articles</code></td>
+<td>All published articles</td>
+<td>title, body, tags, author_name</td>
+<td>category, tags, author</td>
+<td>published_at</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sync Strategy</strong>:
+- On product create/update/delete: push change to Meilisearch via Medusa event subscriber
+- On article publish/update/unpublish: push change via Strapi webhook → sync service
+- Full re-index: scheduled nightly as safety net</p>
+<p><strong>Search Configuration</strong>:
+- Typo tolerance: enabled (default Meilisearch settings)
+- Synonyms: configured for common wellness terms (e.g., "vit c" → "vitamin c", "whey" → "protein")
+- Stop words: common English + Hindi stop words
+- Ranking rules: words → typo → proximity → attribute → sort → exactness</p>
+<hr />
+<h2 id="5-data-architecture">5. Data Architecture<a class="headerlink" href="#5-data-architecture" title="Permanent link">&para;</a></h2>
+<h3 id="51-core-entity-relationship-diagram">5.1 Core Entity Relationship Diagram<a class="headerlink" href="#51-core-entity-relationship-diagram" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>┌──────────────┐     ┌──────────────┐     ┌──────────────┐
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>│   Customer   │     │    Seller    │     │    Admin     │
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>│──────────────│     │──────────────│     │──────────────│
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>│ id           │     │ id           │     │ id           │
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>│ email        │     │ business_name│     │ email        │
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>│ phone        │     │ brand_name   │     │ role         │
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>│ name         │     │ gstin        │     │ password_hash│
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>│ password_hash│     │ fssai_number │     └──────────────┘
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>│ created_at   │     │ status       │
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>└──────┬───────┘     │ commission_%│
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>       │             │ bank_details │
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>       │             └──────┬───────┘
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>       │                    │
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>       │         ┌──────────▼──────────┐
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>       │         │      Product        │
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>       │         │─────────────────────│
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>       │         │ id                  │
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>       │         │ name                │
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>       │         │ slug                │
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>       │         │ description         │
+<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>       │         │ category_id         │
+<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>       │         │ seller_id (nullable)│ ← null = own brand
+<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>       │         │ hsn_code            │
+<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>       │         │ status              │
+<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>       │         │ metadata (JSON)     │ ← badges, certifications, FSSAI
+<a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a>       │         └──────────┬──────────┘
+<a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a>       │                    │
+<a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a>       │         ┌──────────▼──────────┐
+<a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a>       │         │   Product Variant   │
+<a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a>       │         │─────────────────────│
+<a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a>       │         │ id                  │
+<a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a>       │         │ product_id          │
+<a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a>       │         │ title (e.g., &quot;60    │
+<a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a>       │         │   capsules&quot;)        │
+<a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a>       │         │ mrp                 │ ← stored in paise
+<a id="__codelineno-8-36" name="__codelineno-8-36" href="#__codelineno-8-36"></a>       │         │ selling_price       │ ← stored in paise
+<a id="__codelineno-8-37" name="__codelineno-8-37" href="#__codelineno-8-37"></a>       │         │ stock_quantity      │
+<a id="__codelineno-8-38" name="__codelineno-8-38" href="#__codelineno-8-38"></a>       │         │ weight              │
+<a id="__codelineno-8-39" name="__codelineno-8-39" href="#__codelineno-8-39"></a>       │         │ sku                 │
+<a id="__codelineno-8-40" name="__codelineno-8-40" href="#__codelineno-8-40"></a>       │         └────────────────────┘
+<a id="__codelineno-8-41" name="__codelineno-8-41" href="#__codelineno-8-41"></a>       │
+<a id="__codelineno-8-42" name="__codelineno-8-42" href="#__codelineno-8-42"></a>┌──────▼───────┐     ┌──────────────────┐
+<a id="__codelineno-8-43" name="__codelineno-8-43" href="#__codelineno-8-43"></a>│    Order     │────▶│    Sub-Order     │ [Phase 2]
+<a id="__codelineno-8-44" name="__codelineno-8-44" href="#__codelineno-8-44"></a>│──────────────│     │──────────────────│
+<a id="__codelineno-8-45" name="__codelineno-8-45" href="#__codelineno-8-45"></a>│ id           │     │ id               │
+<a id="__codelineno-8-46" name="__codelineno-8-46" href="#__codelineno-8-46"></a>│ customer_id  │     │ order_id         │
+<a id="__codelineno-8-47" name="__codelineno-8-47" href="#__codelineno-8-47"></a>│ status       │     │ seller_id        │
+<a id="__codelineno-8-48" name="__codelineno-8-48" href="#__codelineno-8-48"></a>│ total        │     │ status           │
+<a id="__codelineno-8-49" name="__codelineno-8-49" href="#__codelineno-8-49"></a>│ payment_method     │ subtotal         │
+<a id="__codelineno-8-50" name="__codelineno-8-50" href="#__codelineno-8-50"></a>│ payment_status     │ shipping_cost    │
+<a id="__codelineno-8-51" name="__codelineno-8-51" href="#__codelineno-8-51"></a>│ shipping_address   │ commission_amt   │
+<a id="__codelineno-8-52" name="__codelineno-8-52" href="#__codelineno-8-52"></a>│ billing_address    │ tcs_amount       │
+<a id="__codelineno-8-53" name="__codelineno-8-53" href="#__codelineno-8-53"></a>│ coupon_id    │     │ payout_status    │
+<a id="__codelineno-8-54" name="__codelineno-8-54" href="#__codelineno-8-54"></a>│ created_at   │     │ tracking_number  │
+<a id="__codelineno-8-55" name="__codelineno-8-55" href="#__codelineno-8-55"></a>└──────┬───────┘     └──────────────────┘
+<a id="__codelineno-8-56" name="__codelineno-8-56" href="#__codelineno-8-56"></a>       │
+<a id="__codelineno-8-57" name="__codelineno-8-57" href="#__codelineno-8-57"></a>┌──────▼───────┐
+<a id="__codelineno-8-58" name="__codelineno-8-58" href="#__codelineno-8-58"></a>│  Order Item  │
+<a id="__codelineno-8-59" name="__codelineno-8-59" href="#__codelineno-8-59"></a>│──────────────│
+<a id="__codelineno-8-60" name="__codelineno-8-60" href="#__codelineno-8-60"></a>│ id           │
+<a id="__codelineno-8-61" name="__codelineno-8-61" href="#__codelineno-8-61"></a>│ order_id     │
+<a id="__codelineno-8-62" name="__codelineno-8-62" href="#__codelineno-8-62"></a>│ sub_order_id │ [Phase 2]
+<a id="__codelineno-8-63" name="__codelineno-8-63" href="#__codelineno-8-63"></a>│ product_id   │
+<a id="__codelineno-8-64" name="__codelineno-8-64" href="#__codelineno-8-64"></a>│ variant_id   │
+<a id="__codelineno-8-65" name="__codelineno-8-65" href="#__codelineno-8-65"></a>│ quantity     │
+<a id="__codelineno-8-66" name="__codelineno-8-66" href="#__codelineno-8-66"></a>│ unit_price   │
+<a id="__codelineno-8-67" name="__codelineno-8-67" href="#__codelineno-8-67"></a>│ tax_amount   │
+<a id="__codelineno-8-68" name="__codelineno-8-68" href="#__codelineno-8-68"></a>│ hsn_code     │
+<a id="__codelineno-8-69" name="__codelineno-8-69" href="#__codelineno-8-69"></a>│ seller_id    │
+<a id="__codelineno-8-70" name="__codelineno-8-70" href="#__codelineno-8-70"></a>└──────────────┘
+<a id="__codelineno-8-71" name="__codelineno-8-71" href="#__codelineno-8-71"></a>
+<a id="__codelineno-8-72" name="__codelineno-8-72" href="#__codelineno-8-72"></a>┌──────────────┐     ┌──────────────┐     ┌──────────────┐
+<a id="__codelineno-8-73" name="__codelineno-8-73" href="#__codelineno-8-73"></a>│   Address    │     │   Wishlist   │     │    Review    │
+<a id="__codelineno-8-74" name="__codelineno-8-74" href="#__codelineno-8-74"></a>│──────────────│     │──────────────│     │──────────────│
+<a id="__codelineno-8-75" name="__codelineno-8-75" href="#__codelineno-8-75"></a>│ id           │     │ customer_id  │     │ id           │
+<a id="__codelineno-8-76" name="__codelineno-8-76" href="#__codelineno-8-76"></a>│ customer_id  │     │ product_id   │     │ product_id   │
+<a id="__codelineno-8-77" name="__codelineno-8-77" href="#__codelineno-8-77"></a>│ name         │     │ created_at   │     │ customer_id  │
+<a id="__codelineno-8-78" name="__codelineno-8-78" href="#__codelineno-8-78"></a>│ phone        │     └──────────────┘     │ rating (1-5) │
+<a id="__codelineno-8-79" name="__codelineno-8-79" href="#__codelineno-8-79"></a>│ line_1       │                          │ title        │
+<a id="__codelineno-8-80" name="__codelineno-8-80" href="#__codelineno-8-80"></a>│ line_2       │     ┌──────────────┐     │ body         │
+<a id="__codelineno-8-81" name="__codelineno-8-81" href="#__codelineno-8-81"></a>│ city         │     │    Coupon    │     │ verified_    │
+<a id="__codelineno-8-82" name="__codelineno-8-82" href="#__codelineno-8-82"></a>│ state        │     │──────────────│     │   purchase   │
+<a id="__codelineno-8-83" name="__codelineno-8-83" href="#__codelineno-8-83"></a>│ pincode      │     │ id           │     │ created_at   │
+<a id="__codelineno-8-84" name="__codelineno-8-84" href="#__codelineno-8-84"></a>│ landmark     │     │ code         │     └──────────────┘
+<a id="__codelineno-8-85" name="__codelineno-8-85" href="#__codelineno-8-85"></a>│ is_default   │     │ type         │
+<a id="__codelineno-8-86" name="__codelineno-8-86" href="#__codelineno-8-86"></a>└──────────────┘     │ value        │     ┌──────────────┐
+<a id="__codelineno-8-87" name="__codelineno-8-87" href="#__codelineno-8-87"></a>                     │ min_order    │     │   Invoice    │
+<a id="__codelineno-8-88" name="__codelineno-8-88" href="#__codelineno-8-88"></a>                     │ max_discount │     │──────────────│
+<a id="__codelineno-8-89" name="__codelineno-8-89" href="#__codelineno-8-89"></a>                     │ usage_limit  │     │ id           │
+<a id="__codelineno-8-90" name="__codelineno-8-90" href="#__codelineno-8-90"></a>                     │ per_user_    │     │ invoice_no   │
+<a id="__codelineno-8-91" name="__codelineno-8-91" href="#__codelineno-8-91"></a>                     │   limit      │     │ order_id     │
+<a id="__codelineno-8-92" name="__codelineno-8-92" href="#__codelineno-8-92"></a>                     │ valid_from   │     │ sub_order_id │
+<a id="__codelineno-8-93" name="__codelineno-8-93" href="#__codelineno-8-93"></a>                     │ valid_to     │     │ seller_gstin │
+<a id="__codelineno-8-94" name="__codelineno-8-94" href="#__codelineno-8-94"></a>                     │ seller_id    │     │ buyer_gstin  │
+<a id="__codelineno-8-95" name="__codelineno-8-95" href="#__codelineno-8-95"></a>                     │ category_ids │     │ items (JSON) │
+<a id="__codelineno-8-96" name="__codelineno-8-96" href="#__codelineno-8-96"></a>                     │ new_user_only│     │ tax_breakup  │
+<a id="__codelineno-8-97" name="__codelineno-8-97" href="#__codelineno-8-97"></a>                     └──────────────┘     │ total        │
+<a id="__codelineno-8-98" name="__codelineno-8-98" href="#__codelineno-8-98"></a>                                          │ pdf_url      │
+<a id="__codelineno-8-99" name="__codelineno-8-99" href="#__codelineno-8-99"></a>                                          └──────────────┘
+</code></pre></div>
+<h3 id="52-key-data-design-decisions">5.2 Key Data Design Decisions<a class="headerlink" href="#52-key-data-design-decisions" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Decision</th>
+<th>Approach</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Currency storage</td>
+<td>Store all monetary values in <strong>paise</strong> (integer)</td>
+<td>Avoid floating-point rounding errors. ₹800.50 = 80050 paise</td>
+</tr>
+<tr>
+<td>Seller products vs own-brand</td>
+<td>Same <code>product</code> table, <code>seller_id = NULL</code> for own brand</td>
+<td>Unified catalog, simpler queries, same PLP/PDP for both</td>
+</tr>
+<tr>
+<td>Multi-tenancy</td>
+<td>Shared schema with <code>seller_id</code> foreign keys</td>
+<td>Simpler than schema-per-seller for the scale expected (50-100 sellers)</td>
+</tr>
+<tr>
+<td>Soft deletes</td>
+<td>Products and sellers are soft-deleted (status = 'archived')</td>
+<td>Preserve order history referential integrity</td>
+</tr>
+<tr>
+<td>Dates/times</td>
+<td>All timestamps in UTC, convert to IST on frontend display</td>
+<td>Standard practice, avoids timezone bugs</td>
+</tr>
+<tr>
+<td>JSON columns</td>
+<td>Used for flexible/evolving data: product metadata (badges, certifications), invoice line items, notification payloads</td>
+<td>Avoids excessive schema migrations for non-queryable data</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-marketplace-specific-architecture">6. Marketplace-Specific Architecture<a class="headerlink" href="#6-marketplace-specific-architecture" title="Permanent link">&para;</a></h2>
+<h3 id="61-product-ownership-model">6.1 Product Ownership Model<a class="headerlink" href="#61-product-ownership-model" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Product table:
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    seller_id = NULL     → Own-brand product (managed by Catalog Admin)
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    seller_id = [uuid]   → Seller product (managed by seller, moderated by admin)
+</code></pre></div>
+<p>Both types appear in the same catalog, same search index, same PLP. Differentiated by badges ("Our Brand" vs seller name).</p>
+<h3 id="62-cart-splitting-logic">6.2 Cart Splitting Logic<a class="headerlink" href="#62-cart-splitting-logic" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Cart items:
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    Item A (seller: own_brand)  ₹500
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    Item B (seller: seller_1)   ₹800
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    Item C (seller: seller_1)   ₹300
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    Item D (seller: seller_2)   ₹1,200
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>Split into fulfillment groups:
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>    Group 1: own_brand  → [Item A]         Subtotal: ₹500   Shipping: ₹50
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>    Group 2: seller_1   → [Item B, Item C] Subtotal: ₹1,100 Shipping: ₹60
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>    Group 3: seller_2   → [Item D]         Subtotal: ₹1,200 Shipping: ₹70
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>Cart Total: ₹500 + ₹1,100 + ₹1,200 + ₹50 + ₹60 + ₹70 = ₹2,980
+</code></pre></div>
+<p>Shipping is calculated per group using Shiprocket API (origin = seller's warehouse pincode, destination = buyer pincode).</p>
+<h3 id="63-payout-architecture">6.3 Payout Architecture<a class="headerlink" href="#63-payout-architecture" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>                    ┌──────────────────────┐
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>                    │  Buyer pays ₹2,980   │
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>                    │  (single Razorpay    │
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>                    │   transaction)        │
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>                    └──────────┬───────────┘
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>                               │
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>                    ┌──────────▼───────────┐
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>                    │  Platform Razorpay   │
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>                    │  account holds full  │
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>                    │  amount in escrow    │
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>                    └──────────┬───────────┘
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>                               │
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>              On delivery confirmation:
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>                               │
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>         ┌─────────────────────┼─────────────────────┐
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>         │                     │                     │
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>   ┌─────▼──────┐      ┌──────▼──────┐      ┌──────▼──────┐
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>   │  Own Brand │      │  Seller 1   │      │  Seller 2   │
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>   │  ₹500+₹50  │      │  ₹1,100     │      │  ₹1,200     │
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>   │  stays in   │      │  -15% comm  │      │  -12% comm  │
+<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>   │  platform   │      │  = ₹165     │      │  = ₹144     │
+<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a>   │  account    │      │  -1% TCS    │      │  -1% TCS    │
+<a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a>   │             │      │  = ₹11      │      │  = ₹12      │
+<a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a>   │             │      │  Payout:    │      │  Payout:    │
+<a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a>   │             │      │  ₹924+₹60   │      │  ₹1,044+₹70│
+<a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a>   │             │      │  shipping   │      │  shipping   │
+<a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a>   └─────────────┘      └─────────────┘      └─────────────┘
+</code></pre></div>
+<p>Note: Shipping cost collected from buyer is passed through to the seller (if seller-fulfilled) or retained by platform (if platform-fulfilled). Commission is on product selling price only, not shipping.</p>
+<h3 id="64-seller-data-isolation">6.4 Seller Data Isolation<a class="headerlink" href="#64-seller-data-isolation" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Seller Can See</th>
+<th>Seller Cannot See</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Own products</td>
+<td>All fields, all statuses</td>
+<td>Other sellers' products</td>
+</tr>
+<tr>
+<td>Own orders (sub-orders)</td>
+<td>Items, buyer name, delivery address, amounts</td>
+<td>Other sellers' sub-orders, parent order total, other sellers' items</td>
+</tr>
+<tr>
+<td>Own payouts</td>
+<td>All payout details, commission breakdown</td>
+<td>Other sellers' payouts, platform revenue</td>
+</tr>
+<tr>
+<td>Own reviews</td>
+<td>All reviews on their products</td>
+<td>Reviews on other sellers' products</td>
+</tr>
+<tr>
+<td>Own performance metrics</td>
+<td>Their own scores</td>
+<td>Platform averages, other sellers' metrics</td>
+</tr>
+<tr>
+<td>Buyer full profile</td>
+<td>Name + delivery address (for fulfillment)</td>
+<td>Email, phone, purchase history, other orders</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-content-architecture">7. Content Architecture<a class="headerlink" href="#7-content-architecture" title="Permanent link">&para;</a></h2>
+<h3 id="71-cms-selection">7.1 CMS Selection<a class="headerlink" href="#71-cms-selection" title="Permanent link">&para;</a></h3>
+<p><strong>Recommendation: Strapi v5 (self-hosted)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Strapi (self-hosted)</th>
+<th>Sanity (managed)</th>
+<th>Contentful (managed)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cost</td>
+<td>Free (open-source), hosting cost only</td>
+<td>Free tier (3 users), $99/mo (Pro)</td>
+<td>$300/mo (Team)</td>
+</tr>
+<tr>
+<td>Hosting</td>
+<td>Self-hosted on same infrastructure</td>
+<td>Cloud-managed</td>
+<td>Cloud-managed</td>
+</tr>
+<tr>
+<td>Content API</td>
+<td>REST + GraphQL</td>
+<td>GROQ (custom query language)</td>
+<td>REST + GraphQL</td>
+</tr>
+<tr>
+<td>Media management</td>
+<td>Built-in, S3-backed</td>
+<td>Built-in (Sanity CDN)</td>
+<td>Built-in</td>
+</tr>
+<tr>
+<td>Customization</td>
+<td>Fully customizable (plugins, custom fields)</td>
+<td>Custom schemas, limited UI customization</td>
+<td>Limited customization</td>
+</tr>
+<tr>
+<td>Editor UX</td>
+<td>Good (v5 improved significantly)</td>
+<td>Excellent (best-in-class)</td>
+<td>Good</td>
+</tr>
+</tbody>
+</table>
+<p>Strapi chosen for: zero licensing cost, self-hosted (data stays in India for DPDP Act), same Node.js stack, full customization for content-product linking.</p>
+<h3 id="72-content-models-strapi">7.2 Content Models (Strapi)<a class="headerlink" href="#72-content-models-strapi" title="Permanent link">&para;</a></h3>
+<p><strong>Article</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>{
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>  title: string (required),
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>  slug: string (unique, auto-generated from title),
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>  excerpt: text (required, max 300 chars),
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>  body: rich text / blocks (required),
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>  featured_image: media (required),
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>  category: relation (ArticleCategory, many-to-one),
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>  tags: JSON array of strings,
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>  author: relation (Author, many-to-one),
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>  related_products: JSON array of product IDs (from Medusa),
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>  seo_title: string,
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>  seo_description: text,
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>  og_image: media,
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>  status: enum [draft, review, published],
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>  published_at: datetime,
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>  reading_time: integer (computed on save)
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>}
+</code></pre></div></p>
+<p><strong>ArticleCategory</strong>: <code>{ name, slug, description }</code></p>
+<p><strong>Author</strong>: <code>{ name, slug, photo, title, bio, credentials }</code></p>
+<h3 id="73-content-to-commerce-linking">7.3 Content-to-Commerce Linking<a class="headerlink" href="#73-content-to-commerce-linking" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>Strapi (Content)                    Medusa (Commerce)
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>┌──────────────┐                    ┌──────────────┐
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>│   Article    │                    │   Product    │
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>│              │  product IDs       │              │
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>│ related_     │───────────────────▶│  id          │
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>│ products:    │                    │  name        │
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>│ [prod_1,     │                    │  price       │
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>│  prod_2]     │                    │  image       │
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>└──────────────┘                    └──────────────┘
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>Frontend rendering:
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>1. Fetch article from Strapi API
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>2. Extract product IDs from related_products
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>3. Fetch product data from Medusa API (batch)
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>4. Render product cards inline within article body
+</code></pre></div>
+<p>For inline product embeds within article body: use a custom Strapi block type ("Product Embed") that stores a product ID. Frontend recognizes this block and renders a product card component.</p>
+<h3 id="74-content-delivery">7.4 Content Delivery<a class="headerlink" href="#74-content-delivery" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Articles rendered via Next.js SSG (Static Site Generation) at build time</li>
+<li>ISR (Incremental Static Regeneration) with <code>revalidate: 3600</code> (1 hour) for new/updated articles</li>
+<li>On-demand revalidation: Strapi webhook triggers Next.js revalidation API route when article is published/updated</li>
+<li>Images served via CDN (CloudFront) with optimization (Next.js <code>&lt;Image&gt;</code> component for automatic WebP conversion and responsive sizing)</li>
+</ul>
+<hr />
+<h2 id="8-security-architecture">8. Security Architecture<a class="headerlink" href="#8-security-architecture" title="Permanent link">&para;</a></h2>
+<h3 id="81-authentication">8.1 Authentication<a class="headerlink" href="#81-authentication" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Implementation</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Phone + OTP</td>
+<td>MSG91 OTP API → verify → create JWT session</td>
+<td>Primary buyer login (India standard)</td>
+</tr>
+<tr>
+<td>Email + Password</td>
+<td>bcrypt hash (cost factor 12) → JWT</td>
+<td>Secondary buyer login</td>
+</tr>
+<tr>
+<td>Seller login</td>
+<td>Email + password (bcrypt) → JWT with seller role</td>
+<td>Seller portal access</td>
+</tr>
+<tr>
+<td>Admin login</td>
+<td>Email + password (bcrypt) → JWT with admin role + IP allowlist</td>
+<td>Admin panel access</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Session Management</strong>:
+- Access token: JWT, 15-minute expiry, stored in httpOnly cookie
+- Refresh token: opaque token, 30-day expiry, stored in httpOnly cookie, rotated on use
+- Token payload: <code>{ user_id, role, email }</code> -- no sensitive data in JWT
+- Logout: invalidate refresh token (database-backed token store), clear cookies</p>
+<h3 id="82-authorization-rbac">8.2 Authorization (RBAC)<a class="headerlink" href="#82-authorization-rbac" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Role-based access control as defined in PRD Section 2.2</li>
+<li>Middleware on every API route checks JWT → extracts role → checks against route permissions</li>
+<li>Seller routes: verify <code>seller_id</code> in JWT matches the resource being accessed (no seller can access another seller's data)</li>
+<li>Admin routes: verify admin role + specific admin permission (catalog_admin, seller_admin, etc.)</li>
+</ul>
+<h3 id="83-data-protection">8.3 Data Protection<a class="headerlink" href="#83-data-protection" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTTPS everywhere</td>
+<td>TLS 1.3, HSTS header, redirect HTTP→HTTPS</td>
+</tr>
+<tr>
+<td>Encryption at rest</td>
+<td>AWS RDS encryption (AES-256), S3 server-side encryption</td>
+</tr>
+<tr>
+<td>Encryption in transit</td>
+<td>TLS for all API communication, internal service communication</td>
+</tr>
+<tr>
+<td>PCI DSS</td>
+<td>Fully delegated to Razorpay. No card data touches platform servers. Razorpay tokenization for saved cards</td>
+</tr>
+<tr>
+<td>Password hashing</td>
+<td>bcrypt with cost factor 12</td>
+</tr>
+<tr>
+<td>Input validation</td>
+<td>Server-side validation on all API inputs (Zod schemas in TypeScript)</td>
+</tr>
+<tr>
+<td>SQL injection prevention</td>
+<td>Parameterized queries via ORM (Medusa uses MikroORM/TypeORM)</td>
+</tr>
+<tr>
+<td>XSS prevention</td>
+<td>React's built-in escaping, Content-Security-Policy header, DOMPurify for user-generated content</td>
+</tr>
+<tr>
+<td>CSRF protection</td>
+<td>SameSite=Strict cookies, CSRF tokens for state-changing operations</td>
+</tr>
+<tr>
+<td>Rate limiting</td>
+<td>Redis-backed rate limiter: 100 requests/min per IP (general), 5 requests/min for OTP endpoints</td>
+</tr>
+<tr>
+<td>File upload security</td>
+<td>Type validation (whitelist: JPG, PNG, PDF), size limits, virus scanning (ClamAV or AWS S3 built-in)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="84-dpdp-act-2023-compliance">8.4 DPDP Act 2023 Compliance<a class="headerlink" href="#84-dpdp-act-2023-compliance" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Consent collection</td>
+<td>Explicit consent checkbox at registration, separate marketing consent</td>
+</tr>
+<tr>
+<td>Consent records</td>
+<td>Store consent timestamp, version of privacy policy consented to</td>
+</tr>
+<tr>
+<td>Data access request</td>
+<td>API endpoint for user to download their data (profile, orders, addresses) as JSON/CSV</td>
+</tr>
+<tr>
+<td>Data deletion request</td>
+<td>"Delete Account" flow: 30-day grace period, then permanent deletion of PII, anonymize order records</td>
+</tr>
+<tr>
+<td>Data minimization</td>
+<td>Collect only necessary fields, do not store data beyond retention period</td>
+</tr>
+<tr>
+<td>Breach notification</td>
+<td>Incident response plan, notify DPB and affected users within 72 hours</td>
+</tr>
+<tr>
+<td>Data storage</td>
+<td>All personal data stored in India (AWS ap-south-1). No cross-border transfer without adequate safeguards</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="9-infrastructure-devops">9. Infrastructure &amp; DevOps<a class="headerlink" href="#9-infrastructure-devops" title="Permanent link">&para;</a></h2>
+<h3 id="91-deployment-architecture-phase-1-mvp">9.1 Deployment Architecture (Phase 1 -- MVP)<a class="headerlink" href="#91-deployment-architecture-phase-1-mvp" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>AWS ap-south-1 (Mumbai)
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>│
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>├── Route 53 / Cloudflare DNS
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>│
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>├── CloudFront CDN
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>│   ├── Static assets (JS, CSS, images)
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>│   └── Next.js ISR cached pages
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>│
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>├── ALB (Application Load Balancer)
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>│   ├── Target: ECS Fargate Service (or EC2)
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>│   │   ├── Container: Next.js frontend (port 3000)
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>│   │   ├── Container: Medusa backend (port 9000)
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>│   │   └── Container: Strapi CMS (port 1337)
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>│   └── Health checks on each container
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>│
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>├── RDS PostgreSQL 16 (db.t3.medium → scale up)
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>│   ├── Multi-AZ for high availability
+<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a>│   ├── Automated backups (7-day retention)
+<a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a>│   └── Read replica (add when needed)
+<a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a>│
+<a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a>├── ElastiCache Redis 7 (cache.t3.micro → scale up)
+<a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a>│   └── Sessions, caching, rate limiting
+<a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a>│
+<a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a>├── EC2 or ECS: Meilisearch instance
+<a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a>│   └── Search index, auto-synced from PostgreSQL
+<a id="__codelineno-14-26" name="__codelineno-14-26" href="#__codelineno-14-26"></a>│
+<a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a>├── S3 Bucket: media storage
+<a id="__codelineno-14-28" name="__codelineno-14-28" href="#__codelineno-14-28"></a>│   ├── Product images
+<a id="__codelineno-14-29" name="__codelineno-14-29" href="#__codelineno-14-29"></a>│   ├── Seller documents
+<a id="__codelineno-14-30" name="__codelineno-14-30" href="#__codelineno-14-30"></a>│   ├── Invoice PDFs
+<a id="__codelineno-14-31" name="__codelineno-14-31" href="#__codelineno-14-31"></a>│   └── CMS media
+<a id="__codelineno-14-32" name="__codelineno-14-32" href="#__codelineno-14-32"></a>│
+<a id="__codelineno-14-33" name="__codelineno-14-33" href="#__codelineno-14-33"></a>└── SES: Transactional email
+</code></pre></div>
+<p><strong>Estimated Monthly Cost (Phase 1)</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Specification</th>
+<th>Est. Cost/Month</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ECS Fargate (3 containers)</td>
+<td>0.5 vCPU, 1GB RAM each</td>
+<td>$50-80</td>
+</tr>
+<tr>
+<td>RDS PostgreSQL</td>
+<td>db.t3.medium, Multi-AZ</td>
+<td>$80-120</td>
+</tr>
+<tr>
+<td>ElastiCache Redis</td>
+<td>cache.t3.micro</td>
+<td>$15-25</td>
+</tr>
+<tr>
+<td>EC2 (Meilisearch)</td>
+<td>t3.small</td>
+<td>$15-20</td>
+</tr>
+<tr>
+<td>S3</td>
+<td>50GB storage + transfer</td>
+<td>$5-10</td>
+</tr>
+<tr>
+<td>CloudFront</td>
+<td>100GB transfer</td>
+<td>$10-15</td>
+</tr>
+<tr>
+<td>ALB</td>
+<td>Standard</td>
+<td>$20-25</td>
+</tr>
+<tr>
+<td>SES</td>
+<td>10,000 emails/month</td>
+<td>$1-2</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td><strong>~$200-300/month</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Alternative: Deploy on Vercel (frontend) + Railway/Render (backend) for even simpler ops at similar cost.</p>
+<h3 id="92-cicd-pipeline">9.2 CI/CD Pipeline<a class="headerlink" href="#92-cicd-pipeline" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>GitHub Push (main branch)
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    │
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>    ▼
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>GitHub Actions Workflow
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>    │
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>    ├── 1. Lint (ESLint + Prettier)
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>    ├── 2. Type check (tsc --noEmit)
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>    ├── 3. Unit tests (Vitest)
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>    ├── 4. Integration tests (against test DB)
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>    ├── 5. Build (Next.js build, Medusa build)
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>    │
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>    ▼ (on success)
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>    │
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>    ├── 6. Build Docker images
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>    ├── 7. Push to ECR (Elastic Container Registry)
+<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a>    └── 8. Deploy to ECS (rolling update)
+<a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a>    │
+<a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a>    ▼
+<a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a>    9. Post-deploy smoke tests (health checks, critical flow test)
+</code></pre></div>
+<p><strong>Branch Strategy</strong>: trunk-based development with feature branches. PRs require 1 approval + passing CI.</p>
+<h3 id="93-monitoring-alerting">9.3 Monitoring &amp; Alerting<a class="headerlink" href="#93-monitoring-alerting" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Purpose</th>
+<th>Key Metrics</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sentry</td>
+<td>Error tracking (frontend + backend)</td>
+<td>Error rate, error frequency by type, affected users</td>
+</tr>
+<tr>
+<td>CloudWatch</td>
+<td>Infrastructure monitoring</td>
+<td>CPU, memory, disk, network, RDS connections</td>
+</tr>
+<tr>
+<td>Grafana + CloudWatch Metrics</td>
+<td>Custom dashboards</td>
+<td>Orders/minute, payment success rate, API latency p95</td>
+</tr>
+<tr>
+<td>UptimeRobot (or Better Uptime)</td>
+<td>Uptime monitoring</td>
+<td>Homepage, API health endpoint, checkout flow</td>
+</tr>
+<tr>
+<td>PagerDuty / Slack alerts</td>
+<td>Incident alerting</td>
+<td>Critical: &gt;1% error rate, payment gateway down, database unreachable</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="10-non-functional-requirements-detailed">10. Non-Functional Requirements (Detailed)<a class="headerlink" href="#10-non-functional-requirements-detailed" title="Permanent link">&para;</a></h2>
+<h3 id="101-performance">10.1 Performance<a class="headerlink" href="#101-performance" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target</th>
+<th>Measurement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LCP (Largest Contentful Paint)</td>
+<td>&lt; 2.5s</td>
+<td>Chrome UX Report, Lighthouse</td>
+</tr>
+<tr>
+<td>FID (First Input Delay)</td>
+<td>&lt; 100ms</td>
+<td>Chrome UX Report</td>
+</tr>
+<tr>
+<td>CLS (Cumulative Layout Shift)</td>
+<td>&lt; 0.1</td>
+<td>Chrome UX Report</td>
+</tr>
+<tr>
+<td>TTFB (Time to First Byte)</td>
+<td>&lt; 600ms</td>
+<td>Server-side monitoring</td>
+</tr>
+<tr>
+<td>API response time (p95)</td>
+<td>&lt; 500ms</td>
+<td>Application monitoring</td>
+</tr>
+<tr>
+<td>Search autocomplete latency</td>
+<td>&lt; 200ms</td>
+<td>Meilisearch metrics</td>
+</tr>
+<tr>
+<td>Checkout completion time</td>
+<td>&lt; 60 seconds (median)</td>
+<td>Analytics funnel</td>
+</tr>
+<tr>
+<td>Image load time</td>
+<td>&lt; 1s per image on 4G</td>
+<td>CDN metrics, responsive images</td>
+</tr>
+</tbody>
+</table>
+<h3 id="102-availability-reliability">10.2 Availability &amp; Reliability<a class="headerlink" href="#102-availability-reliability" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Uptime</td>
+<td>99.9% (~8.76 hours downtime/year)</td>
+</tr>
+<tr>
+<td>RPO (Recovery Point Objective)</td>
+<td>1 hour (hourly DB snapshots)</td>
+</tr>
+<tr>
+<td>RTO (Recovery Time Objective)</td>
+<td>4 hours (failover + restore)</td>
+</tr>
+<tr>
+<td>Database backup</td>
+<td>Automated daily, 30-day retention, point-in-time recovery</td>
+</tr>
+<tr>
+<td>Deployment strategy</td>
+<td>Rolling update (zero-downtime)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="103-scalability-targets">10.3 Scalability Targets<a class="headerlink" href="#103-scalability-targets" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Concurrent Users</th>
+<th>Orders/Day</th>
+<th>Products</th>
+<th>Sellers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Phase 1 (Launch)</td>
+<td>1,000</td>
+<td>50-100</td>
+<td>100-500</td>
+<td>0 (own brand only)</td>
+</tr>
+<tr>
+<td>Phase 1 (6 months)</td>
+<td>5,000</td>
+<td>200-500</td>
+<td>500-1,000</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Phase 2 (12 months)</td>
+<td>10,000</td>
+<td>500-1,000</td>
+<td>2,000-5,000</td>
+<td>30-50</td>
+</tr>
+<tr>
+<td>Phase 3 (24 months)</td>
+<td>50,000-100,000</td>
+<td>5,000-10,000</td>
+<td>10,000+</td>
+<td>100+</td>
+</tr>
+</tbody>
+</table>
+<p>Architecture supports horizontal scaling at each layer:
+- Frontend: Vercel auto-scales / add ECS instances behind ALB
+- Backend: add ECS instances, use Redis for shared state
+- Database: read replicas for query scaling, vertical scale for write scaling
+- Search: Meilisearch scales to millions of documents, add replicas if needed</p>
+<hr />
+<p><em>Cross-references: BMRD (Doc 01), PRD (Doc 02), IA (Doc 03), FSD (Doc 05)</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

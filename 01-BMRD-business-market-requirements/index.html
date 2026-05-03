@@ -1,0 +1,2473 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Enterprise PRD suite for a hybrid DTC + curated marketplace wellness platform, India-first.">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../02-PRD-product-requirements/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>1. Business & Market Requirements (BMRD) - Wellness Platform - Product Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#bmrd-business-market-requirements-document" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Wellness Platform - Product Documentation" class="md-header__button md-logo" aria-label="Wellness Platform - Product Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Wellness Platform - Product Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              1. Business & Market Requirements (BMRD)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Wellness Platform - Product Documentation" class="md-nav__button md-logo" aria-label="Wellness Platform - Product Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Wellness Platform - Product Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Business & Market Requirements (BMRD)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Business & Market Requirements (BMRD)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-executive-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Executive Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-business-objectives-success-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Business Objectives &amp; Success Criteria
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Business Objectives &amp; Success Criteria">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-north-star-metric" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 North Star Metric
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-success-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Success Metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-business-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Business Objectives
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-market-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Market Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Market Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-market-sizing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Market Sizing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-competitive-landscape" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Competitive Landscape
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-differentiation-thesis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Differentiation Thesis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-target-customer-personas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Target Customer Personas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Target Customer Personas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#persona-1-priya-the-wellness-curious-professional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Persona 1: "Priya" -- The Wellness-Curious Professional
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#persona-2-rahul-the-fitness-focused-buyer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Persona 2: "Rahul" -- The Fitness-Focused Buyer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#persona-3-meera-the-gifting-oriented-buyer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Persona 3: "Meera" -- The Gifting-Oriented Buyer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#persona-4-kavitha-the-curated-seller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Persona 4: "Kavitha" -- The Curated Seller
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-business-model-unit-economics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Business Model &amp; Unit Economics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Business Model &amp; Unit Economics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-revenue-streams" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Revenue Streams
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-commission-structure-marketplace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Commission Structure (Marketplace)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-own-brand-unit-economics-per-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Own-Brand Unit Economics (per order)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-marketplace-unit-economics-per-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Marketplace Unit Economics (per order)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-payment-gateway-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Payment Gateway Comparison
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-regulatory-compliance-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Regulatory &amp; Compliance Requirements
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Regulatory &amp; Compliance Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-fssai-food-safety-and-standards-authority-of-india" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 FSSAI (Food Safety and Standards Authority of India)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-drugs-cosmetics-act-skincare-beauty" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Drugs &amp; Cosmetics Act (Skincare &amp; Beauty)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-gst-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 GST Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-consumer-protection-e-commerce-rules-2020" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Consumer Protection (E-Commerce) Rules, 2020
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-digital-personal-data-protection-act-2023-dpdp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 Digital Personal Data Protection Act, 2023 (DPDP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#66-other-regulatory-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6 Other Regulatory Considerations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-stakeholder-map-raci" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Stakeholder Map &amp; RACI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-constraints-assumptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Constraints &amp; Assumptions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Constraints &amp; Assumptions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 Constraints
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-assumptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Assumptions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-risks-mitigations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Risks &amp; Mitigations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-a-glossary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appendix A: Glossary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-b-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appendix B: References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-PRD-product-requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Product Requirements (PRD)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-IA-information-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Information Architecture (IA)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-TAD-technical-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Technical Architecture (TAD)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-FSD-functional-specifications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Functional Specifications (FSD)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-executive-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Executive Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-business-objectives-success-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Business Objectives &amp; Success Criteria
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Business Objectives &amp; Success Criteria">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-north-star-metric" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 North Star Metric
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-success-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Success Metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-business-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Business Objectives
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-market-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Market Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Market Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-market-sizing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Market Sizing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-competitive-landscape" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Competitive Landscape
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-differentiation-thesis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Differentiation Thesis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-target-customer-personas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Target Customer Personas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Target Customer Personas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#persona-1-priya-the-wellness-curious-professional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Persona 1: "Priya" -- The Wellness-Curious Professional
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#persona-2-rahul-the-fitness-focused-buyer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Persona 2: "Rahul" -- The Fitness-Focused Buyer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#persona-3-meera-the-gifting-oriented-buyer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Persona 3: "Meera" -- The Gifting-Oriented Buyer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#persona-4-kavitha-the-curated-seller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Persona 4: "Kavitha" -- The Curated Seller
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-business-model-unit-economics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Business Model &amp; Unit Economics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Business Model &amp; Unit Economics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-revenue-streams" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Revenue Streams
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-commission-structure-marketplace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Commission Structure (Marketplace)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-own-brand-unit-economics-per-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Own-Brand Unit Economics (per order)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-marketplace-unit-economics-per-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Marketplace Unit Economics (per order)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-payment-gateway-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Payment Gateway Comparison
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-regulatory-compliance-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Regulatory &amp; Compliance Requirements
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Regulatory &amp; Compliance Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-fssai-food-safety-and-standards-authority-of-india" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 FSSAI (Food Safety and Standards Authority of India)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-drugs-cosmetics-act-skincare-beauty" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Drugs &amp; Cosmetics Act (Skincare &amp; Beauty)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-gst-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 GST Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-consumer-protection-e-commerce-rules-2020" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Consumer Protection (E-Commerce) Rules, 2020
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-digital-personal-data-protection-act-2023-dpdp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 Digital Personal Data Protection Act, 2023 (DPDP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#66-other-regulatory-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6 Other Regulatory Considerations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-stakeholder-map-raci" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Stakeholder Map &amp; RACI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-constraints-assumptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Constraints &amp; Assumptions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Constraints &amp; Assumptions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 Constraints
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-assumptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Assumptions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-risks-mitigations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Risks &amp; Mitigations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-a-glossary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appendix A: Glossary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-b-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appendix B: References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="bmrd-business-market-requirements-document">BMRD: Business &amp; Market Requirements Document<a class="headerlink" href="#bmrd-business-market-requirements-document" title="Permanent link">&para;</a></h1>
+<p><strong>Document ID</strong>: BMRD-v1.0
+<strong>Status</strong>: Draft
+<strong>Author</strong>: [Product Lead / Founder]
+<strong>Last Updated</strong>: [Date]
+<strong>Audience</strong>: Stakeholders, investors, executive team, product team</p>
+<hr />
+<h2 id="1-executive-summary">1. Executive Summary<a class="headerlink" href="#1-executive-summary" title="Permanent link">&para;</a></h2>
+<p>This document establishes the business case for building a hybrid wellness e-commerce platform that combines three surfaces:</p>
+<ol>
+<li><strong>Branded DTC Storefront</strong> -- selling the company's own supplements, nutrition, and skincare products directly to consumers</li>
+<li><strong>Curated Marketplace</strong> -- hosting vetted third-party wellness sellers (invite-only) who list their products alongside the brand's own catalog</li>
+<li><strong>Editorial Content Hub</strong> -- publishing wellness articles, expert advice, and ingredient deep-dives that drive organic traffic and build brand authority</li>
+</ol>
+<p>The platform launches India-first, targeting health-conscious urban consumers in Tier 1 and Tier 2 cities. Revenue comes from three streams: own-product margins, marketplace commissions on third-party sales, and featured placement fees from sellers.</p>
+<p>The hybrid model is the core differentiator. Unlike Nykaa (pure marketplace) or Healthkart (single-brand DTC), this platform offers the trust of a curated brand experience with the catalog breadth of a marketplace -- similar to how Hims built brand authority before expanding, but adapted for the Indian market with multi-seller support from day one of Phase 2.</p>
+<hr />
+<h2 id="2-business-objectives-success-criteria">2. Business Objectives &amp; Success Criteria<a class="headerlink" href="#2-business-objectives-success-criteria" title="Permanent link">&para;</a></h2>
+<h3 id="21-north-star-metric">2.1 North Star Metric<a class="headerlink" href="#21-north-star-metric" title="Permanent link">&para;</a></h3>
+<p><strong>Monthly Repeat Purchase Rate (MRPR)</strong>: Percentage of customers who make a second purchase within 60 days. This metric captures product quality, trust, and platform stickiness better than GMV alone.</p>
+<h3 id="22-success-metrics">2.2 Success Metrics<a class="headerlink" href="#22-success-metrics" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target (Month 6)</th>
+<th>Target (Month 12)</th>
+<th>Measurement Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GMV (Gross Merchandise Value)</td>
+<td>₹25L/month</td>
+<td>₹1Cr/month</td>
+<td>Order data</td>
+</tr>
+<tr>
+<td>Monthly Active Users (MAU)</td>
+<td>50,000</td>
+<td>200,000</td>
+<td>Analytics (GA4/Mixpanel)</td>
+</tr>
+<tr>
+<td>Monthly Repeat Purchase Rate</td>
+<td>15%</td>
+<td>25%</td>
+<td>Cohort analysis</td>
+</tr>
+<tr>
+<td>Average Order Value (AOV)</td>
+<td>₹800</td>
+<td>₹1,200</td>
+<td>Order data</td>
+</tr>
+<tr>
+<td>Own Brand vs Marketplace GMV Split</td>
+<td>100% own (Phase 1)</td>
+<td>60:40 own:marketplace</td>
+<td>Order data</td>
+</tr>
+<tr>
+<td>Approved Sellers (marketplace)</td>
+<td>0 (Phase 1)</td>
+<td>30-50</td>
+<td>Seller admin panel</td>
+</tr>
+<tr>
+<td>Content Hub Monthly Visits</td>
+<td>20,000</td>
+<td>100,000</td>
+<td>Analytics</td>
+</tr>
+<tr>
+<td>Customer Acquisition Cost (CAC)</td>
+<td>₹300</td>
+<td>₹200 (declining)</td>
+<td>Marketing spend / new customers</td>
+</tr>
+<tr>
+<td>Customer Lifetime Value (LTV)</td>
+<td>₹2,000</td>
+<td>₹4,000</td>
+<td>Revenue per customer over 12 months</td>
+</tr>
+<tr>
+<td>LTV:CAC Ratio</td>
+<td>&gt;3:1</td>
+<td>&gt;5:1</td>
+<td>Derived</td>
+</tr>
+<tr>
+<td>NPS (Net Promoter Score)</td>
+<td>&gt;40</td>
+<td>&gt;50</td>
+<td>Post-purchase surveys</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-business-objectives">2.3 Business Objectives<a class="headerlink" href="#23-business-objectives" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Establish brand authority</strong> in the Indian wellness space through curated products and expert content</li>
+<li><strong>Build a defensible marketplace moat</strong> by onboarding high-quality sellers that consumers cannot find on Amazon/Flipkart</li>
+<li><strong>Achieve unit economics viability</strong> within 12 months (positive contribution margin on own-brand, breakeven on marketplace operations)</li>
+<li><strong>Create a content-driven acquisition channel</strong> that reduces dependency on paid advertising over time</li>
+</ol>
+<hr />
+<h2 id="3-market-analysis">3. Market Analysis<a class="headerlink" href="#3-market-analysis" title="Permanent link">&para;</a></h2>
+<h3 id="31-market-sizing">3.1 Market Sizing<a class="headerlink" href="#31-market-sizing" title="Permanent link">&para;</a></h3>
+<p><strong>India Health &amp; Wellness Market</strong>:
+- Market size: USD 164.35 billion (2025), projected to reach USD 257.94 billion by 2034
+- CAGR: 5.14%
+- Key growth drivers: rising health awareness post-COVID, increasing disposable income in Tier 2/3 cities, growing digital health literacy</p>
+<p><strong>Supplements &amp; Nutrition (India)</strong>:
+- Nutraceuticals market: ~USD 10-12 billion (2024)
+- Key sub-segments: vitamins &amp; minerals, protein supplements, immunity boosters, herbal/Ayurvedic supplements
+- Growth driven by: fitness culture adoption, preventive healthcare awareness, D2C brand proliferation</p>
+<p><strong>Skincare &amp; Beauty (India)</strong>:
+- Market size: ~USD 18-20 billion (2024)
+- Online penetration growing rapidly (estimated 15-20% of total)
+- Key sub-segments: face care, anti-aging, natural/clean beauty, men's grooming
+- Growth driven by: social media influence, ingredient-conscious consumers, premiumization trend</p>
+<p><strong>Serviceable Addressable Market (SAM)</strong>:
+Online wellness products (supplements + skincare) targeting urban India (Tier 1/2 cities, age 22-45, smartphone users) -- estimated at USD 2-3 billion.</p>
+<p><strong>Serviceable Obtainable Market (SOM)</strong>:
+Year 1 target: ₹12Cr GMV (~USD 1.4M), representing &lt;0.1% of SAM.</p>
+<h3 id="32-competitive-landscape">3.2 Competitive Landscape<a class="headerlink" href="#32-competitive-landscape" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Competitor</th>
+<th>Model</th>
+<th>Strengths</th>
+<th>Weaknesses</th>
+<th>Differentiator vs. Us</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nykaa</strong></td>
+<td>Marketplace + private labels</td>
+<td>Massive catalog (5,000+ brands), strong brand recognition, IPO-funded scale</td>
+<td>Cluttered UX, no wellness curation, mass market positioning</td>
+<td>We are curated + expert-content-driven, not a catalog dump</td>
+</tr>
+<tr>
+<td><strong>Purplle</strong></td>
+<td>Marketplace</td>
+<td>Price-competitive, strong Tier 2/3 penetration, 70% YoY active user growth</td>
+<td>Low brand trust for wellness/health products, discount-driven</td>
+<td>We lead with trust (curation, FSSAI verification, expert content)</td>
+</tr>
+<tr>
+<td><strong>Healthkart</strong></td>
+<td>DTC + marketplace</td>
+<td>Strong supplements focus, HealthVit + MuscleBlaze owned brands, established trust</td>
+<td>No skincare, male-skewing, no content hub</td>
+<td>We serve both genders, combine supplements + skincare + content</td>
+</tr>
+<tr>
+<td><strong>WOW Skin Science</strong></td>
+<td>DTC (single brand)</td>
+<td>Strong brand, Amazon bestseller, ingredient-led marketing</td>
+<td>Single brand limits catalog, no marketplace, no community</td>
+<td>We offer multi-brand curated selection + editorial content</td>
+</tr>
+<tr>
+<td><strong>Amazon India</strong></td>
+<td>Open marketplace</td>
+<td>Unlimited selection, Prime delivery, price competition</td>
+<td>Zero curation, counterfeit concerns, no wellness expertise</td>
+<td>We solve the trust problem with curation + FSSAI verification</td>
+</tr>
+<tr>
+<td><strong>1mg (Tata Health)</strong></td>
+<td>Marketplace + telehealth</td>
+<td>Pharma + supplements, doctor consultations, Tata backing</td>
+<td>Pharmacy-first UX, not a lifestyle/wellness brand</td>
+<td>We are lifestyle wellness, not clinical/pharmaceutical</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-differentiation-thesis">3.3 Differentiation Thesis<a class="headerlink" href="#33-differentiation-thesis" title="Permanent link">&para;</a></h3>
+<p>The Indian wellness e-commerce market has a "trust gap":</p>
+<ul>
+<li><strong>Open marketplaces</strong> (Amazon, Flipkart) offer everything but consumers cannot verify product authenticity, ingredient sourcing, or regulatory compliance</li>
+<li><strong>Single-brand DTC</strong> (WOW, Mamaearth) solves trust for one brand but limits selection</li>
+<li><strong>Beauty marketplaces</strong> (Nykaa, Purplle) are catalog-first, not wellness-expertise-first</li>
+</ul>
+<p>The hybrid model bridges this gap:
+1. Own-brand products establish quality baseline and margin control
+2. Curated sellers expand catalog without diluting trust (every seller is vetted, every product is reviewed)
+3. Expert content (journal) educates consumers and drives organic acquisition
+4. FSSAI/regulatory badge system builds trust at the product level</p>
+<hr />
+<h2 id="4-target-customer-personas">4. Target Customer Personas<a class="headerlink" href="#4-target-customer-personas" title="Permanent link">&para;</a></h2>
+<h3 id="persona-1-priya-the-wellness-curious-professional">Persona 1: "Priya" -- The Wellness-Curious Professional<a class="headerlink" href="#persona-1-priya-the-wellness-curious-professional" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Demographics</td>
+<td>Female, 26-34, urban (Bangalore/Mumbai/Delhi), household income ₹10-25L/year</td>
+</tr>
+<tr>
+<td>Occupation</td>
+<td>IT professional, startup employee, or freelancer</td>
+</tr>
+<tr>
+<td>Digital behavior</td>
+<td>Instagram-heavy, follows wellness influencers, reads ingredient lists, uses PhonePe/GPay for payments</td>
+</tr>
+<tr>
+<td>Buying behavior</td>
+<td>Researches 3-5 products before buying, reads reviews, price-sensitive but willing to pay premium for trusted brands, prefers COD for first purchase from new brand</td>
+</tr>
+<tr>
+<td>Pain points</td>
+<td>Overwhelmed by choices on Amazon, skeptical of "natural" claims, worried about counterfeit supplements</td>
+</tr>
+<tr>
+<td>Wellness goals</td>
+<td>Skin health, immunity, energy, stress management</td>
+</tr>
+<tr>
+<td>Acquisition channels</td>
+<td>Instagram ads, Google search ("best vitamin C serum India"), wellness blog content</td>
+</tr>
+</tbody>
+</table>
+<h3 id="persona-2-rahul-the-fitness-focused-buyer">Persona 2: "Rahul" -- The Fitness-Focused Buyer<a class="headerlink" href="#persona-2-rahul-the-fitness-focused-buyer" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Demographics</td>
+<td>Male, 24-35, urban (Tier 1/2 cities), household income ₹8-20L/year</td>
+</tr>
+<tr>
+<td>Occupation</td>
+<td>Corporate employee, gym-goer, weekend athlete</td>
+</tr>
+<tr>
+<td>Digital behavior</td>
+<td>YouTube fitness content, Reddit for supplement reviews, UPI-primary payments</td>
+</tr>
+<tr>
+<td>Buying behavior</td>
+<td>Brand-loyal once trust is established, bulk buyer (monthly protein supply), compares prices across platforms, comfortable with online payment</td>
+</tr>
+<tr>
+<td>Pain points</td>
+<td>Quality concerns with unbranded supplements, confusion about dosages and combinations, wants expert guidance not just product listings</td>
+</tr>
+<tr>
+<td>Wellness goals</td>
+<td>Muscle building, recovery, general health maintenance</td>
+</tr>
+<tr>
+<td>Acquisition channels</td>
+<td>Google search ("whey protein India genuine"), YouTube reviews, fitness community referrals</td>
+</tr>
+</tbody>
+</table>
+<h3 id="persona-3-meera-the-gifting-oriented-buyer">Persona 3: "Meera" -- The Gifting-Oriented Buyer<a class="headerlink" href="#persona-3-meera-the-gifting-oriented-buyer" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Demographics</td>
+<td>Female/Male, 30-45, urban, household income ₹15L+/year</td>
+</tr>
+<tr>
+<td>Occupation</td>
+<td>Senior professional, business owner</td>
+</tr>
+<tr>
+<td>Digital behavior</td>
+<td>WhatsApp-primary, moderate Instagram, uses credit cards and UPI</td>
+</tr>
+<tr>
+<td>Buying behavior</td>
+<td>Buys wellness products as gifts (Diwali, birthdays, corporate gifting), values premium packaging, higher AOV, less price-sensitive</td>
+</tr>
+<tr>
+<td>Pain points</td>
+<td>Difficulty finding curated wellness gift sets, wants something that "looks premium" not clinical</td>
+</tr>
+<tr>
+<td>Wellness goals</td>
+<td>Gift-giving, personal skincare routine</td>
+</tr>
+<tr>
+<td>Acquisition channels</td>
+<td>Google search ("wellness gift box India"), Instagram ads, word of mouth</td>
+</tr>
+</tbody>
+</table>
+<h3 id="persona-4-kavitha-the-curated-seller">Persona 4: "Kavitha" -- The Curated Seller<a class="headerlink" href="#persona-4-kavitha-the-curated-seller" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Demographics</td>
+<td>28-45, runs a D2C wellness brand (small-to-mid scale), based anywhere in India</td>
+</tr>
+<tr>
+<td>Business profile</td>
+<td>1-50 SKUs, has FSSAI/manufacturing licenses, sells on own website + Amazon, wants additional distribution channels with higher margins than Amazon</td>
+</tr>
+<tr>
+<td>Pain points</td>
+<td>Amazon takes 15-30% commission + advertising costs, no brand storytelling on marketplace platforms, competition from counterfeits</td>
+</tr>
+<tr>
+<td>What she wants from us</td>
+<td>Curated platform with brand story pages, fair commission (10-15%), reliable payouts, co-marketing opportunities</td>
+</tr>
+<tr>
+<td>Acquisition channels</td>
+<td>LinkedIn outreach, industry events, seller referrals, inbound via "Sell With Us" page</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-business-model-unit-economics">5. Business Model &amp; Unit Economics<a class="headerlink" href="#5-business-model-unit-economics" title="Permanent link">&para;</a></h2>
+<h3 id="51-revenue-streams">5.1 Revenue Streams<a class="headerlink" href="#51-revenue-streams" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Stream</th>
+<th>Description</th>
+<th>Expected Contribution (Year 1)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Own-Brand Product Sales</strong></td>
+<td>Direct margin on products sourced/manufactured under the brand's own label</td>
+<td>70% of revenue</td>
+</tr>
+<tr>
+<td><strong>Marketplace Commission</strong></td>
+<td>Percentage of GMV from third-party seller transactions</td>
+<td>20% of revenue</td>
+</tr>
+<tr>
+<td><strong>Featured Placement Fees</strong></td>
+<td>Sellers pay for homepage features, category page top spots, content hub product embeds</td>
+<td>10% of revenue</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-commission-structure-marketplace">5.2 Commission Structure (Marketplace)<a class="headerlink" href="#52-commission-structure-marketplace" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Base Commission</th>
+<th>Fulfillment Fee (if platform-fulfilled)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Supplements &amp; Nutrition</td>
+<td>12%</td>
+<td>+₹30-50/order</td>
+</tr>
+<tr>
+<td>Skincare &amp; Beauty</td>
+<td>15%</td>
+<td>+₹30-50/order</td>
+</tr>
+<tr>
+<td>Bundles / Gift Sets</td>
+<td>10%</td>
+<td>+₹50-80/order</td>
+</tr>
+</tbody>
+</table>
+<p>Rationale: Lower than Amazon India (15-30%) to attract quality sellers. Higher commission on skincare (higher margins in category). Lower on bundles (incentivize AOV growth).</p>
+<h3 id="53-own-brand-unit-economics-per-order">5.3 Own-Brand Unit Economics (per order)<a class="headerlink" href="#53-own-brand-unit-economics-per-order" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Line Item</th>
+<th>Amount (₹)</th>
+<th>% of Revenue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Average Selling Price (ASP)</td>
+<td>800</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>COGS (product cost)</td>
+<td>280</td>
+<td>35%</td>
+</tr>
+<tr>
+<td>Packaging &amp; labeling</td>
+<td>40</td>
+<td>5%</td>
+</tr>
+<tr>
+<td>Shipping (avg, via Shiprocket)</td>
+<td>60</td>
+<td>7.5%</td>
+</tr>
+<tr>
+<td>Payment gateway fee (Razorpay ~2%)</td>
+<td>16</td>
+<td>2%</td>
+</tr>
+<tr>
+<td>Returns &amp; RTO (~8% return rate)</td>
+<td>64</td>
+<td>8%</td>
+</tr>
+<tr>
+<td><strong>Contribution Margin</strong></td>
+<td><strong>340</strong></td>
+<td><strong>42.5%</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="54-marketplace-unit-economics-per-order">5.4 Marketplace Unit Economics (per order)<a class="headerlink" href="#54-marketplace-unit-economics-per-order" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Line Item</th>
+<th>Amount (₹)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GMV per order (avg)</td>
+<td>1,000</td>
+<td>Marketplace ASP slightly higher</td>
+</tr>
+<tr>
+<td>Commission revenue (12-15%)</td>
+<td>120-150</td>
+<td>Platform's revenue</td>
+</tr>
+<tr>
+<td>Payment gateway fee on full GMV</td>
+<td>20</td>
+<td>Platform bears this</td>
+</tr>
+<tr>
+<td>Payout processing fee</td>
+<td>5-10</td>
+<td>Razorpay Route / Cashfree</td>
+</tr>
+<tr>
+<td><strong>Net marketplace revenue per order</strong></td>
+<td><strong>90-120</strong></td>
+<td>Before fixed costs</td>
+</tr>
+</tbody>
+</table>
+<h3 id="55-payment-gateway-comparison">5.5 Payment Gateway Comparison<a class="headerlink" href="#55-payment-gateway-comparison" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Gateway</th>
+<th>Transaction Fee</th>
+<th>UPI Support</th>
+<th>Marketplace Split (Route/Split)</th>
+<th>Settlement Cycle</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Razorpay</strong></td>
+<td>2% (cards), 0% (UPI &lt; ₹2000)</td>
+<td>Native</td>
+<td>Razorpay Route (split payments, escrow)</td>
+<td>T+2 (standard)</td>
+<td>Best marketplace support, most popular in India</td>
+</tr>
+<tr>
+<td><strong>PayU</strong></td>
+<td>1.99% (cards), 0% (UPI)</td>
+<td>Native</td>
+<td>PayU Hub (marketplace payouts)</td>
+<td>T+2</td>
+<td>Strong alternative, competitive pricing</td>
+</tr>
+<tr>
+<td><strong>Cashfree</strong></td>
+<td>1.90% (cards), 0% (UPI)</td>
+<td>Native</td>
+<td>Cashfree Payouts (bank transfer API)</td>
+<td>T+1 (available)</td>
+<td>Fastest settlement, good payout API</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommendation</strong>: Razorpay as primary gateway. Best marketplace split-payment support (Razorpay Route), broadest payment method coverage, strongest developer documentation.</p>
+<hr />
+<h2 id="6-regulatory-compliance-requirements">6. Regulatory &amp; Compliance Requirements<a class="headerlink" href="#6-regulatory-compliance-requirements" title="Permanent link">&para;</a></h2>
+<h3 id="61-fssai-food-safety-and-standards-authority-of-india">6.1 FSSAI (Food Safety and Standards Authority of India)<a class="headerlink" href="#61-fssai-food-safety-and-standards-authority-of-india" title="Permanent link">&para;</a></h3>
+<p><strong>Applicable to</strong>: All supplements, nutrition products, nutraceuticals, health foods.</p>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Applicability</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>FSSAI License (Central)</strong></td>
+<td>Own brand (manufacturer/marketer)</td>
+<td>Central license required if annual turnover &gt; ₹12Cr or operating in 2+ states. Requires Form B application, product formulation details, manufacturing premises inspection</td>
+</tr>
+<tr>
+<td><strong>FSSAI License (State)</strong></td>
+<td>Smaller own-brand operations</td>
+<td>State license if turnover ₹12L-20Cr, single state</td>
+</tr>
+<tr>
+<td><strong>Seller FSSAI Verification</strong></td>
+<td>Marketplace obligation</td>
+<td>Platform MUST verify that every seller listing supplements/nutrition holds a valid FSSAI license before allowing product listings</td>
+</tr>
+<tr>
+<td><strong>Product-Level Compliance</strong></td>
+<td>All supplement listings</td>
+<td>Each product must display: FSSAI license number, ingredient list, nutritional information, best before date, allergen warnings, "Not for medicinal use" disclaimer (for nutraceuticals)</td>
+</tr>
+<tr>
+<td><strong>Health Claims Restrictions</strong></td>
+<td>Content + product descriptions</td>
+<td>FSSAI regulates health claims on supplements. Cannot claim to "cure" or "treat" diseases. Only structure/function claims allowed (e.g., "supports immunity")</td>
+</tr>
+<tr>
+<td><strong>Labeling Requirements</strong></td>
+<td>All products</td>
+<td>MRP, net quantity, manufacturer address, FSSAI logo, vegetarian/non-vegetarian symbol (mandatory in India), batch number</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Categories under FSSAI Nutraceuticals Regulation</strong>:
+1. Health Supplements
+2. Nutraceuticals
+3. Food for Special Dietary Use
+4. Food for Special Medical Purpose
+5. Specialty Food containing Plant/Botanical ingredients
+6. Probiotics
+7. Prebiotics
+8. Novel Foods</p>
+<h3 id="62-drugs-cosmetics-act-skincare-beauty">6.2 Drugs &amp; Cosmetics Act (Skincare &amp; Beauty)<a class="headerlink" href="#62-drugs-cosmetics-act-skincare-beauty" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cosmetics Registration</strong></td>
+<td>Products classified as "cosmetics" under D&amp;C Act require registration with CDSCO (Central Drugs Standard Control Organization)</td>
+</tr>
+<tr>
+<td><strong>Import License</strong></td>
+<td>If importing skincare products, import registration under D&amp;C Act is required</td>
+</tr>
+<tr>
+<td><strong>Ingredient Restrictions</strong></td>
+<td>BIS (Bureau of Indian Standards) IS 4707 lists prohibited and restricted cosmetic ingredients</td>
+</tr>
+<tr>
+<td><strong>Labeling</strong></td>
+<td>Must include: ingredients (INCI names), manufacturer, batch number, MRP, manufacturing/expiry dates, net content</td>
+</tr>
+<tr>
+<td><strong>Claims Restrictions</strong></td>
+<td>Cannot claim "medicinal" or "drug-like" effects. "Anti-aging" is allowed; "cures acne" is not</td>
+</tr>
+<tr>
+<td><strong>Seller Verification</strong></td>
+<td>Marketplace must verify seller holds appropriate cosmetics manufacturing license or import registration</td>
+</tr>
+</tbody>
+</table>
+<h3 id="63-gst-structure">6.3 GST Structure<a class="headerlink" href="#63-gst-structure" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Product Category</th>
+<th>HSN Code</th>
+<th>GST Rate</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vitamins &amp; minerals</td>
+<td>2106 90</td>
+<td>12%</td>
+<td>Health supplements category</td>
+</tr>
+<tr>
+<td>Protein supplements (whey, plant-based)</td>
+<td>2106 90</td>
+<td>18%</td>
+<td>Classified as food preparations</td>
+</tr>
+<tr>
+<td>Nutraceutical capsules/tablets</td>
+<td>2936 / 2937</td>
+<td>18%</td>
+<td>Depending on formulation</td>
+</tr>
+<tr>
+<td>Skincare - face creams, serums</td>
+<td>3304</td>
+<td>28%</td>
+<td>Beauty/cosmetics rate</td>
+</tr>
+<tr>
+<td>Skincare - sunscreen</td>
+<td>3304</td>
+<td>28%</td>
+<td>Same as cosmetics</td>
+</tr>
+<tr>
+<td>Herbal/Ayurvedic products</td>
+<td>3003 / 3004</td>
+<td>12%</td>
+<td>If registered as Ayurvedic medicine</td>
+</tr>
+<tr>
+<td>Gift sets (mixed)</td>
+<td>Highest rate component</td>
+<td>18-28%</td>
+<td>GST on composite supply = highest rate</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Multi-Seller GST Invoicing</strong>:
+- For marketplace orders, each seller must issue their own GST invoice with their GSTIN
+- Platform generates invoice on behalf of seller (facilitation model) or seller issues directly
+- TCS (Tax Collected at Source): E-commerce operators must collect TCS at 1% (0.5% CGST + 0.5% SGST) on net taxable supplies of sellers and file GSTR-8
+- Platform must maintain seller-wise GSTIN records and validate them</p>
+<h3 id="64-consumer-protection-e-commerce-rules-2020">6.4 Consumer Protection (E-Commerce) Rules, 2020<a class="headerlink" href="#64-consumer-protection-e-commerce-rules-2020" title="Permanent link">&para;</a></h3>
+<p>As a marketplace entity, the platform MUST:</p>
+<table>
+<thead>
+<tr>
+<th>Obligation</th>
+<th>Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Display seller details</td>
+<td>Show seller legal name, GSTIN, address, rating on every product page</td>
+</tr>
+<tr>
+<td>Product information accuracy</td>
+<td>Ensure sellers provide accurate images, descriptions, ingredients. Platform reviews before publishing</td>
+</tr>
+<tr>
+<td>Return/refund policy display</td>
+<td>Clear return policy on every product page, per-seller if policies differ</td>
+</tr>
+<tr>
+<td>Grievance redressal</td>
+<td>Acknowledge complaints within 48 hours, resolve within 30 days. Appoint Grievance Officer, display contact on website</td>
+</tr>
+<tr>
+<td>No preferential treatment disclosure</td>
+<td>If any seller (including own brand) gets preferential placement, disclose it</td>
+</tr>
+<tr>
+<td>Price manipulation prohibition</td>
+<td>No artificial price inflation before sales/discounts</td>
+</tr>
+<tr>
+<td>Country of origin</td>
+<td>Display country of origin for all products (mandatory)</td>
+</tr>
+<tr>
+<td>Seller credential verification</td>
+<td>Verify seller identity documents, maintain records</td>
+</tr>
+<tr>
+<td>IP infringement records</td>
+<td>Maintain records of reported intellectual property violations</td>
+</tr>
+<tr>
+<td>Ranking criteria transparency</td>
+<td>Disclose how search results and product rankings are determined</td>
+</tr>
+</tbody>
+</table>
+<h3 id="65-digital-personal-data-protection-act-2023-dpdp">6.5 Digital Personal Data Protection Act, 2023 (DPDP)<a class="headerlink" href="#65-digital-personal-data-protection-act-2023-dpdp" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Consent management</td>
+<td>Explicit consent before collecting personal data. Granular consent (marketing vs transactional)</td>
+</tr>
+<tr>
+<td>Data minimization</td>
+<td>Collect only data necessary for the transaction/service</td>
+</tr>
+<tr>
+<td>Purpose limitation</td>
+<td>Use data only for stated purpose</td>
+</tr>
+<tr>
+<td>Data principal rights</td>
+<td>Users can request access, correction, erasure of their data</td>
+</tr>
+<tr>
+<td>Data breach notification</td>
+<td>Notify Data Protection Board and affected users in case of breach</td>
+</tr>
+<tr>
+<td>Cross-border transfer</td>
+<td>Restrictions on transferring personal data outside India (to be specified by government notification)</td>
+</tr>
+<tr>
+<td>Children's data</td>
+<td>Extra protections if platform serves users under 18</td>
+</tr>
+</tbody>
+</table>
+<h3 id="66-other-regulatory-considerations">6.6 Other Regulatory Considerations<a class="headerlink" href="#66-other-regulatory-considerations" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Regulation</th>
+<th>Relevance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Legal Metrology Act</strong></td>
+<td>MRP display, net quantity declarations on all packaged products</td>
+</tr>
+<tr>
+<td><strong>BIS Standards</strong></td>
+<td>Certain product categories may require BIS certification</td>
+</tr>
+<tr>
+<td><strong>FDI Policy</strong></td>
+<td>Marketplace model allows 100% FDI; inventory-based model has restrictions. Hybrid model must clearly separate platform entity from own-brand entity</td>
+</tr>
+<tr>
+<td><strong>GST Registration</strong></td>
+<td>Platform entity needs GST registration in every state where it has business presence</td>
+</tr>
+<tr>
+<td><strong>Shops &amp; Establishments Act</strong></td>
+<td>State-specific registrations for business operations</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-stakeholder-map-raci">7. Stakeholder Map &amp; RACI<a class="headerlink" href="#7-stakeholder-map-raci" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>Founder</th>
+<th>Product Lead</th>
+<th>Eng Lead</th>
+<th>Design Lead</th>
+<th>Legal</th>
+<th>Operations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Business strategy &amp; funding</td>
+<td><strong>A</strong></td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Product requirements (PRD)</td>
+<td>C</td>
+<td><strong>A</strong></td>
+<td>R</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Technical architecture (TAD)</td>
+<td>I</td>
+<td>C</td>
+<td><strong>A</strong></td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>UI/UX design</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td><strong>A</strong></td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Regulatory compliance</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+<td><strong>A</strong></td>
+<td>C</td>
+</tr>
+<tr>
+<td>Seller onboarding operations</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+<td>C</td>
+<td><strong>A</strong></td>
+</tr>
+<tr>
+<td>Content strategy &amp; creation</td>
+<td>C</td>
+<td><strong>A</strong></td>
+<td>I</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Shipping &amp; logistics setup</td>
+<td>I</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+<td><strong>A</strong></td>
+</tr>
+<tr>
+<td>Payment gateway integration</td>
+<td>I</td>
+<td>C</td>
+<td><strong>A</strong></td>
+<td>I</td>
+<td>C</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legend</strong>: <strong>A</strong> = Accountable, <strong>R</strong> = Responsible, <strong>C</strong> = Consulted, <strong>I</strong> = Informed</p>
+<hr />
+<h2 id="8-constraints-assumptions">8. Constraints &amp; Assumptions<a class="headerlink" href="#8-constraints-assumptions" title="Permanent link">&para;</a></h2>
+<h3 id="81-constraints">8.1 Constraints<a class="headerlink" href="#81-constraints" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Constraint</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>India-only launch</td>
+<td>No international shipping, no multi-currency, no international payment methods needed at launch</td>
+</tr>
+<tr>
+<td>One-time purchases only</td>
+<td>No subscription billing, no recurring payment integration, no auto-refill logic needed</td>
+</tr>
+<tr>
+<td>Curated/invite-only marketplace</td>
+<td>Seller self-registration is not open. Seller onboarding volume is manually manageable (target: 5-10 sellers/month)</td>
+</tr>
+<tr>
+<td>Established brand identity</td>
+<td>Logo, colors, typography, tone of voice are finalized. No brand discovery or naming exercise needed</td>
+</tr>
+<tr>
+<td>Product categories fixed at launch</td>
+<td>Supplements &amp; Nutrition, Skincare &amp; Beauty only. No fitness equipment, apparel, or telehealth</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-assumptions">8.2 Assumptions<a class="headerlink" href="#82-assumptions" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Assumption</th>
+<th>Risk if Wrong</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>70%+ of traffic will be mobile</td>
+<td>If desktop-heavy (unlikely for India), mobile-first design decisions may under-serve desktop UX</td>
+</tr>
+<tr>
+<td>UPI will be the dominant payment method (50%+)</td>
+<td>If COD dominates, RTO (return-to-origin) rates will be higher, impacting unit economics</td>
+</tr>
+<tr>
+<td>Sellers will accept 12-15% commission</td>
+<td>If sellers demand lower, marketplace unit economics suffer. Mitigate by offering value (brand storytelling, co-marketing)</td>
+</tr>
+<tr>
+<td>FSSAI verification can be done manually at launch scale</td>
+<td>If seller volume grows beyond 50, need automated FSSAI license verification API</td>
+</tr>
+<tr>
+<td>Content hub will meaningfully contribute to organic traffic within 6 months</td>
+<td>If SEO traction is slow, may need to increase paid acquisition budget</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="9-risks-mitigations">9. Risks &amp; Mitigations<a class="headerlink" href="#9-risks-mitigations" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Likelihood</th>
+<th>Impact</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Regulatory risk</strong>: FSSAI or cosmetics compliance violation from a marketplace seller</td>
+<td>Medium</td>
+<td>High (platform liability, fines, reputational damage)</td>
+<td>Mandatory document upload + manual verification before seller goes live. Periodic re-verification. Immediate delisting on compliance breach</td>
+</tr>
+<tr>
+<td><strong>Platform risk</strong>: Chosen tech platform cannot scale or has critical limitations</td>
+<td>Medium</td>
+<td>High (re-platforming cost)</td>
+<td>Detailed platform evaluation in TAD. Start with modular architecture that allows component replacement</td>
+</tr>
+<tr>
+<td><strong>Supply chain risk</strong>: Own-brand product supply disruption</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>Maintain 30-day buffer stock. Diversify suppliers. Marketplace sellers provide catalog resilience</td>
+</tr>
+<tr>
+<td><strong>Competition risk</strong>: Nykaa or Amazon launches a curated wellness vertical</td>
+<td>High</td>
+<td>Medium</td>
+<td>Speed to market. Build brand loyalty and content moat before incumbents can replicate curation</td>
+</tr>
+<tr>
+<td><strong>Trust risk</strong>: Consumers don't trust a new wellness marketplace</td>
+<td>High</td>
+<td>High</td>
+<td>Launch own-brand first (Phase 1) to build trust. Add marketplace sellers only after brand is established. FSSAI badge system. Expert content builds credibility</td>
+</tr>
+<tr>
+<td><strong>Seller acquisition risk</strong>: Cannot attract quality sellers</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>Start with direct outreach to known D2C brands. Offer lower commission than Amazon. Provide brand story pages as value-add</td>
+</tr>
+<tr>
+<td><strong>COD/RTO risk</strong>: High cash-on-delivery rates lead to return-to-origin losses</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>OTP verification for COD orders above ₹1,000. Incentivize prepaid with ₹50 discount. Track RTO by pincode, block high-RTO areas for COD</td>
+</tr>
+<tr>
+<td><strong>Data privacy risk</strong>: DPDP Act non-compliance</td>
+<td>Low</td>
+<td>High</td>
+<td>Implement consent management from day one. Privacy policy review by legal counsel. Data minimization by design</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="appendix-a-glossary">Appendix A: Glossary<a class="headerlink" href="#appendix-a-glossary" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GMV</td>
+<td>Gross Merchandise Value -- total value of goods sold through the platform</td>
+</tr>
+<tr>
+<td>AOV</td>
+<td>Average Order Value -- average revenue per transaction</td>
+</tr>
+<tr>
+<td>CAC</td>
+<td>Customer Acquisition Cost -- cost to acquire one new customer</td>
+</tr>
+<tr>
+<td>LTV</td>
+<td>Lifetime Value -- total revenue from a customer over their relationship with the platform</td>
+</tr>
+<tr>
+<td>MRPR</td>
+<td>Monthly Repeat Purchase Rate -- % of customers making a second purchase within 60 days</td>
+</tr>
+<tr>
+<td>RTO</td>
+<td>Return to Origin -- when a shipped order is returned to the seller (common with COD)</td>
+</tr>
+<tr>
+<td>TCS</td>
+<td>Tax Collected at Source -- 1% tax e-commerce operators must collect on seller transactions</td>
+</tr>
+<tr>
+<td>FSSAI</td>
+<td>Food Safety and Standards Authority of India</td>
+</tr>
+<tr>
+<td>CDSCO</td>
+<td>Central Drugs Standard Control Organization</td>
+</tr>
+<tr>
+<td>BIS</td>
+<td>Bureau of Indian Standards</td>
+</tr>
+<tr>
+<td>DPDP</td>
+<td>Digital Personal Data Protection Act, 2023</td>
+</tr>
+<tr>
+<td>HSN</td>
+<td>Harmonized System of Nomenclature -- classification code for GST</td>
+</tr>
+<tr>
+<td>GSTIN</td>
+<td>Goods and Services Tax Identification Number</td>
+</tr>
+<tr>
+<td>UPI</td>
+<td>Unified Payments Interface</td>
+</tr>
+<tr>
+<td>COD</td>
+<td>Cash on Delivery</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="appendix-b-references">Appendix B: References<a class="headerlink" href="#appendix-b-references" title="Permanent link">&para;</a></h2>
+<ul>
+<li>FSSAI Health Supplements &amp; Nutraceuticals Standards: https://fssai.gov.in/cms/health-supplements.php</li>
+<li>Consumer Protection (E-Commerce) Rules, 2020</li>
+<li>Digital Personal Data Protection Act, 2023</li>
+<li>IMARC Group - India Health &amp; Wellness Market Report</li>
+<li>Drugs &amp; Cosmetics Act, 1940 (as amended)</li>
+<li>GST Rate Schedule - CBIC</li>
+<li>Razorpay Route Documentation: https://razorpay.com/docs/route/</li>
+</ul>
+<hr />
+<p><em>This document is the foundation for all subsequent product, technical, and functional specifications. All scope, persona, and regulatory decisions made here cascade into the PRD, IA, TAD, and FSD.</em></p>
+<p><em>Cross-references: PRD (Doc 02), IA (Doc 03), TAD (Doc 04), FSD (Doc 05)</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
