@@ -1,4 +1,6 @@
-site/
-__pycache__/
-*.pyc
+node_modules
+.next
+coverage
 .DS_Store
+*.tsbuildinfo
+.qoder
